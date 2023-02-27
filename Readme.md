@@ -1,6 +1,4 @@
 
-Analysis Scripts for "Transcript Characterization of mRNP-SiMPull"
-
 The following directories contain scripts and key inputs used at various steps of the analysis as shown in ***Yra1 (Aly/REF) is a conserved organizer of nuclear mRNP architecture*** by Asada et al.
 
 The directories are organized in the stepwise manner in which the files were processed:
