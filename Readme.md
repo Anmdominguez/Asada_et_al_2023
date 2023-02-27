@@ -7,4 +7,4 @@ The directories are organized in the stepwise manner in which the files were pro
 * '1. DE analysis & Transcript Characterization'
 * '2. Motif Discovery & Secondary Structure'
 
-***Snakemake and transcript characterization pipelines were initially written by Taylor Rieter and adapted from Bensidoun_et_al_2021***
+***Snakemake and transcript characterization pipelines were initially written by Taylor Reiter and adapted from Bensidoun_et_al_2021***
