@@ -1,0 +1,1051 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!-- Document definition -->
+<!DOCTYPE MEME[
+<!ELEMENT MEME (
+  training_set,
+  model, 
+  motifs, 
+  scanned_sites_summary?
+)>
+<!ATTLIST MEME 
+  version CDATA #REQUIRED
+  release CDATA #REQUIRED
+>
+<!-- Training-set elements -->
+<!ELEMENT training_set (alphabet, ambigs, sequence*, letter_frequencies)>
+<!ATTLIST training_set primary_sequences CDATA #REQUIRED primary_count CDATA #REQUIRED primary_positions CDATA #REQUIRED
+  control_sequences CDATA "" control_count CDATA "" control_positions CDATA "">
+<!ELEMENT alphabet (letter*)>
+<!ATTLIST alphabet name CDATA #REQUIRED>
+<!ELEMENT ambigs (letter*)>
+<!ELEMENT letter EMPTY>
+<!ATTLIST letter id ID #REQUIRED>
+<!ATTLIST letter symbol CDATA #REQUIRED>
+<!ATTLIST letter equals CDATA #IMPLIED>
+<!ATTLIST letter aliases CDATA #IMPLIED>
+<!ATTLIST letter complement CDATA #IMPLIED>
+<!ATTLIST letter name CDATA #IMPLIED>
+<!ATTLIST letter colour CDATA #IMPLIED>
+<!ELEMENT sequence EMPTY>
+<!ATTLIST sequence id ID #REQUIRED
+                   name CDATA #REQUIRED
+                   length CDATA #REQUIRED
+                   weight CDATA #REQUIRED
+>
+<!ELEMENT letter_frequencies (alphabet_array)>
+
+<!-- Model elements -->
+<!ELEMENT model (
+  command_line,
+  host,
+  type,
+  nmotifs,
+  evalue_threshold,
+  object_function,
+  spfun,
+  min_width,
+  max_width,
+  wg,
+  ws,
+  endgaps,
+  minsites,
+  maxsites,
+  wnsites,
+  spmap,
+  spfuzz,
+  prior,
+  beta,
+  maxiter,
+  distance,
+  num_positions,
+  seed,
+  hsfrac,
+  searchsize,
+  maxsize,
+  norand,
+  csites,
+  strands,
+  brief,
+  psp_file,
+  priors_file,
+  reason_for_stopping,
+  background_frequencies
+)>
+<!ELEMENT command_line (#PCDATA)*>
+<!ELEMENT host (#PCDATA)*>
+<!ELEMENT type (#PCDATA)*>
+<!ELEMENT nmotifs (#PCDATA)*>
+<!ELEMENT evalue_threshold (#PCDATA)*>
+<!ELEMENT object_function (#PCDATA)*>
+<!ELEMENT spfun (#PCDATA)*>
+<!ELEMENT min_width (#PCDATA)*>
+<!ELEMENT max_width (#PCDATA)*>
+<!ELEMENT wg (#PCDATA)*>
+<!ELEMENT ws (#PCDATA)*>
+<!ELEMENT endgaps (#PCDATA)*>
+<!ELEMENT minsites (#PCDATA)*>
+<!ELEMENT maxsites (#PCDATA)*>
+<!ELEMENT wnsites (#PCDATA)*>
+<!ELEMENT spmap (#PCDATA)*>
+<!ELEMENT spfuzz (#PCDATA)*>
+<!ELEMENT prior (#PCDATA)*>
+<!ELEMENT beta (#PCDATA)*>
+<!ELEMENT maxiter (#PCDATA)*>
+<!ELEMENT distance (#PCDATA)*>
+<!ELEMENT num_positions (#PCDATA)*>
+<!ELEMENT seed (#PCDATA)*>
+<!ELEMENT hsfrac (#PCDATA)*>
+<!ELEMENT searchsize (#PCDATA)*>
+<!ELEMENT maxsize (#PCDATA)*>
+<!ELEMENT norand (#PCDATA)*>
+<!ELEMENT csites (#PCDATA)*>
+<!ELEMENT strands (#PCDATA)*>
+<!ELEMENT brief (#PCDATA)*>
+<!ELEMENT psp_file (#PCDATA)*>
+<!ELEMENT priors_file (#PCDATA)*>
+<!ELEMENT reason_for_stopping (#PCDATA)*>
+<!ELEMENT background_frequencies (alphabet_array)>
+<!ATTLIST background_frequencies source CDATA #REQUIRED
+		   order CDATA #REQUIRED>
+
+<!-- Motif elements -->
+<!ELEMENT motifs (motif*)>
+<!ELEMENT motif (scores, probabilities, regular_expression?, contributing_sites)>
+<!ATTLIST motif id ID #REQUIRED
+                name CDATA #REQUIRED
+                alt CDATA ""
+                width CDATA #REQUIRED
+                sites CDATA #REQUIRED
+                ic CDATA #REQUIRED
+                re CDATA #REQUIRED
+                llr CDATA #REQUIRED
+                p_value CDATA #REQUIRED
+                e_value CDATA #REQUIRED
+                bayes_threshold CDATA #REQUIRED
+                elapsed_time CDATA #REQUIRED
+                url CDATA ""
+>
+<!ELEMENT scores (alphabet_matrix)>
+<!ELEMENT probabilities (alphabet_matrix)>
+<!ELEMENT regular_expression (#PCDATA)*>
+
+<!-- Contributing site elements -->
+<!-- Contributing sites are motif occurences found during the motif discovery phase -->
+<!ELEMENT contributing_sites (contributing_site*)>
+<!ELEMENT contributing_site (left_flank, site, right_flank)>
+<!ATTLIST contributing_site sequence_id IDREF #REQUIRED
+                          position CDATA #REQUIRED
+                          strand (plus|minus|none) 'none'
+                          pvalue CDATA #REQUIRED
+>
+<!-- The left_flank contains the sequence for 10 bases to the left of the motif start -->
+<!ELEMENT left_flank (#PCDATA)>
+<!-- The site contains the sequence for the motif instance -->
+<!ELEMENT site (letter_ref*)>
+<!-- The right_flank contains the sequence for 10 bases to the right of the motif end -->
+<!ELEMENT right_flank (#PCDATA)>
+
+<!-- Scanned site elements -->
+<!-- Scanned sites are motif occurences found during the sequence scan phase -->
+<!ELEMENT scanned_sites_summary (scanned_sites*)>
+<!ATTLIST scanned_sites_summary p_thresh CDATA #REQUIRED>
+<!ELEMENT scanned_sites (scanned_site*)>
+<!ATTLIST scanned_sites sequence_id IDREF #REQUIRED
+                        pvalue CDATA #REQUIRED
+                        num_sites CDATA #REQUIRED>
+<!ELEMENT scanned_site EMPTY>
+<!ATTLIST scanned_site  motif_id IDREF #REQUIRED
+                        strand (plus|minus|none) 'none'
+                        position CDATA #REQUIRED
+                        pvalue CDATA #REQUIRED>
+
+<!-- Utility elements -->
+<!-- A reference to a letter in the alphabet -->
+<!ELEMENT letter_ref EMPTY>
+<!ATTLIST letter_ref letter_id IDREF #REQUIRED>
+<!-- A alphabet-array contains one floating point value for each letter in an alphabet -->
+<!ELEMENT alphabet_array (value*)>
+<!ELEMENT value (#PCDATA)>
+<!ATTLIST value letter_id IDREF #REQUIRED>
+
+<!-- A alphabet_matrix contains one alphabet_array for each position in a motif -->
+<!ELEMENT alphabet_matrix (alphabet_array*)>
+
+]>
+<!-- Begin document body -->
+<MEME version="5.5.1" release="Sun Jan 29 10:33:12 2023 -0800">
+<training_set primary_sequences="Cbp80Hpr1_RNApar.fa" primary_count="801" primary_positions="1216410" control_sequences="--none--" control_count="0" control_positions="0">
+<alphabet name="RNA" like="rna">
+<letter id="A" symbol="A" name="Adenine" colour="CC0000"/>
+<letter id="C" symbol="C" name="Cytosine" colour="0000CC"/>
+<letter id="G" symbol="G" name="Guanine" colour="FFB300"/>
+<letter id="U" symbol="U" aliases="T" name="Uracil" colour="008000"/>
+<letter id="N" symbol="N" aliases="X." equals="ACGU" name="Any base"/>
+<letter id="V" symbol="V" equals="ACG" name="Not U"/>
+<letter id="H" symbol="H" equals="ACU" name="Not G"/>
+<letter id="D" symbol="D" equals="AGU" name="Not C"/>
+<letter id="B" symbol="B" equals="CGU" name="Not A"/>
+<letter id="M" symbol="M" equals="AC" name="Amino"/>
+<letter id="R" symbol="R" equals="AG" name="Purine"/>
+<letter id="W" symbol="W" equals="AU" name="Weak"/>
+<letter id="S" symbol="S" equals="CG" name="Strong"/>
+<letter id="Y" symbol="Y" equals="CU" name="Pyrimidine"/>
+<letter id="K" symbol="K" equals="GU" name="Keto"/>
+</alphabet>
+<sequence id="sequence_0" name="YAL046C" length="356" weight="1.000000" />
+<sequence id="sequence_1" name="YAL044W-A" length="332" weight="1.000000" />
+<sequence id="sequence_2" name="YAL044C" length="512" weight="1.000000" />
+<sequence id="sequence_3" name="YAL040C" length="1742" weight="1.000000" />
+<sequence id="sequence_4" name="YAL038W" length="1502" weight="1.000000" />
+<sequence id="sequence_5" name="YAL034C" length="1241" weight="1.000000" />
+<sequence id="sequence_6" name="YAL030W" length="466" weight="1.000000" />
+<sequence id="sequence_7" name="YAL007C" length="647" weight="1.000000" />
+<sequence id="sequence_8" name="YAR002C-A" length="659" weight="1.000000" />
+<sequence id="sequence_9" name="YAR014C" length="2129" weight="1.000000" />
+<sequence id="sequence_10" name="YAR027W" length="707" weight="1.000000" />
+<sequence id="sequence_11" name="YAR042W" length="3566" weight="1.000000" />
+<sequence id="sequence_12" name="YBL105C" length="3455" weight="1.000000" />
+<sequence id="sequence_13" name="YBL103C" length="1460" weight="1.000000" />
+<sequence id="sequence_14" name="YBL099W" length="1637" weight="1.000000" />
+<sequence id="sequence_15" name="YBL092W" length="725" weight="1.000000" />
+<sequence id="sequence_16" name="YBL089W" length="1379" weight="1.000000" />
+<sequence id="sequence_17" name="YBL087C" length="917" weight="1.000000" />
+<sequence id="sequence_18" name="YBL072C" length="917" weight="1.000000" />
+<sequence id="sequence_19" name="YBL069W" length="1289" weight="1.000000" />
+<sequence id="sequence_20" name="YBL046W" length="1325" weight="1.000000" />
+<sequence id="sequence_21" name="YBL043W" length="773" weight="1.000000" />
+<sequence id="sequence_22" name="YBL039C" length="1739" weight="1.000000" />
+<sequence id="sequence_23" name="YBL033C" length="1037" weight="1.000000" />
+<sequence id="sequence_24" name="YBL030C" length="956" weight="1.000000" />
+<sequence id="sequence_25" name="YBL027W" length="953" weight="1.000000" />
+<sequence id="sequence_26" name="YBL011W" length="2279" weight="1.000000" />
+<sequence id="sequence_27" name="YBL003C" length="398" weight="1.000000" />
+<sequence id="sequence_28" name="YBL002W" length="395" weight="1.000000" />
+<sequence id="sequence_29" name="YBR001C" length="2342" weight="1.000000" />
+<sequence id="sequence_30" name="YBR002C" length="860" weight="1.000000" />
+<sequence id="sequence_31" name="YBR011C" length="863" weight="1.000000" />
+<sequence id="sequence_32" name="YBR023C" length="3497" weight="1.000000" />
+<sequence id="sequence_33" name="YBR031W" length="1088" weight="1.000000" />
+<sequence id="sequence_34" name="YBR034C" length="1046" weight="1.000000" />
+<sequence id="sequence_35" name="YBR035C" length="686" weight="1.000000" />
+<sequence id="sequence_36" name="YBR036C" length="1232" weight="1.000000" />
+<sequence id="sequence_37" name="YBR041W" length="2009" weight="1.000000" />
+<sequence id="sequence_38" name="YBR054W" length="1034" weight="1.000000" />
+<sequence id="sequence_39" name="YBR058C-A" length="242" weight="1.000000" />
+<sequence id="sequence_40" name="YBR067C" length="632" weight="1.000000" />
+<sequence id="sequence_41" name="YBR068C" length="1829" weight="1.000000" />
+<sequence id="sequence_42" name="YBR069C" length="1859" weight="1.000000" />
+<sequence id="sequence_43" name="YBR084C-A" length="1075" weight="1.000000" />
+<sequence id="sequence_44" name="YBR088C" length="776" weight="1.000000" />
+<sequence id="sequence_45" name="YBR094W" length="2261" weight="1.000000" />
+<sequence id="sequence_46" name="YBR106W" length="566" weight="1.000000" />
+<sequence id="sequence_47" name="YBR107C" length="737" weight="1.000000" />
+<sequence id="sequence_48" name="YBR109C" length="443" weight="1.000000" />
+<sequence id="sequence_49" name="YBR112C" length="2900" weight="1.000000" />
+<sequence id="sequence_50" name="YBR114W" length="2372" weight="1.000000" />
+<sequence id="sequence_51" name="YBR118W" length="1376" weight="1.000000" />
+<sequence id="sequence_52" name="YBR126C" length="1487" weight="1.000000" />
+<sequence id="sequence_53" name="YBR132C" length="1790" weight="1.000000" />
+<sequence id="sequence_54" name="YBR133C" length="2483" weight="1.000000" />
+<sequence id="sequence_55" name="YBR143C" length="1313" weight="1.000000" />
+<sequence id="sequence_56" name="YBR159W" length="1043" weight="1.000000" />
+<sequence id="sequence_57" name="YBR166C" length="1358" weight="1.000000" />
+<sequence id="sequence_58" name="YBR167C" length="422" weight="1.000000" />
+<sequence id="sequence_59" name="YBR169C" length="2081" weight="1.000000" />
+<sequence id="sequence_60" name="YBR170C" length="1742" weight="1.000000" />
+<sequence id="sequence_61" name="YBR171W" length="620" weight="1.000000" />
+<sequence id="sequence_62" name="YBR181C" length="1062" weight="1.000000" />
+<sequence id="sequence_63" name="YBR183W" length="950" weight="1.000000" />
+<sequence id="sequence_64" name="YBR202W" length="2537" weight="1.000000" />
+<sequence id="sequence_65" name="YBR214W" length="1583" weight="1.000000" />
+<sequence id="sequence_66" name="YBR216C" length="2024" weight="1.000000" />
+<sequence id="sequence_67" name="YBR223C" length="1634" weight="1.000000" />
+<sequence id="sequence_68" name="YBR233W" length="1241" weight="1.000000" />
+<sequence id="sequence_69" name="YBR234C" length="1154" weight="1.000000" />
+<sequence id="sequence_70" name="YBR235W" length="3362" weight="1.000000" />
+<sequence id="sequence_71" name="YBR237W" length="2549" weight="1.000000" />
+<sequence id="sequence_72" name="YBR239C" length="1589" weight="1.000000" />
+<sequence id="sequence_73" name="YBR246W" length="1163" weight="1.000000" />
+<sequence id="sequence_74" name="YBR252W" length="443" weight="1.000000" />
+<sequence id="sequence_75" name="YBR257W" length="839" weight="1.000000" />
+<sequence id="sequence_76" name="YBR265W" length="962" weight="1.000000" />
+<sequence id="sequence_77" name="YBR272C" length="1442" weight="1.000000" />
+<sequence id="sequence_78" name="YBR280C" length="1913" weight="1.000000" />
+<sequence id="sequence_79" name="YBR283C" length="1472" weight="1.000000" />
+<sequence id="sequence_80" name="YBR290W" length="965" weight="1.000000" />
+<sequence id="sequence_81" name="YBR298C" length="1844" weight="1.000000" />
+<sequence id="sequence_82" name="YCL057W" length="2138" weight="1.000000" />
+<sequence id="sequence_83" name="YCL040W" length="1502" weight="1.000000" />
+<sequence id="sequence_84" name="YCL030C" length="2399" weight="1.000000" />
+<sequence id="sequence_85" name="YCL025C" length="1901" weight="1.000000" />
+<sequence id="sequence_86" name="YCL010C" length="779" weight="1.000000" />
+<sequence id="sequence_87" name="YCL005W-A" length="394" weight="1.000000" />
+<sequence id="sequence_88" name="YCL001W" length="566" weight="1.000000" />
+<sequence id="sequence_89" name="YCR005C" length="1382" weight="1.000000" />
+<sequence id="sequence_90" name="YCR008W" length="1811" weight="1.000000" />
+<sequence id="sequence_91" name="YCR012W" length="1250" weight="1.000000" />
+<sequence id="sequence_92" name="YCR017C" length="2861" weight="1.000000" />
+<sequence id="sequence_93" name="YCR021C" length="998" weight="1.000000" />
+<sequence id="sequence_94" name="YCR028C" length="1538" weight="1.000000" />
+<sequence id="sequence_95" name="YCR028C-A" length="490" weight="1.000000" />
+<sequence id="sequence_96" name="YCR031C" length="720" weight="1.000000" />
+<sequence id="sequence_97" name="YCR033W" length="3680" weight="1.000000" />
+<sequence id="sequence_98" name="YCR054C" length="1691" weight="1.000000" />
+<sequence id="sequence_99" name="YCR081W" length="4283" weight="1.000000" />
+<sequence id="sequence_100" name="YCR093W" length="6326" weight="1.000000" />
+<sequence id="sequence_101" name="YDL240W" length="3053" weight="1.000000" />
+<sequence id="sequence_102" name="YDL236W" length="938" weight="1.000000" />
+<sequence id="sequence_103" name="YDL229W" length="1841" weight="1.000000" />
+<sequence id="sequence_104" name="YDL219W" length="523" weight="1.000000" />
+<sequence id="sequence_105" name="YDL212W" length="632" weight="1.000000" />
+<sequence id="sequence_106" name="YDL209C" length="1019" weight="1.000000" />
+<sequence id="sequence_107" name="YDL205C" length="983" weight="1.000000" />
+<sequence id="sequence_108" name="YDL201W" length="860" weight="1.000000" />
+<sequence id="sequence_109" name="YDL192W" length="545" weight="1.000000" />
+<sequence id="sequence_110" name="YDL191W" length="853" weight="1.000000" />
+<sequence id="sequence_111" name="YDL184C" length="77" weight="1.000000" />
+<sequence id="sequence_112" name="YDL173W" length="887" weight="1.000000" />
+<sequence id="sequence_113" name="YDL171C" length="6437" weight="1.000000" />
+<sequence id="sequence_114" name="YDL165W" length="575" weight="1.000000" />
+<sequence id="sequence_115" name="YDL137W" length="916" weight="1.000000" />
+<sequence id="sequence_116" name="YDL135C" length="608" weight="1.000000" />
+<sequence id="sequence_117" name="YDL130W" length="621" weight="1.000000" />
+<sequence id="sequence_118" name="YDL123W" length="422" weight="1.000000" />
+<sequence id="sequence_119" name="YDL115C" length="1131" weight="1.000000" />
+<sequence id="sequence_120" name="YDL111C" length="797" weight="1.000000" />
+<sequence id="sequence_121" name="YDL100C" length="1064" weight="1.000000" />
+<sequence id="sequence_122" name="YDL092W" length="440" weight="1.000000" />
+<sequence id="sequence_123" name="YDL084W" length="1340" weight="1.000000" />
+<sequence id="sequence_124" name="YDL083C" length="863" weight="1.000000" />
+<sequence id="sequence_125" name="YDL082W" length="964" weight="1.000000" />
+<sequence id="sequence_126" name="YDL081C" length="320" weight="1.000000" />
+<sequence id="sequence_127" name="YDL080C" length="1829" weight="1.000000" />
+<sequence id="sequence_128" name="YDL075W" length="762" weight="1.000000" />
+<sequence id="sequence_129" name="YDL061C" length="591" weight="1.000000" />
+<sequence id="sequence_130" name="YDL052C" length="911" weight="1.000000" />
+<sequence id="sequence_131" name="YDL048C" length="1472" weight="1.000000" />
+<sequence id="sequence_132" name="YDL037C" length="986" weight="1.000000" />
+<sequence id="sequence_133" name="YDL033C" length="1253" weight="1.000000" />
+<sequence id="sequence_134" name="YDL022W" length="1175" weight="1.000000" />
+<sequence id="sequence_135" name="YDL010W" length="695" weight="1.000000" />
+<sequence id="sequence_136" name="YDL004W" length="482" weight="1.000000" />
+<sequence id="sequence_137" name="YDR001C" length="2255" weight="1.000000" />
+<sequence id="sequence_138" name="YDR012W" length="1088" weight="1.000000" />
+<sequence id="sequence_139" name="YDR022C" length="590" weight="1.000000" />
+<sequence id="sequence_140" name="YDR025W" length="809" weight="1.000000" />
+<sequence id="sequence_141" name="YDR033W" length="962" weight="1.000000" />
+<sequence id="sequence_142" name="YDR035W" length="1112" weight="1.000000" />
+<sequence id="sequence_143" name="YDR046C" length="1814" weight="1.000000" />
+<sequence id="sequence_144" name="YDR050C" length="746" weight="1.000000" />
+<sequence id="sequence_145" name="YDR055W" length="1334" weight="1.000000" />
+<sequence id="sequence_146" name="YDR063W" length="449" weight="1.000000" />
+<sequence id="sequence_147" name="YDR064W" length="994" weight="1.000000" />
+<sequence id="sequence_148" name="YDR071C" length="575" weight="1.000000" />
+<sequence id="sequence_149" name="YDR072C" length="1583" weight="1.000000" />
+<sequence id="sequence_150" name="YDR074W" length="2690" weight="1.000000" />
+<sequence id="sequence_151" name="YDR077W" length="1016" weight="1.000000" />
+<sequence id="sequence_152" name="YDR086C" length="242" weight="1.000000" />
+<sequence id="sequence_153" name="YDR096W" length="2684" weight="1.000000" />
+<sequence id="sequence_154" name="YDR120C" length="1712" weight="1.000000" />
+<sequence id="sequence_155" name="YDR127W" length="4766" weight="1.000000" />
+<sequence id="sequence_156" name="YDR139C" length="306" weight="1.000000" />
+<sequence id="sequence_157" name="YDR151C" length="977" weight="1.000000" />
+<sequence id="sequence_158" name="YDR155C" length="488" weight="1.000000" />
+<sequence id="sequence_159" name="YDR160W" length="2558" weight="1.000000" />
+<sequence id="sequence_160" name="YDR164C" length="2174" weight="1.000000" />
+<sequence id="sequence_161" name="YDR170C" length="6029" weight="1.000000" />
+<sequence id="sequence_162" name="YDR171W" length="1127" weight="1.000000" />
+<sequence id="sequence_163" name="YDR173C" length="1067" weight="1.000000" />
+<sequence id="sequence_164" name="YDR178W" length="545" weight="1.000000" />
+<sequence id="sequence_165" name="YDR188W" length="1640" weight="1.000000" />
+<sequence id="sequence_166" name="YDR190C" length="1391" weight="1.000000" />
+<sequence id="sequence_167" name="YDR194C" length="1994" weight="1.000000" />
+<sequence id="sequence_168" name="YDR211W" length="2138" weight="1.000000" />
+<sequence id="sequence_169" name="YDR221W" length="2108" weight="1.000000" />
+<sequence id="sequence_170" name="YDR224C" length="395" weight="1.000000" />
+<sequence id="sequence_171" name="YDR225W" length="398" weight="1.000000" />
+<sequence id="sequence_172" name="YDR226W" length="668" weight="1.000000" />
+<sequence id="sequence_173" name="YDR228C" length="1880" weight="1.000000" />
+<sequence id="sequence_174" name="YDR232W" length="1646" weight="1.000000" />
+<sequence id="sequence_175" name="YDR238C" length="2921" weight="1.000000" />
+<sequence id="sequence_176" name="YDR242W" length="1649" weight="1.000000" />
+<sequence id="sequence_177" name="YDR247W" length="1385" weight="1.000000" />
+<sequence id="sequence_178" name="YDR264C" length="2294" weight="1.000000" />
+<sequence id="sequence_179" name="YDR275W" length="707" weight="1.000000" />
+<sequence id="sequence_180" name="YDR279W" length="1052" weight="1.000000" />
+<sequence id="sequence_181" name="YDR282C" length="1244" weight="1.000000" />
+<sequence id="sequence_182" name="YDR283C" length="4979" weight="1.000000" />
+<sequence id="sequence_183" name="YDR288W" length="911" weight="1.000000" />
+<sequence id="sequence_184" name="YDR293C" length="3752" weight="1.000000" />
+<sequence id="sequence_185" name="YDR302W" length="659" weight="1.000000" />
+<sequence id="sequence_186" name="YDR304C" length="677" weight="1.000000" />
+<sequence id="sequence_187" name="YDR319C" length="824" weight="1.000000" />
+<sequence id="sequence_188" name="YDR321W" length="1145" weight="1.000000" />
+<sequence id="sequence_189" name="YDR334W" length="4544" weight="1.000000" />
+<sequence id="sequence_190" name="YDR345C" length="1703" weight="1.000000" />
+<sequence id="sequence_191" name="YDR346C" length="1445" weight="1.000000" />
+<sequence id="sequence_192" name="YDR368W" length="938" weight="1.000000" />
+<sequence id="sequence_193" name="YDR382W" length="332" weight="1.000000" />
+<sequence id="sequence_194" name="YDR385W" length="2528" weight="1.000000" />
+<sequence id="sequence_195" name="YDR399W" length="665" weight="1.000000" />
+<sequence id="sequence_196" name="YDR411C" length="1025" weight="1.000000" />
+<sequence id="sequence_197" name="YDR416W" length="2579" weight="1.000000" />
+<sequence id="sequence_198" name="YDR418W" length="497" weight="1.000000" />
+<sequence id="sequence_199" name="YDR419W" length="1898" weight="1.000000" />
+<sequence id="sequence_200" name="YDR432W" length="1244" weight="1.000000" />
+<sequence id="sequence_201" name="YDR441C" length="545" weight="1.000000" />
+<sequence id="sequence_202" name="YDR447C" length="724" weight="1.000000" />
+<sequence id="sequence_203" name="YDR450W" length="875" weight="1.000000" />
+<sequence id="sequence_204" name="YDR451C" length="1061" weight="1.000000" />
+<sequence id="sequence_205" name="YDR454C" length="563" weight="1.000000" />
+<sequence id="sequence_206" name="YDR466W" length="2696" weight="1.000000" />
+<sequence id="sequence_207" name="YDR471W" length="794" weight="1.000000" />
+<sequence id="sequence_208" name="YDR481C" length="1700" weight="1.000000" />
+<sequence id="sequence_209" name="YDR485C" length="2387" weight="1.000000" />
+<sequence id="sequence_210" name="YDR492W" length="950" weight="1.000000" />
+<sequence id="sequence_211" name="YDR498C" length="1151" weight="1.000000" />
+<sequence id="sequence_212" name="YDR502C" length="1154" weight="1.000000" />
+<sequence id="sequence_213" name="YDR508C" length="1991" weight="1.000000" />
+<sequence id="sequence_214" name="YDR510W" length="305" weight="1.000000" />
+<sequence id="sequence_215" name="YDR513W" length="431" weight="1.000000" />
+<sequence id="sequence_216" name="YIL148W" length="820" weight="1.000000" />
+<sequence id="sequence_217" name="YIL137C" length="2840" weight="1.000000" />
+<sequence id="sequence_218" name="YIL133C" length="889" weight="1.000000" />
+<sequence id="sequence_219" name="YIL130W" length="2894" weight="1.000000" />
+<sequence id="sequence_220" name="YIL129C" length="7130" weight="1.000000" />
+<sequence id="sequence_221" name="YIL125W" length="3044" weight="1.000000" />
+<sequence id="sequence_222" name="YIL121W" length="1628" weight="1.000000" />
+<sequence id="sequence_223" name="YIL094C" length="1115" weight="1.000000" />
+<sequence id="sequence_224" name="YIL084C" length="983" weight="1.000000" />
+<sequence id="sequence_225" name="YIL053W" length="752" weight="1.000000" />
+<sequence id="sequence_226" name="YIL052C" length="837" weight="1.000000" />
+<sequence id="sequence_227" name="YIL047C" length="2708" weight="1.000000" />
+<sequence id="sequence_228" name="YIL046W" length="1922" weight="1.000000" />
+<sequence id="sequence_229" name="YIL020C" length="785" weight="1.000000" />
+<sequence id="sequence_230" name="YIL018W" length="1164" weight="1.000000" />
+<sequence id="sequence_231" name="YIL015W" length="1763" weight="1.000000" />
+<sequence id="sequence_232" name="YIL009W" length="2084" weight="1.000000" />
+<sequence id="sequence_233" name="YIL008W" length="299" weight="1.000000" />
+<sequence id="sequence_234" name="YIR022W" length="503" weight="1.000000" />
+<sequence id="sequence_235" name="YIR037W" length="491" weight="1.000000" />
+<sequence id="sequence_236" name="YIR038C" length="704" weight="1.000000" />
+<sequence id="sequence_237" name="YEL063C" length="1772" weight="1.000000" />
+<sequence id="sequence_238" name="YEL060C" length="1907" weight="1.000000" />
+<sequence id="sequence_239" name="YEL054C" length="497" weight="1.000000" />
+<sequence id="sequence_240" name="YEL051W" length="770" weight="1.000000" />
+<sequence id="sequence_241" name="YEL048C" length="458" weight="1.000000" />
+<sequence id="sequence_242" name="YEL047C" length="1412" weight="1.000000" />
+<sequence id="sequence_243" name="YEL046C" length="1163" weight="1.000000" />
+<sequence id="sequence_244" name="YEL040W" length="1403" weight="1.000000" />
+<sequence id="sequence_245" name="YEL033W" length="419" weight="1.000000" />
+<sequence id="sequence_246" name="YEL026W" length="380" weight="1.000000" />
+<sequence id="sequence_247" name="YEL017C-A" length="131" weight="1.000000" />
+<sequence id="sequence_248" name="YEL011W" length="2114" weight="1.000000" />
+<sequence id="sequence_249" name="YEL002C" length="1292" weight="1.000000" />
+<sequence id="sequence_250" name="YER001W" length="2288" weight="1.000000" />
+<sequence id="sequence_251" name="YER003C" length="1382" weight="1.000000" />
+<sequence id="sequence_252" name="YER007C-A" length="648" weight="1.000000" />
+<sequence id="sequence_253" name="YER023W" length="860" weight="1.000000" />
+<sequence id="sequence_254" name="YER025W" length="1583" weight="1.000000" />
+<sequence id="sequence_255" name="YER031C" length="671" weight="1.000000" />
+<sequence id="sequence_256" name="YER043C" length="1349" weight="1.000000" />
+<sequence id="sequence_257" name="YER053C" length="902" weight="1.000000" />
+<sequence id="sequence_258" name="YER055C" length="893" weight="1.000000" />
+<sequence id="sequence_259" name="YER056C-A" length="762" weight="1.000000" />
+<sequence id="sequence_260" name="YER064C" length="1517" weight="1.000000" />
+<sequence id="sequence_261" name="YER070W" length="2666" weight="1.000000" />
+<sequence id="sequence_262" name="YER072W" length="389" weight="1.000000" />
+<sequence id="sequence_263" name="YER073W" length="1562" weight="1.000000" />
+<sequence id="sequence_264" name="YER074W" length="873" weight="1.000000" />
+<sequence id="sequence_265" name="YER077C" length="2066" weight="1.000000" />
+<sequence id="sequence_266" name="YER081W" length="1409" weight="1.000000" />
+<sequence id="sequence_267" name="YER087C-B" length="248" weight="1.000000" />
+<sequence id="sequence_268" name="YER088C" length="2012" weight="1.000000" />
+<sequence id="sequence_269" name="YER090W" length="1523" weight="1.000000" />
+<sequence id="sequence_270" name="YER102W" length="969" weight="1.000000" />
+<sequence id="sequence_271" name="YER117W" length="884" weight="1.000000" />
+<sequence id="sequence_272" name="YER120W" length="734" weight="1.000000" />
+<sequence id="sequence_273" name="YER123W" length="1574" weight="1.000000" />
+<sequence id="sequence_274" name="YER124C" length="1721" weight="1.000000" />
+<sequence id="sequence_275" name="YER130C" length="1331" weight="1.000000" />
+<sequence id="sequence_276" name="YER141W" length="1460" weight="1.000000" />
+<sequence id="sequence_277" name="YER145C" length="1214" weight="1.000000" />
+<sequence id="sequence_278" name="YER146W" length="281" weight="1.000000" />
+<sequence id="sequence_279" name="YER183C" length="635" weight="1.000000" />
+<sequence id="sequence_280" name="YFL049W" length="1871" weight="1.000000" />
+<sequence id="sequence_281" name="YFL044C" length="905" weight="1.000000" />
+<sequence id="sequence_282" name="YFL039C" length="1436" weight="1.000000" />
+<sequence id="sequence_283" name="YFL037W" length="1373" weight="1.000000" />
+<sequence id="sequence_284" name="YFL036W" length="4055" weight="1.000000" />
+<sequence id="sequence_285" name="YFL033C" length="5312" weight="1.000000" />
+<sequence id="sequence_286" name="YFL031W" length="968" weight="1.000000" />
+<sequence id="sequence_287" name="YFL024C" length="2498" weight="1.000000" />
+<sequence id="sequence_288" name="YFL016C" length="1535" weight="1.000000" />
+<sequence id="sequence_289" name="YFR015C" length="2126" weight="1.000000" />
+<sequence id="sequence_290" name="YFR022W" length="2201" weight="1.000000" />
+<sequence id="sequence_291" name="YFR031C-A" length="911" weight="1.000000" />
+<sequence id="sequence_292" name="YFR032C-A" length="513" weight="1.000000" />
+<sequence id="sequence_293" name="YFR034C" length="938" weight="1.000000" />
+<sequence id="sequence_294" name="YFR043C" length="713" weight="1.000000" />
+<sequence id="sequence_295" name="YFR044C" length="1445" weight="1.000000" />
+<sequence id="sequence_296" name="YFR053C" length="1457" weight="1.000000" />
+<sequence id="sequence_297" name="YFR055W" length="1022" weight="1.000000" />
+<sequence id="sequence_298" name="YGL244W" length="1676" weight="1.000000" />
+<sequence id="sequence_299" name="YGL231C" length="572" weight="1.000000" />
+<sequence id="sequence_300" name="YGL226W" length="371" weight="1.000000" />
+<sequence id="sequence_301" name="YGL225W" length="1013" weight="1.000000" />
+<sequence id="sequence_302" name="YGL221C" length="866" weight="1.000000" />
+<sequence id="sequence_303" name="YGL215W" length="1358" weight="1.000000" />
+<sequence id="sequence_304" name="YGL203C" length="2189" weight="1.000000" />
+<sequence id="sequence_305" name="YGL200C" length="611" weight="1.000000" />
+<sequence id="sequence_306" name="YGL198W" length="707" weight="1.000000" />
+<sequence id="sequence_307" name="YGL197W" length="4463" weight="1.000000" />
+<sequence id="sequence_308" name="YGL190C" length="1580" weight="1.000000" />
+<sequence id="sequence_309" name="YGL189C" length="737" weight="1.000000" />
+<sequence id="sequence_310" name="YGL179C" length="1682" weight="1.000000" />
+<sequence id="sequence_311" name="YGL178W" length="3219" weight="1.000000" />
+<sequence id="sequence_312" name="YGL167C" length="2852" weight="1.000000" />
+<sequence id="sequence_313" name="YGL163C" length="2696" weight="1.000000" />
+<sequence id="sequence_314" name="YGL148W" length="1130" weight="1.000000" />
+<sequence id="sequence_315" name="YGL147C" length="575" weight="1.000000" />
+<sequence id="sequence_316" name="YGL135W" length="653" weight="1.000000" />
+<sequence id="sequence_317" name="YGL133W" length="3794" weight="1.000000" />
+<sequence id="sequence_318" name="YGL126W" length="1142" weight="1.000000" />
+<sequence id="sequence_319" name="YGL123W" length="764" weight="1.000000" />
+<sequence id="sequence_320" name="YGL122C" length="1577" weight="1.000000" />
+<sequence id="sequence_321" name="YGL105W" length="1130" weight="1.000000" />
+<sequence id="sequence_322" name="YGL103W" length="960" weight="1.000000" />
+<sequence id="sequence_323" name="YGL100W" length="1049" weight="1.000000" />
+<sequence id="sequence_324" name="YGL090W" length="1265" weight="1.000000" />
+<sequence id="sequence_325" name="YGL076C" length="1661" weight="1.000000" />
+<sequence id="sequence_326" name="YGL066W" length="1973" weight="1.000000" />
+<sequence id="sequence_327" name="YGL062W" length="3536" weight="1.000000" />
+<sequence id="sequence_328" name="YGL055W" length="1532" weight="1.000000" />
+<sequence id="sequence_329" name="YGL038C" length="1442" weight="1.000000" />
+<sequence id="sequence_330" name="YGL035C" length="1514" weight="1.000000" />
+<sequence id="sequence_331" name="YGL032C" length="263" weight="1.000000" />
+<sequence id="sequence_332" name="YGL031C" length="930" weight="1.000000" />
+<sequence id="sequence_333" name="YGL030W" length="547" weight="1.000000" />
+<sequence id="sequence_334" name="YGL028C" length="1628" weight="1.000000" />
+<sequence id="sequence_335" name="YGL026C" length="2123" weight="1.000000" />
+<sequence id="sequence_336" name="YGL010W" length="524" weight="1.000000" />
+<sequence id="sequence_337" name="YGL008C" length="2756" weight="1.000000" />
+<sequence id="sequence_338" name="YGL006W" length="3521" weight="1.000000" />
+<sequence id="sequence_339" name="YGR006W" length="755" weight="1.000000" />
+<sequence id="sequence_340" name="YGR014W" length="3920" weight="1.000000" />
+<sequence id="sequence_341" name="YGR027C" length="653" weight="1.000000" />
+<sequence id="sequence_342" name="YGR032W" length="5687" weight="1.000000" />
+<sequence id="sequence_343" name="YGR034W" length="860" weight="1.000000" />
+<sequence id="sequence_344" name="YGR037C" length="263" weight="1.000000" />
+<sequence id="sequence_345" name="YGR072W" length="1163" weight="1.000000" />
+<sequence id="sequence_346" name="YGR085C" length="524" weight="1.000000" />
+<sequence id="sequence_347" name="YGR094W" length="3314" weight="1.000000" />
+<sequence id="sequence_348" name="YGR108W" length="1415" weight="1.000000" />
+<sequence id="sequence_349" name="YGR118W" length="756" weight="1.000000" />
+<sequence id="sequence_350" name="YGR124W" length="1718" weight="1.000000" />
+<sequence id="sequence_351" name="YGR138C" length="1844" weight="1.000000" />
+<sequence id="sequence_352" name="YGR142W" length="1232" weight="1.000000" />
+<sequence id="sequence_353" name="YGR143W" length="2315" weight="1.000000" />
+<sequence id="sequence_354" name="YGR146C" length="635" weight="1.000000" />
+<sequence id="sequence_355" name="YGR148C" length="866" weight="1.000000" />
+<sequence id="sequence_356" name="YGR155W" length="1523" weight="1.000000" />
+<sequence id="sequence_357" name="YGR169C-A" length="278" weight="1.000000" />
+<sequence id="sequence_358" name="YGR175C" length="1490" weight="1.000000" />
+<sequence id="sequence_359" name="YGR189C" length="1523" weight="1.000000" />
+<sequence id="sequence_360" name="YGR194C" length="1802" weight="1.000000" />
+<sequence id="sequence_361" name="YGR198W" length="2453" weight="1.000000" />
+<sequence id="sequence_362" name="YGR214W" length="1213" weight="1.000000" />
+<sequence id="sequence_363" name="YGR217W" length="6119" weight="1.000000" />
+<sequence id="sequence_364" name="YGR218W" length="3254" weight="1.000000" />
+<sequence id="sequence_365" name="YGR220C" length="809" weight="1.000000" />
+<sequence id="sequence_366" name="YGR227W" length="1577" weight="1.000000" />
+<sequence id="sequence_367" name="YGR229C" length="1517" weight="1.000000" />
+<sequence id="sequence_368" name="YGR232W" length="686" weight="1.000000" />
+<sequence id="sequence_369" name="YGR254W" length="1313" weight="1.000000" />
+<sequence id="sequence_370" name="YGR261C" length="2429" weight="1.000000" />
+<sequence id="sequence_371" name="YGR262C" length="785" weight="1.000000" />
+<sequence id="sequence_372" name="YGR279C" length="1160" weight="1.000000" />
+<sequence id="sequence_373" name="YGR281W" length="4433" weight="1.000000" />
+<sequence id="sequence_374" name="YGR285C" length="1301" weight="1.000000" />
+<sequence id="sequence_375" name="YGR288W" length="1421" weight="1.000000" />
+<sequence id="sequence_376" name="YGR295C" length="1145" weight="1.000000" />
+<sequence id="sequence_377" name="YHL047C" length="1862" weight="1.000000" />
+<sequence id="sequence_378" name="YHL039W" length="1757" weight="1.000000" />
+<sequence id="sequence_379" name="YHL028W" length="1817" weight="1.000000" />
+<sequence id="sequence_380" name="YHL010C" length="1757" weight="1.000000" />
+<sequence id="sequence_381" name="YHL006C" length="452" weight="1.000000" />
+<sequence id="sequence_382" name="YHL001W" length="814" weight="1.000000" />
+<sequence id="sequence_383" name="YHR002W" length="1073" weight="1.000000" />
+<sequence id="sequence_384" name="YHR010W" length="971" weight="1.000000" />
+<sequence id="sequence_385" name="YHR013C" length="716" weight="1.000000" />
+<sequence id="sequence_386" name="YHR019C" length="1664" weight="1.000000" />
+<sequence id="sequence_387" name="YHR032W" length="1745" weight="1.000000" />
+<sequence id="sequence_388" name="YHR036W" length="1415" weight="1.000000" />
+<sequence id="sequence_389" name="YHR039C-A" length="506" weight="1.000000" />
+<sequence id="sequence_390" name="YHR043C" length="740" weight="1.000000" />
+<sequence id="sequence_391" name="YHR046C" length="887" weight="1.000000" />
+<sequence id="sequence_392" name="YHR064C" length="1616" weight="1.000000" />
+<sequence id="sequence_393" name="YHR072W-A" length="176" weight="1.000000" />
+<sequence id="sequence_394" name="YHR073W" length="2990" weight="1.000000" />
+<sequence id="sequence_395" name="YHR092C" length="1730" weight="1.000000" />
+<sequence id="sequence_396" name="YHR094C" length="1712" weight="1.000000" />
+<sequence id="sequence_397" name="YHR102W" length="3242" weight="1.000000" />
+<sequence id="sequence_398" name="YHR115C" length="1250" weight="1.000000" />
+<sequence id="sequence_399" name="YHR134W" length="809" weight="1.000000" />
+<sequence id="sequence_400" name="YHR143W" length="977" weight="1.000000" />
+<sequence id="sequence_401" name="YHR162W" length="389" weight="1.000000" />
+<sequence id="sequence_402" name="YHR174W" length="1313" weight="1.000000" />
+<sequence id="sequence_403" name="YHR183W" length="1469" weight="1.000000" />
+<sequence id="sequence_404" name="YHR186C" length="4673" weight="1.000000" />
+<sequence id="sequence_405" name="YHR193C" length="524" weight="1.000000" />
+<sequence id="sequence_406" name="YHR203C" length="1054" weight="1.000000" />
+<sequence id="sequence_407" name="YJL217W" length="596" weight="1.000000" />
+<sequence id="sequence_408" name="YJL212C" length="2399" weight="1.000000" />
+<sequence id="sequence_409" name="YJL204C" length="2522" weight="1.000000" />
+<sequence id="sequence_410" name="YJL192C" length="704" weight="1.000000" />
+<sequence id="sequence_411" name="YJL190C" length="392" weight="1.000000" />
+<sequence id="sequence_412" name="YJL177W" length="871" weight="1.000000" />
+<sequence id="sequence_413" name="YJL173C" length="368" weight="1.000000" />
+<sequence id="sequence_414" name="YJL171C" length="1190" weight="1.000000" />
+<sequence id="sequence_415" name="YJL165C" length="2567" weight="1.000000" />
+<sequence id="sequence_416" name="YJL164C" length="1193" weight="1.000000" />
+<sequence id="sequence_417" name="YJL162C" length="1751" weight="1.000000" />
+<sequence id="sequence_418" name="YJL159W" length="1241" weight="1.000000" />
+<sequence id="sequence_419" name="YJL143W" length="476" weight="1.000000" />
+<sequence id="sequence_420" name="YJL136C" length="723" weight="1.000000" />
+<sequence id="sequence_421" name="YJL128C" length="2006" weight="1.000000" />
+<sequence id="sequence_422" name="YJL122W" length="527" weight="1.000000" />
+<sequence id="sequence_423" name="YJL102W" length="2459" weight="1.000000" />
+<sequence id="sequence_424" name="YJL101C" length="2036" weight="1.000000" />
+<sequence id="sequence_425" name="YJL096W" length="485" weight="1.000000" />
+<sequence id="sequence_426" name="YJL094C" length="2621" weight="1.000000" />
+<sequence id="sequence_427" name="YJL082W" length="2195" weight="1.000000" />
+<sequence id="sequence_428" name="YJL079C" length="899" weight="1.000000" />
+<sequence id="sequence_429" name="YJL078C" length="2645" weight="1.000000" />
+<sequence id="sequence_430" name="YJL048C" length="1190" weight="1.000000" />
+<sequence id="sequence_431" name="YJL042W" length="4196" weight="1.000000" />
+<sequence id="sequence_432" name="YJL039C" length="5051" weight="1.000000" />
+<sequence id="sequence_433" name="YJL034W" length="2048" weight="1.000000" />
+<sequence id="sequence_434" name="YJR016C" length="1757" weight="1.000000" />
+<sequence id="sequence_435" name="YJR025C" length="533" weight="1.000000" />
+<sequence id="sequence_436" name="YJR035W" length="3257" weight="1.000000" />
+<sequence id="sequence_437" name="YJR042W" length="2234" weight="1.000000" />
+<sequence id="sequence_438" name="YJR045C" length="1964" weight="1.000000" />
+<sequence id="sequence_439" name="YJR052W" length="1697" weight="1.000000" />
+<sequence id="sequence_440" name="YJR059W" length="2456" weight="1.000000" />
+<sequence id="sequence_441" name="YJR091C" length="3275" weight="1.000000" />
+<sequence id="sequence_442" name="YJR094W-A" length="553" weight="1.000000" />
+<sequence id="sequence_443" name="YJR103W" length="1736" weight="1.000000" />
+<sequence id="sequence_444" name="YJR105W" length="1022" weight="1.000000" />
+<sequence id="sequence_445" name="YJR109C" length="3356" weight="1.000000" />
+<sequence id="sequence_446" name="YJR110W" length="2066" weight="1.000000" />
+<sequence id="sequence_447" name="YJR112W" length="605" weight="1.000000" />
+<sequence id="sequence_448" name="YJR117W" length="1361" weight="1.000000" />
+<sequence id="sequence_449" name="YJR121W" length="1535" weight="1.000000" />
+<sequence id="sequence_450" name="YJR123W" length="677" weight="1.000000" />
+<sequence id="sequence_451" name="YJR127C" length="4142" weight="1.000000" />
+<sequence id="sequence_452" name="YJR130C" length="1919" weight="1.000000" />
+<sequence id="sequence_453" name="YJR133W" length="629" weight="1.000000" />
+<sequence id="sequence_454" name="YJR139C" length="1079" weight="1.000000" />
+<sequence id="sequence_455" name="YJR145C" length="1041" weight="1.000000" />
+<sequence id="sequence_456" name="YJR147W" length="1076" weight="1.000000" />
+<sequence id="sequence_457" name="YKL216W" length="944" weight="1.000000" />
+<sequence id="sequence_458" name="YKL213C" length="2147" weight="1.000000" />
+<sequence id="sequence_459" name="YKL212W" length="1871" weight="1.000000" />
+<sequence id="sequence_460" name="YKL210W" length="3074" weight="1.000000" />
+<sequence id="sequence_461" name="YKL209C" length="3872" weight="1.000000" />
+<sequence id="sequence_462" name="YKL207W" length="761" weight="1.000000" />
+<sequence id="sequence_463" name="YKL204W" length="1898" weight="1.000000" />
+<sequence id="sequence_464" name="YKL201C" length="3536" weight="1.000000" />
+<sequence id="sequence_465" name="YKL196C" length="602" weight="1.000000" />
+<sequence id="sequence_466" name="YKL192C" length="377" weight="1.000000" />
+<sequence id="sequence_467" name="YKL191W" length="1604" weight="1.000000" />
+<sequence id="sequence_468" name="YKL184W" length="1400" weight="1.000000" />
+<sequence id="sequence_469" name="YKL180W" length="860" weight="1.000000" />
+<sequence id="sequence_470" name="YKL174C" length="1856" weight="1.000000" />
+<sequence id="sequence_471" name="YKL164C" length="1025" weight="1.000000" />
+<sequence id="sequence_472" name="YKL160W" length="437" weight="1.000000" />
+<sequence id="sequence_473" name="YKL150W" length="1052" weight="1.000000" />
+<sequence id="sequence_474" name="YKL128C" length="887" weight="1.000000" />
+<sequence id="sequence_475" name="YKL125W" length="1883" weight="1.000000" />
+<sequence id="sequence_476" name="YKL120W" length="974" weight="1.000000" />
+<sequence id="sequence_477" name="YKL109W" length="1664" weight="1.000000" />
+<sequence id="sequence_478" name="YKL096W-A" length="278" weight="1.000000" />
+<sequence id="sequence_479" name="YKL082C" length="1304" weight="1.000000" />
+<sequence id="sequence_480" name="YKL062W" length="1892" weight="1.000000" />
+<sequence id="sequence_481" name="YKL056C" length="503" weight="1.000000" />
+<sequence id="sequence_482" name="YKL054C" length="2216" weight="1.000000" />
+<sequence id="sequence_483" name="YKL051W" length="1061" weight="1.000000" />
+<sequence id="sequence_484" name="YKL044W" length="320" weight="1.000000" />
+<sequence id="sequence_485" name="YKL043W" length="1100" weight="1.000000" />
+<sequence id="sequence_486" name="YKL039W" length="1571" weight="1.000000" />
+<sequence id="sequence_487" name="YKL029C" length="2009" weight="1.000000" />
+<sequence id="sequence_488" name="YKL024C" length="614" weight="1.000000" />
+<sequence id="sequence_489" name="YKL013C" length="515" weight="1.000000" />
+<sequence id="sequence_490" name="YKL006W" length="814" weight="1.000000" />
+<sequence id="sequence_491" name="YKL005C" length="1784" weight="1.000000" />
+<sequence id="sequence_492" name="YKR006C" length="794" weight="1.000000" />
+<sequence id="sequence_493" name="YKR014C" length="704" weight="1.000000" />
+<sequence id="sequence_494" name="YKR031C" length="5051" weight="1.000000" />
+<sequence id="sequence_495" name="YKR042W" length="1097" weight="1.000000" />
+<sequence id="sequence_496" name="YKR043C" length="815" weight="1.000000" />
+<sequence id="sequence_497" name="YKR057W" length="585" weight="1.000000" />
+<sequence id="sequence_498" name="YKR059W" length="1187" weight="1.000000" />
+<sequence id="sequence_499" name="YKR065C" length="593" weight="1.000000" />
+<sequence id="sequence_500" name="YKR066C" length="1085" weight="1.000000" />
+<sequence id="sequence_501" name="YKR069W" length="1781" weight="1.000000" />
+<sequence id="sequence_502" name="YKR071C" length="1046" weight="1.000000" />
+<sequence id="sequence_503" name="YKR080W" length="962" weight="1.000000" />
+<sequence id="sequence_504" name="YKR093W" length="1805" weight="1.000000" />
+<sequence id="sequence_505" name="YKR094C" length="754" weight="1.000000" />
+<sequence id="sequence_506" name="YLL045C" length="770" weight="1.000000" />
+<sequence id="sequence_507" name="YLL041C" length="800" weight="1.000000" />
+<sequence id="sequence_508" name="YLL039C" length="1145" weight="1.000000" />
+<sequence id="sequence_509" name="YLL028W" length="1760" weight="1.000000" />
+<sequence id="sequence_510" name="YLL027W" length="752" weight="1.000000" />
+<sequence id="sequence_511" name="YLL026W" length="2726" weight="1.000000" />
+<sequence id="sequence_512" name="YLL024C" length="1919" weight="1.000000" />
+<sequence id="sequence_513" name="YLL018C" length="1673" weight="1.000000" />
+<sequence id="sequence_514" name="YLL010C" length="1283" weight="1.000000" />
+<sequence id="sequence_515" name="YLL001W" length="2273" weight="1.000000" />
+<sequence id="sequence_516" name="YLR006C" length="2138" weight="1.000000" />
+<sequence id="sequence_517" name="YLR021W" length="539" weight="1.000000" />
+<sequence id="sequence_518" name="YLR027C" length="1256" weight="1.000000" />
+<sequence id="sequence_519" name="YLR033W" length="1508" weight="1.000000" />
+<sequence id="sequence_520" name="YLR043C" length="311" weight="1.000000" />
+<sequence id="sequence_521" name="YLR045C" length="2666" weight="1.000000" />
+<sequence id="sequence_522" name="YLR061W" length="754" weight="1.000000" />
+<sequence id="sequence_523" name="YLR066W" length="554" weight="1.000000" />
+<sequence id="sequence_524" name="YLR072W" length="2081" weight="1.000000" />
+<sequence id="sequence_525" name="YLR075W" length="665" weight="1.000000" />
+<sequence id="sequence_526" name="YLR079W" length="854" weight="1.000000" />
+<sequence id="sequence_527" name="YLR084C" length="3662" weight="1.000000" />
+<sequence id="sequence_528" name="YLR104W" length="395" weight="1.000000" />
+<sequence id="sequence_529" name="YLR109W" length="530" weight="1.000000" />
+<sequence id="sequence_530" name="YLR114C" length="2294" weight="1.000000" />
+<sequence id="sequence_531" name="YLR120C" length="1709" weight="1.000000" />
+<sequence id="sequence_532" name="YLR121C" length="1526" weight="1.000000" />
+<sequence id="sequence_533" name="YLR150W" length="821" weight="1.000000" />
+<sequence id="sequence_534" name="YLR153C" length="2051" weight="1.000000" />
+<sequence id="sequence_535" name="YLR167W" length="458" weight="1.000000" />
+<sequence id="sequence_536" name="YLR200W" length="344" weight="1.000000" />
+<sequence id="sequence_537" name="YLR206W" length="1841" weight="1.000000" />
+<sequence id="sequence_538" name="YLR213C" length="1268" weight="1.000000" />
+<sequence id="sequence_539" name="YLR219W" length="2186" weight="1.000000" />
+<sequence id="sequence_540" name="YLR220W" length="968" weight="1.000000" />
+<sequence id="sequence_541" name="YLR229C" length="575" weight="1.000000" />
+<sequence id="sequence_542" name="YLR256W" length="4508" weight="1.000000" />
+<sequence id="sequence_543" name="YLR258W" length="2117" weight="1.000000" />
+<sequence id="sequence_544" name="YLR262C-A" length="194" weight="1.000000" />
+<sequence id="sequence_545" name="YLR286C" length="1688" weight="1.000000" />
+<sequence id="sequence_546" name="YLR287C-A" length="621" weight="1.000000" />
+<sequence id="sequence_547" name="YLR300W" length="1346" weight="1.000000" />
+<sequence id="sequence_548" name="YLR301W" length="734" weight="1.000000" />
+<sequence id="sequence_549" name="YLR304C" length="2336" weight="1.000000" />
+<sequence id="sequence_550" name="YLR325C" length="236" weight="1.000000" />
+<sequence id="sequence_551" name="YLR333C" length="762" weight="1.000000" />
+<sequence id="sequence_552" name="YLR340W" length="938" weight="1.000000" />
+<sequence id="sequence_553" name="YLR344W" length="830" weight="1.000000" />
+<sequence id="sequence_554" name="YLR347C" length="2585" weight="1.000000" />
+<sequence id="sequence_555" name="YLR348C" length="896" weight="1.000000" />
+<sequence id="sequence_556" name="YLR355C" length="1187" weight="1.000000" />
+<sequence id="sequence_557" name="YLR361C" length="1736" weight="1.000000" />
+<sequence id="sequence_558" name="YLR367W" length="1439" weight="1.000000" />
+<sequence id="sequence_559" name="YLR399C" length="2060" weight="1.000000" />
+<sequence id="sequence_560" name="YLR403W" length="2051" weight="1.000000" />
+<sequence id="sequence_561" name="YLR413W" length="2027" weight="1.000000" />
+<sequence id="sequence_562" name="YLR414C" length="791" weight="1.000000" />
+<sequence id="sequence_563" name="YLR421C" length="470" weight="1.000000" />
+<sequence id="sequence_564" name="YLR426W" length="1051" weight="1.000000" />
+<sequence id="sequence_565" name="YLR441C" length="767" weight="1.000000" />
+<sequence id="sequence_566" name="YLR455W" length="914" weight="1.000000" />
+<sequence id="sequence_567" name="YML130C" length="1691" weight="1.000000" />
+<sequence id="sequence_568" name="YML125C" length="938" weight="1.000000" />
+<sequence id="sequence_569" name="YML123C" length="1763" weight="1.000000" />
+<sequence id="sequence_570" name="YML111W" length="2762" weight="1.000000" />
+<sequence id="sequence_571" name="YML106W" length="680" weight="1.000000" />
+<sequence id="sequence_572" name="YML100W" length="3296" weight="1.000000" />
+<sequence id="sequence_573" name="YML094W" length="574" weight="1.000000" />
+<sequence id="sequence_574" name="YML078W" length="548" weight="1.000000" />
+<sequence id="sequence_575" name="YML073C" length="945" weight="1.000000" />
+<sequence id="sequence_576" name="YML063W" length="767" weight="1.000000" />
+<sequence id="sequence_577" name="YML062C" length="1178" weight="1.000000" />
+<sequence id="sequence_578" name="YML052W" length="908" weight="1.000000" />
+<sequence id="sequence_579" name="YML048W" length="1211" weight="1.000000" />
+<sequence id="sequence_580" name="YML034W" length="2630" weight="1.000000" />
+<sequence id="sequence_581" name="YML031W" length="1967" weight="1.000000" />
+<sequence id="sequence_582" name="YML024W" length="808" weight="1.000000" />
+<sequence id="sequence_583" name="YML017W" length="2143" weight="1.000000" />
+<sequence id="sequence_584" name="YML012W" length="635" weight="1.000000" />
+<sequence id="sequence_585" name="YML010W" length="3191" weight="1.000000" />
+<sequence id="sequence_586" name="YMR008C" length="1994" weight="1.000000" />
+<sequence id="sequence_587" name="YMR015C" length="1616" weight="1.000000" />
+<sequence id="sequence_588" name="YMR022W" length="497" weight="1.000000" />
+<sequence id="sequence_589" name="YMR024W" length="1172" weight="1.000000" />
+<sequence id="sequence_590" name="YMR031C" length="2531" weight="1.000000" />
+<sequence id="sequence_591" name="YMR053C" length="2552" weight="1.000000" />
+<sequence id="sequence_592" name="YMR058W" length="1910" weight="1.000000" />
+<sequence id="sequence_593" name="YMR080C" length="2915" weight="1.000000" />
+<sequence id="sequence_594" name="YMR105C" length="1709" weight="1.000000" />
+<sequence id="sequence_595" name="YMR116C" length="1232" weight="1.000000" />
+<sequence id="sequence_596" name="YMR119W" length="1874" weight="1.000000" />
+<sequence id="sequence_597" name="YMR134W" length="713" weight="1.000000" />
+<sequence id="sequence_598" name="YMR136W" length="1682" weight="1.000000" />
+<sequence id="sequence_599" name="YMR138W" length="575" weight="1.000000" />
+<sequence id="sequence_600" name="YMR140W" length="1469" weight="1.000000" />
+<sequence id="sequence_601" name="YMR142C" length="1001" weight="1.000000" />
+<sequence id="sequence_602" name="YMR143W" length="975" weight="1.000000" />
+<sequence id="sequence_603" name="YMR145C" length="1682" weight="1.000000" />
+<sequence id="sequence_604" name="YMR146C" length="1043" weight="1.000000" />
+<sequence id="sequence_605" name="YMR162C" length="4970" weight="1.000000" />
+<sequence id="sequence_606" name="YMR179W" length="2276" weight="1.000000" />
+<sequence id="sequence_607" name="YMR182C" length="635" weight="1.000000" />
+<sequence id="sequence_608" name="YMR194W" length="765" weight="1.000000" />
+<sequence id="sequence_609" name="YMR205C" length="2879" weight="1.000000" />
+<sequence id="sequence_610" name="YMR216C" length="2228" weight="1.000000" />
+<sequence id="sequence_611" name="YMR223W" length="1415" weight="1.000000" />
+<sequence id="sequence_612" name="YMR230W" length="727" weight="1.000000" />
+<sequence id="sequence_613" name="YMR242C" length="995" weight="1.000000" />
+<sequence id="sequence_614" name="YMR246W" length="2084" weight="1.000000" />
+<sequence id="sequence_615" name="YMR251W-A" length="179" weight="1.000000" />
+<sequence id="sequence_616" name="YMR272C" length="1154" weight="1.000000" />
+<sequence id="sequence_617" name="YMR273C" length="2747" weight="1.000000" />
+<sequence id="sequence_618" name="YMR290C" length="1517" weight="1.000000" />
+<sequence id="sequence_619" name="YMR292W" length="498" weight="1.000000" />
+<sequence id="sequence_620" name="YMR316W" length="1010" weight="1.000000" />
+<sequence id="sequence_621" name="YMR319C" length="1658" weight="1.000000" />
+<sequence id="sequence_622" name="YNL327W" length="3125" weight="1.000000" />
+<sequence id="sequence_623" name="YNL311C" length="2291" weight="1.000000" />
+<sequence id="sequence_624" name="YNL302C" length="985" weight="1.000000" />
+<sequence id="sequence_625" name="YNL268W" length="1835" weight="1.000000" />
+<sequence id="sequence_626" name="YNL263C" length="944" weight="1.000000" />
+<sequence id="sequence_627" name="YNL257C" length="3689" weight="1.000000" />
+<sequence id="sequence_628" name="YNL229C" length="1064" weight="1.000000" />
+<sequence id="sequence_629" name="YNL223W" length="1484" weight="1.000000" />
+<sequence id="sequence_630" name="YNL222W" length="620" weight="1.000000" />
+<sequence id="sequence_631" name="YNL212W" length="2348" weight="1.000000" />
+<sequence id="sequence_632" name="YNL209W" length="1841" weight="1.000000" />
+<sequence id="sequence_633" name="YNL207W" length="1277" weight="1.000000" />
+<sequence id="sequence_634" name="YNL201C" length="2576" weight="1.000000" />
+<sequence id="sequence_635" name="YNL197C" length="1985" weight="1.000000" />
+<sequence id="sequence_636" name="YNL192W" length="3395" weight="1.000000" />
+<sequence id="sequence_637" name="YNL186W" length="2378" weight="1.000000" />
+<sequence id="sequence_638" name="YNL178W" length="722" weight="1.000000" />
+<sequence id="sequence_639" name="YNL169C" length="1502" weight="1.000000" />
+<sequence id="sequence_640" name="YNL162W" length="832" weight="1.000000" />
+<sequence id="sequence_641" name="YNL160W" length="1064" weight="1.000000" />
+<sequence id="sequence_642" name="YNL159C" length="869" weight="1.000000" />
+<sequence id="sequence_643" name="YNL158W" length="596" weight="1.000000" />
+<sequence id="sequence_644" name="YNL141W" length="1043" weight="1.000000" />
+<sequence id="sequence_645" name="YNL139C" length="4793" weight="1.000000" />
+<sequence id="sequence_646" name="YNL137C" length="1460" weight="1.000000" />
+<sequence id="sequence_647" name="YNL100W" length="704" weight="1.000000" />
+<sequence id="sequence_648" name="YNL079C" length="599" weight="1.000000" />
+<sequence id="sequence_649" name="YNL077W" length="1586" weight="1.000000" />
+<sequence id="sequence_650" name="YNL069C" length="1045" weight="1.000000" />
+<sequence id="sequence_651" name="YNL066W" length="1620" weight="1.000000" />
+<sequence id="sequence_652" name="YNL065W" length="1760" weight="1.000000" />
+<sequence id="sequence_653" name="YNL037C" length="1082" weight="1.000000" />
+<sequence id="sequence_654" name="YNL027W" length="2036" weight="1.000000" />
+<sequence id="sequence_655" name="YNL020C" length="1916" weight="1.000000" />
+<sequence id="sequence_656" name="YNL007C" length="1058" weight="1.000000" />
+<sequence id="sequence_657" name="YNL003C" length="854" weight="1.000000" />
+<sequence id="sequence_658" name="YNR001C" length="1439" weight="1.000000" />
+<sequence id="sequence_659" name="YNR008W" length="1985" weight="1.000000" />
+<sequence id="sequence_660" name="YNR019W" length="1928" weight="1.000000" />
+<sequence id="sequence_661" name="YNR035C" length="1028" weight="1.000000" />
+<sequence id="sequence_662" name="YNR067C" length="3353" weight="1.000000" />
+<sequence id="sequence_663" name="YNR074C" length="1136" weight="1.000000" />
+<sequence id="sequence_664" name="YOL136C" length="1193" weight="1.000000" />
+<sequence id="sequence_665" name="YOL126C" length="1133" weight="1.000000" />
+<sequence id="sequence_666" name="YOL122C" length="1727" weight="1.000000" />
+<sequence id="sequence_667" name="YOL120C" length="1007" weight="1.000000" />
+<sequence id="sequence_668" name="YOL115W" length="1754" weight="1.000000" />
+<sequence id="sequence_669" name="YOL108C" length="455" weight="1.000000" />
+<sequence id="sequence_670" name="YOL101C" length="938" weight="1.000000" />
+<sequence id="sequence_671" name="YOL097C" length="1298" weight="1.000000" />
+<sequence id="sequence_672" name="YOL082W" length="1247" weight="1.000000" />
+<sequence id="sequence_673" name="YOL081W" length="9239" weight="1.000000" />
+<sequence id="sequence_674" name="YOL060C" length="2120" weight="1.000000" />
+<sequence id="sequence_675" name="YOL059W" length="1322" weight="1.000000" />
+<sequence id="sequence_676" name="YOL051W" length="3245" weight="1.000000" />
+<sequence id="sequence_677" name="YOL049W" length="1475" weight="1.000000" />
+<sequence id="sequence_678" name="YOL040C" length="428" weight="1.000000" />
+<sequence id="sequence_679" name="YOL039W" length="320" weight="1.000000" />
+<sequence id="sequence_680" name="YOL030W" length="1454" weight="1.000000" />
+<sequence id="sequence_681" name="YOL016C" length="1343" weight="1.000000" />
+<sequence id="sequence_682" name="YOL011W" length="2060" weight="1.000000" />
+<sequence id="sequence_683" name="YOL010W" length="1103" weight="1.000000" />
+<sequence id="sequence_684" name="YOL006C" length="2309" weight="1.000000" />
+<sequence id="sequence_685" name="YOR008C" length="1136" weight="1.000000" />
+<sequence id="sequence_686" name="YOR014W" length="2273" weight="1.000000" />
+<sequence id="sequence_687" name="YOR059C" length="1352" weight="1.000000" />
+<sequence id="sequence_688" name="YOR060C" length="773" weight="1.000000" />
+<sequence id="sequence_689" name="YOR063W" length="1163" weight="1.000000" />
+<sequence id="sequence_690" name="YOR066W" length="1889" weight="1.000000" />
+<sequence id="sequence_691" name="YOR070C" length="1913" weight="1.000000" />
+<sequence id="sequence_692" name="YOR089C" length="632" weight="1.000000" />
+<sequence id="sequence_693" name="YOR092W" length="1841" weight="1.000000" />
+<sequence id="sequence_694" name="YOR096W" length="973" weight="1.000000" />
+<sequence id="sequence_695" name="YOR109W" length="3323" weight="1.000000" />
+<sequence id="sequence_696" name="YOR116C" length="4382" weight="1.000000" />
+<sequence id="sequence_697" name="YOR122C" length="589" weight="1.000000" />
+<sequence id="sequence_698" name="YOR133W" length="2528" weight="1.000000" />
+<sequence id="sequence_699" name="YOR136W" length="1109" weight="1.000000" />
+<sequence id="sequence_700" name="YOR137C" length="1868" weight="1.000000" />
+<sequence id="sequence_701" name="YOR153W" length="4535" weight="1.000000" />
+<sequence id="sequence_702" name="YOR162C" length="2432" weight="1.000000" />
+<sequence id="sequence_703" name="YOR164C" length="938" weight="1.000000" />
+<sequence id="sequence_704" name="YOR165W" length="2330" weight="1.000000" />
+<sequence id="sequence_705" name="YOR167C" length="203" weight="1.000000" />
+<sequence id="sequence_706" name="YOR182C" length="602" weight="1.000000" />
+<sequence id="sequence_707" name="YOR204W" length="1814" weight="1.000000" />
+<sequence id="sequence_708" name="YOR207C" length="3449" weight="1.000000" />
+<sequence id="sequence_709" name="YOR224C" length="440" weight="1.000000" />
+<sequence id="sequence_710" name="YOR227W" length="3740" weight="1.000000" />
+<sequence id="sequence_711" name="YOR243C" length="2030" weight="1.000000" />
+<sequence id="sequence_712" name="YOR252W" length="536" weight="1.000000" />
+<sequence id="sequence_713" name="YOR267C" length="2279" weight="1.000000" />
+<sequence id="sequence_714" name="YOR272W" length="1382" weight="1.000000" />
+<sequence id="sequence_715" name="YOR273C" length="1979" weight="1.000000" />
+<sequence id="sequence_716" name="YOR274W" length="1286" weight="1.000000" />
+<sequence id="sequence_717" name="YOR286W" length="449" weight="1.000000" />
+<sequence id="sequence_718" name="YOR290C" length="5111" weight="1.000000" />
+<sequence id="sequence_719" name="YOR293W" length="754" weight="1.000000" />
+<sequence id="sequence_720" name="YOR299W" length="2240" weight="1.000000" />
+<sequence id="sequence_721" name="YOR312C" length="944" weight="1.000000" />
+<sequence id="sequence_722" name="YOR315W" length="1040" weight="1.000000" />
+<sequence id="sequence_723" name="YOR317W" length="2102" weight="1.000000" />
+<sequence id="sequence_724" name="YOR322C" length="2456" weight="1.000000" />
+<sequence id="sequence_725" name="YOR332W" length="701" weight="1.000000" />
+<sequence id="sequence_726" name="YOR335C" length="2876" weight="1.000000" />
+<sequence id="sequence_727" name="YOR337W" length="2279" weight="1.000000" />
+<sequence id="sequence_728" name="YOR341W" length="4994" weight="1.000000" />
+<sequence id="sequence_729" name="YOR344C" length="875" weight="1.000000" />
+<sequence id="sequence_730" name="YOR359W" length="1571" weight="1.000000" />
+<sequence id="sequence_731" name="YOR362C" length="866" weight="1.000000" />
+<sequence id="sequence_732" name="YOR367W" length="602" weight="1.000000" />
+<sequence id="sequence_733" name="YOR369C" length="431" weight="1.000000" />
+<sequence id="sequence_734" name="YPL271W" length="188" weight="1.000000" />
+<sequence id="sequence_735" name="YPL268W" length="2609" weight="1.000000" />
+<sequence id="sequence_736" name="YPL267W" length="629" weight="1.000000" />
+<sequence id="sequence_737" name="YPL266W" length="956" weight="1.000000" />
+<sequence id="sequence_738" name="YPL265W" length="1826" weight="1.000000" />
+<sequence id="sequence_739" name="YPL250C" length="410" weight="1.000000" />
+<sequence id="sequence_740" name="YPL249C-A" length="540" weight="1.000000" />
+<sequence id="sequence_741" name="YPL240C" length="2129" weight="1.000000" />
+<sequence id="sequence_742" name="YPL226W" length="3590" weight="1.000000" />
+<sequence id="sequence_743" name="YPL221W" length="2381" weight="1.000000" />
+<sequence id="sequence_744" name="YPL220W" length="653" weight="1.000000" />
+<sequence id="sequence_745" name="YPL218W" length="711" weight="1.000000" />
+<sequence id="sequence_746" name="YPL211W" length="545" weight="1.000000" />
+<sequence id="sequence_747" name="YPL207W" length="2432" weight="1.000000" />
+<sequence id="sequence_748" name="YPL204W" length="1484" weight="1.000000" />
+<sequence id="sequence_749" name="YPL190C" length="2408" weight="1.000000" />
+<sequence id="sequence_750" name="YPL179W" length="1649" weight="1.000000" />
+<sequence id="sequence_751" name="YPL168W" length="1292" weight="1.000000" />
+<sequence id="sequence_752" name="YPL160W" length="3272" weight="1.000000" />
+<sequence id="sequence_753" name="YPL143W" length="848" weight="1.000000" />
+<sequence id="sequence_754" name="YPL141C" length="2597" weight="1.000000" />
+<sequence id="sequence_755" name="YPL137C" length="3830" weight="1.000000" />
+<sequence id="sequence_756" name="YPL131W" length="893" weight="1.000000" />
+<sequence id="sequence_757" name="YPL129W" length="839" weight="1.000000" />
+<sequence id="sequence_758" name="YPL098C" length="341" weight="1.000000" />
+<sequence id="sequence_759" name="YPL094C" length="824" weight="1.000000" />
+<sequence id="sequence_760" name="YPL093W" length="1943" weight="1.000000" />
+<sequence id="sequence_761" name="YPL087W" length="953" weight="1.000000" />
+<sequence id="sequence_762" name="YPL079W" length="903" weight="1.000000" />
+<sequence id="sequence_763" name="YPL075W" length="3108" weight="1.000000" />
+<sequence id="sequence_764" name="YPL059W" length="452" weight="1.000000" />
+<sequence id="sequence_765" name="YPL058C" length="4535" weight="1.000000" />
+<sequence id="sequence_766" name="YPL048W" length="1247" weight="1.000000" />
+<sequence id="sequence_767" name="YPL042C" length="1667" weight="1.000000" />
+<sequence id="sequence_768" name="YPL037C" length="473" weight="1.000000" />
+<sequence id="sequence_769" name="YPL028W" length="1196" weight="1.000000" />
+<sequence id="sequence_770" name="YPL026C" length="1508" weight="1.000000" />
+<sequence id="sequence_771" name="YPL018W" length="1109" weight="1.000000" />
+<sequence id="sequence_772" name="YPL014W" length="1145" weight="1.000000" />
+<sequence id="sequence_773" name="YPL004C" length="1025" weight="1.000000" />
+<sequence id="sequence_774" name="YPL003W" length="1388" weight="1.000000" />
+<sequence id="sequence_775" name="YPR008W" length="2084" weight="1.000000" />
+<sequence id="sequence_776" name="YPR010C" length="3611" weight="1.000000" />
+<sequence id="sequence_777" name="YPR020W" length="347" weight="1.000000" />
+<sequence id="sequence_778" name="YPR030W" length="3365" weight="1.000000" />
+<sequence id="sequence_779" name="YPR034W" length="1433" weight="1.000000" />
+<sequence id="sequence_780" name="YPR035W" length="1112" weight="1.000000" />
+<sequence id="sequence_781" name="YPR036W-A" length="203" weight="1.000000" />
+<sequence id="sequence_782" name="YPR042C" length="3227" weight="1.000000" />
+<sequence id="sequence_783" name="YPR043W" length="681" weight="1.000000" />
+<sequence id="sequence_784" name="YPR065W" length="1106" weight="1.000000" />
+<sequence id="sequence_785" name="YPR066W" length="899" weight="1.000000" />
+<sequence id="sequence_786" name="YPR080W" length="1376" weight="1.000000" />
+<sequence id="sequence_787" name="YPR102C" length="524" weight="1.000000" />
+<sequence id="sequence_788" name="YPR125W" length="1364" weight="1.000000" />
+<sequence id="sequence_789" name="YPR129W" length="1049" weight="1.000000" />
+<sequence id="sequence_790" name="YPR132W" length="802" weight="1.000000" />
+<sequence id="sequence_791" name="YPR133W-A" length="152" weight="1.000000" />
+<sequence id="sequence_792" name="YPR138C" length="1469" weight="1.000000" />
+<sequence id="sequence_793" name="YPR139C" length="902" weight="1.000000" />
+<sequence id="sequence_794" name="YPR156C" length="1868" weight="1.000000" />
+<sequence id="sequence_795" name="YPR157W" length="1403" weight="1.000000" />
+<sequence id="sequence_796" name="YPR159W" length="2162" weight="1.000000" />
+<sequence id="sequence_797" name="YPR160W" length="2708" weight="1.000000" />
+<sequence id="sequence_798" name="YPR181C" length="2306" weight="1.000000" />
+<sequence id="sequence_799" name="YPR184W" length="4610" weight="1.000000" />
+<sequence id="sequence_800" name="YPR198W" length="1631" weight="1.000000" />
+<letter_frequencies>
+<alphabet_array>
+<value letter_id="A">0.299</value>
+<value letter_id="C">0.202</value>
+<value letter_id="G">0.201</value>
+<value letter_id="U">0.297</value>
+</alphabet_array>
+</letter_frequencies>
+</training_set>
+<model>
+<command_line>meme -oc meme_out -mod zoops -minw 6 -maxw 15 -bfile ./background -markov_order 2 -seed 0 -rna -evt 0.05 -nostatus -time 7071 -searchsize 100000 Cbp80Hpr1_RNApar.fa </command_line>
+<host>noble-meme.grid.gs.washington.edu</host>
+<type>zoops</type>
+<nmotifs>1000</nmotifs>
+<evalue_threshold>0.05</evalue_threshold>
+<object_function>E-value of product of p-values</object_function>
+<spfun>E-value of product of p-values</spfun>
+<min_width>6</min_width>
+<max_width>15</max_width>
+<wg>11</wg>
+<ws>1</ws>
+<endgaps>yes</endgaps>
+<substring>yes</substring>
+<minsites>2</minsites>
+<maxsites>801</maxsites>
+<wnsites>0.8</wnsites>
+<spmap>uni</spmap>
+<spfuzz>0.5</spfuzz>
+<prior>dirichlet</prior>
+<beta>0.01</beta>
+<maxiter>50</maxiter>
+<distance>1e-05</distance>
+<num_positions>1216410</num_positions>
+<seed>0</seed>
+<hsfrac>0</hsfrac>
+<searchsize>100000</searchsize>
+<maxsize>0</maxsize>
+<norand>no</norand>
+<csites>1000</csites>
+<strands>none</strands>
+<brief>1000</brief>
+<psp_file></psp_file>
+<priors_file></priors_file>
+<reason_for_stopping>Stopped because the next motif E-value > 5.00e-02.</reason_for_stopping>
+<background_frequencies source="./background" order="2">
+<alphabet_array>
+<value letter_id="A">0.299</value>
+<value letter_id="C">0.202</value>
+<value letter_id="G">0.201</value>
+<value letter_id="U">0.297</value>
+</alphabet_array>
+</background_frequencies>
+</model>
+<motifs>
+</motifs>
+</MEME>
