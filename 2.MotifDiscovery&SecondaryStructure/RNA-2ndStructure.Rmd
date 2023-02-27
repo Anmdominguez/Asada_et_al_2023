@@ -1,0 +1,123 @@
+---
+title: "Untitled"
+author: "Andrew Dominguez"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r Load Fastas}
+library(Biostrings)
+
+#imports fasta reference file
+fastaImport <- function(fasta){
+  fastaFile <- readDNAStringSet(fasta)
+  seq_name = names(fastaFile)
+  sequence = paste(fastaFile)
+  Transcript.Dataframe <- data.frame(seq_name, sequence)
+  return(Transcript.Dataframe)
+}
+
+
+
+```
+
+```{r}
+library(ggplot2)
+Cbp80 <- fastaImport("Cbp80/mRNA_Cbp80.fa")
+Cbp80.length <- vector("numeric", length(Cbp80$sequence))
+for (i in seq_along(Cbp80$sequence)){
+  Cbp80.length[i] <- nchar(Cbp80$sequence[i]) 
+}
+
+Cbp80Hpr1 <- fastaImport("Cbp80Hpr1/mRNA_Cbp80Hpr1.fa")
+Cbp80Hpr1.length <- vector("numeric", length(Cbp80Hpr1$sequence))
+for (i in seq_along(Cbp80Hpr1$sequence)){
+  Cbp80Hpr1.length[i] <- nchar(Cbp80Hpr1$sequence[i]) 
+}
+
+Cbp80.length.df <- as.data.frame(Cbp80.length)
+Cbp80.length.df$Condition <- "Cbp80"
+colnames(Cbp80.length.df)[1] <- "Length"
+
+Cbp80Hpr1.length.df <- as.data.frame(Cbp80Hpr1.length)
+Cbp80Hpr1.length.df$Condition <- "Cbp80Hpr1"
+colnames(Cbp80Hpr1.length.df)[1] <- "Length"
+Length.df <- rbind(Cbp80.length.df, Cbp80Hpr1.length.df)
+
+ggplot(Length.df, aes(x=Length, fill=Condition)) +
+  geom_density(alpha=0.4) +
+  geom_vline(xintercept = 200, colour="black", linetype = "longdash") +
+  xlim(c(0,10000))
+
+```
+
+Plan to use RNApar to generate ifragments for longer transcripts and then 
+predict structure using Ufold
+
+Fragments less than 200bps need to be filled with "-"
+
+```{r}
+library(stringr)
+
+RNAprep <- function(sequence) {
+  RNA.seq <- vector("numeric", length(sequence))
+  for (i in seq_along(sequence)){
+    RNA.seq[i] <- gsub("T", "U", sequence[i])
+  }
+  #seq.fill <- str_pad(RNA.seq, 200, pad = "-", side = "right")
+  return(RNA.seq)
+}
+
+
+
+Cbp80$RNA_sequence <- RNAprep(Cbp80$sequence)
+Cbp80Hpr1$RNA_sequence <- RNAprep(Cbp80Hpr1$sequence)
+
+Cbp80.fill <- vector("numeric", length(Cbp80$RNA_sequence))
+for (i in seq_along(Cbp80$RNA_sequence)){
+  Cbp80.fill[i] <- nchar(Cbp80$RNA_sequence[i]) 
+}
+
+Cbp80Hpr1.fill <- vector("numeric", length(Cbp80Hpr1$RNA_sequence))
+for (i in seq_along(Cbp80Hpr1$RNA_sequence)){
+  Cbp80Hpr1.fill[i] <- nchar(Cbp80Hpr1$RNA_sequence[i]) 
+}
+
+print(c("Min_Cbp80:",min(Cbp80.fill)))
+print(c("Min_Cbp80Hpr1:",min(Cbp80Hpr1.fill)))
+```
+
+***if both "mins" are 200, the samples have been "padded" and are ready to be input into RNApar***
+Samples will need to be converted to fasta with their RNA sequences
+
+```{r}
+#function taken from https://bootstrappers.umassmed.edu/guides/main/r_writeFasta.html
+writeFasta<-function(data, filename){
+  fastaLines = c()
+  for (rowNum in 1:nrow(data)){
+    fastaLines = c(fastaLines, as.character(paste(">", data[rowNum,"seq_name"], sep = "")))
+    fastaLines = c(fastaLines,as.character(data[rowNum,"RNA_sequence"]))
+  }
+  fileConn<-file(filename)
+  writeLines(fastaLines, fileConn)
+  close(fileConn)
+}
+
+#specify which subsets to generate Fasta files for
+writeFasta(Cbp80, "Cbp80_RNA.fa")
+writeFasta(Cbp80Hpr1, "Cbp80Hpr1_RNA.fa")
+
+```
+
+Input these newly formatted fasta files into RNApar
+
+```{bash}
+conda activate AD_RNAseq
+python /RNAPar-main/predict.py -i Cbp80_RNApar.fa -o Cbp80_RNApar.data -w ./RNAPar-main/models/weight-1.h5 -K 6 -C 61 -U 115 -N 53
+```
+
+
