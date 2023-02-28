@@ -1,0 +1,10 @@
+RANK	DB	ID	ALT_ID	CONSENSUS	TP	TP%	FP	FP%	ENR_RATIO	SCORE_THR	PVALUE	LOG_PVALUE	EVALUE	LOG_EVALUE	QVALUE	LOG_QVALUE
+1	streme_out/streme.xml	1-UCAUCDUCRUCAUCA	STREME-1	UCAUCDUCRUCAUCA	110	47.01	18	7.69	5.84	10	1.72e-17	-38.60	4.47e-16	-35.34	4.47e-16	-35.34
+2	meme_out/meme.xml	UYDUCNUYUUCWUCA	MEME-1	UYDUCNUYUUCWUCA	70	29.91	8	3.42	7.89	13	1.04e-13	-29.90	2.70e-12	-26.64	1.35e-12	-27.33
+3	streme_out/streme.xml	2-UGUUGCUGCUGU	STREME-2	UGUUGCUGCUGU	58	24.79	17	7.26	3.28	11	1.23e-6	-13.61	3.19e-5	-10.35	1.06e-5	-11.45
+4	streme_out/streme.xml	4-GUUAUUAUUA	STREME-4	GUUAUUAUUA	74	31.62	27	11.54	2.68	10	1.82e-6	-13.22	4.73e-5	-9.96	1.18e-5	-11.35
+5	streme_out/streme.xml	3-CAAAGUCUUC	STREME-3	CAAAGUCUUC	15	6.41	1	0.43	8	15	2.70e-4	-8.22	7.02e-3	-4.96	1.40e-3	-6.57
+
+# SEA (Simple Enrichment Analysis): Version 5.5.1 compiled on Feb  5 2023 at 16:40:34
+# The format of this file is described at https://meme-suite.org/meme/doc/sea-output-format.html.
+# sea --verbosity 1 --oc sea_out --thresh 0.05 --order 2 --bfile ./background --seed 0 --align center --motif-pseudo 0.01 --m meme_out/meme.xml --m streme_out/streme.xml --m motifs.meme --noseqs --p Cbp80_G1.fa

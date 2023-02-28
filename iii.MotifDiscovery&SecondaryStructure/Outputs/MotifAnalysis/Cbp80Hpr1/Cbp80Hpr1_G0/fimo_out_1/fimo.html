@@ -1,0 +1,2936 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:cis="http://zlab.bu.edu/schema/cisml" xmlns:fimo="http://noble.gs.washington.edu/schema/cisml" xmlns:mem="http://noble.gs.washington.edu/meme">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>FIMO Results</title>
+<style type="text/css">
+td.left {text-align: left;}
+td.right {text-align: right; padding-right: 1cm;}
+</style>
+</head>
+<body color="#000000">
+<a name="top_buttons"></a>
+<hr>
+<table summary="buttons" align="left" cellspacing="0">
+<tr>
+<td bgcolor="#00FFFF"><a href="#database_and_motifs"><b>Database and Motifs</b></a></td>
+<td bgcolor="#DDFFDD"><a href="#sec_i"><b>High-scoring Motif Occurences</b></a></td>
+<td bgcolor="#DDDDFF"><a href="#debugging_information"><b>Debugging Information</b></a></td>
+<td bgcolor="#FFDD00"><a href="fimo.tsv""><b>Results in TSV Format</b></a></td>
+<td bgcolor="#FFDDFF"><a href="fimo.gff""><b>Results in GFF3 Format</b></a></td>
+</tr>
+</table>
+<br/>
+<br/>
+<hr/>
+<center><big><b>FIMO - Motif search tool</b></big></center>
+<hr>
+<p>
+FIMO version 5.5.1, (Release date: Sun Jan 29 10:33:12 2023 -0800)
+</p>
+<p>
+For further information on how to interpret these results please access <a href="https://meme-suite.org/meme/doc/fimo-output-format.html">https://meme-suite.org/meme/doc/fimo-output-format.html</a>.<br>
+To get a copy of the FIMO software please access <a href="https://meme-suite.org">https://meme-suite.org</a>
+
+</p>
+<p>If you use FIMO in your research, please cite the following paper:<br>
+Charles E. Grant, Timothy L. Bailey, and William Stafford Noble,
+"FIMO: Scanning for occurrences of a given motif",
+<i>Bioinformatics</i>, <b>27</b>(7):1017-1018, 2011.
+<a href="http://bioinformatics.oxfordjournals.org/content/27/7/1017">[full text]</a></p>
+<hr>
+<center><big><b><a name="database_and_motifs">DATABASE AND MOTIFS</a></b></big></center>
+<hr>
+<div style="padding-left: 0.75in; line-height: 1em; font-family: monospace;">
+<p>
+  DATABASE Cbp80Hpr1_G0.fa
+  <br />
+  Database contains 110 sequences, 143628 residues
+</p>
+<p>
+  MOTIFS meme_out/meme.xml (RNA)
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom: 1px dashed;">MOTIF</th>
+        <th style="border-bottom: 1px dashed; padding-left: 1em;">WIDTH</th>
+        <th style="border-bottom: 1px dashed; padding-left: 1em;text-align:left;" >
+         BEST POSSIBLE MATCH
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align:right;">RRCACCRDCASCRRC</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AGCACCGUCAGCGGC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">ABCADCRGMWKCASC</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AGCAACAGCUUCAGC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">WUACCACCRGC</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">UUACCACCAGC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">YUUCCUUSUYD</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">CUUCCUUCUUA</td>
+       </tr>
+    </tbody>
+  </table>
+</p>
+<p>
+Random model letter frequencies (./background):
+<br/>
+
+A 0.294 C 0.219 G 0.196 U 0.291 </p>
+</div>
+<hr>
+<center><big><b><a name="sec_i">SECTION I: HIGH-SCORING MOTIF OCCURENCES</a></b></big></center>
+<hr>
+<ul>
+<li>
+There were 249 motif occurences with a p-value less than 0.0001.
+
+The full set of motif occurences can be seen in the
+TSV (tab-delimited values) output file
+<a href="fimo.tsv">fimo.tsv</a>, 
+the GFF3 file 
+<a href="fimo.gff">fimo.gff</a> 
+which may be suitable for uploading to the 
+<a href="http://genome.ucsc.edu/cgi-bin/hgTables">UCSC Genome Table Browser</a>
+(assuming the FASTA input sequences included genomic coordinates in UCSC or Galaxy format),
+or the XML file 
+<a href="fimo.xml">fimo.xml</a>.
+</li>
+<li>
+The <i>p</i>-value of a motif occurrence is defined as the
+probability of a random sequence of the same length as the motif
+matching that position of the sequence with as good or better a score.
+</li>
+<li>
+The score for the match of a position in a sequence to a motif
+is computed by summing the appropriate entries from each column of
+the position-dependent scoring matrix that represents the motif.
+</li>
+<li>
+The q-value of a motif occurrence is defined as the
+false discovery rate if the occurrence is accepted as significant.
+</li>
+<li>The table is sorted by increasing <i>p</i>-value.</li>
+</ul>
+<table border="1">
+<thead>
+<tr>
+<th>Motif ID</th>
+<th>Alt ID</th>
+<th>Sequence Name</th>
+<th>Strand</th>
+<th>Start</th>
+<th>End</th>
+<th>p-value</th>
+<th>q-value</th>
+<th>Matched Sequence</th>
+</tr>
+</thead>
+<tbody>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YJR139C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">57</td>
+      <td style="text-align:left;">71</td>
+      <td style="text-align:left;">1.13e-09</td>
+      <td style="text-align:left;">0.000156</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCGGCACCGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YOR116C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">3870</td>
+      <td style="text-align:left;">3884</td>
+      <td style="text-align:left;">2.61e-09</td>
+      <td style="text-align:left;">0.000181</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCAGCAGCGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YMR105C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1473</td>
+      <td style="text-align:left;">1487</td>
+      <td style="text-align:left;">6.73e-08</td>
+      <td style="text-align:left;">0.0026</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCGATAGCGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBL072C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">555</td>
+      <td style="text-align:left;">569</td>
+      <td style="text-align:left;">9.84e-08</td>
+      <td style="text-align:left;">0.0026</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCACCGGTAGCGGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YPR156C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">174</td>
+      <td style="text-align:left;">188</td>
+      <td style="text-align:left;">1.21e-07</td>
+      <td style="text-align:left;">0.0026</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCAGCACCACCGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGR138C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">177</td>
+      <td style="text-align:left;">191</td>
+      <td style="text-align:left;">1.21e-07</td>
+      <td style="text-align:left;">0.0026</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCAGCACCACCGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDR502C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">345</td>
+      <td style="text-align:left;">359</td>
+      <td style="text-align:left;">1.38e-07</td>
+      <td style="text-align:left;">0.0026</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCACCACCACCGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDL081C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">120</td>
+      <td style="text-align:left;">134</td>
+      <td style="text-align:left;">1.5e-07</td>
+      <td style="text-align:left;">0.0026</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCAGCAGCACCAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YMR116C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">999</td>
+      <td style="text-align:left;">1013</td>
+      <td style="text-align:left;">1.84e-07</td>
+      <td style="text-align:left;">0.00284</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCGTCAGCAGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLR262C-A</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">78</td>
+      <td style="text-align:left;">92</td>
+      <td style="text-align:left;">3.29e-07</td>
+      <td style="text-align:left;">0.00442</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCAGCATCGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBL087C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">900</td>
+      <td style="text-align:left;">914</td>
+      <td style="text-align:left;">3.51e-07</td>
+      <td style="text-align:left;">0.00442</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCGTTACCGGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDL081C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">96</td>
+      <td style="text-align:left;">110</td>
+      <td style="text-align:left;">3.99e-07</td>
+      <td style="text-align:left;">0.00453</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GACACCACCAGCGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YPL058C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1218</td>
+      <td style="text-align:left;">1232</td>
+      <td style="text-align:left;">4.64e-07</td>
+      <td style="text-align:left;">0.00453</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCACCGGCACCAAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDR508C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">636</td>
+      <td style="text-align:left;">650</td>
+      <td style="text-align:left;">4.76e-07</td>
+      <td style="text-align:left;">0.00453</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCACCGTTAGCAAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YFL039C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">651</td>
+      <td style="text-align:left;">665</td>
+      <td style="text-align:left;">5.07e-07</td>
+      <td style="text-align:left;">0.00453</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACACCATCACCGGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YJR139C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1035</td>
+      <td style="text-align:left;">1049</td>
+      <td style="text-align:left;">5.23e-07</td>
+      <td style="text-align:left;">0.00453</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACACCGGCACCGAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDR050C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">558</td>
+      <td style="text-align:left;">572</td>
+      <td style="text-align:left;">8.24e-07</td>
+      <td style="text-align:left;">0.00672</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCGACAGTGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGL008C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1962</td>
+      <td style="text-align:left;">1976</td>
+      <td style="text-align:left;">8.74e-07</td>
+      <td style="text-align:left;">0.00673</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GTCACCGGTAGCGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YCL025C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1470</td>
+      <td style="text-align:left;">1484</td>
+      <td style="text-align:left;">9.63e-07</td>
+      <td style="text-align:left;">0.00697</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGTACCGTTACCGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDL171C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">645</td>
+      <td style="text-align:left;">659</td>
+      <td style="text-align:left;">1.01e-06</td>
+      <td style="text-align:left;">0.00697</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GTCACCACCACCGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLL018C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">93</td>
+      <td style="text-align:left;">107</td>
+      <td style="text-align:left;">1.18e-06</td>
+      <td style="text-align:left;">0.00771</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GATACCACCACCGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGR175C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1407</td>
+      <td style="text-align:left;">1421</td>
+      <td style="text-align:left;">1.24e-06</td>
+      <td style="text-align:left;">0.00771</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACACCAGCACCGAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDR155C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">276</td>
+      <td style="text-align:left;">290</td>
+      <td style="text-align:left;">1.37e-06</td>
+      <td style="text-align:left;">0.00771</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGTACCGTTACCAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YJR045C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">603</td>
+      <td style="text-align:left;">617</td>
+      <td style="text-align:left;">1.37e-06</td>
+      <td style="text-align:left;">0.00771</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCGGCAGTGGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YEL046C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1038</td>
+      <td style="text-align:left;">1052</td>
+      <td style="text-align:left;">1.41e-06</td>
+      <td style="text-align:left;">0.00771</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GACAGCGTCACCGAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBL030C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">114</td>
+      <td style="text-align:left;">128</td>
+      <td style="text-align:left;">1.45e-06</td>
+      <td style="text-align:left;">0.00771</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACACCTTCAGCAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLR304C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1533</td>
+      <td style="text-align:left;">1547</td>
+      <td style="text-align:left;">1.53e-06</td>
+      <td style="text-align:left;">0.00785</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACACCATCACCGAA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YER043C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1056</td>
+      <td style="text-align:left;">1070</td>
+      <td style="text-align:left;">1.62e-06</td>
+      <td style="text-align:left;">0.00792</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACACCGGAAGCGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YMR145C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1011</td>
+      <td style="text-align:left;">1025</td>
+      <td style="text-align:left;">1.66e-06</td>
+      <td style="text-align:left;">0.00792</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCCACACCGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBL003C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">183</td>
+      <td style="text-align:left;">197</td>
+      <td style="text-align:left;">1.99e-06</td>
+      <td style="text-align:left;">0.0085</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCATTACCAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YER145C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">702</td>
+      <td style="text-align:left;">716</td>
+      <td style="text-align:left;">1.99e-06</td>
+      <td style="text-align:left;">0.0085</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATACCTGCACCGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLR441C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">87</td>
+      <td style="text-align:left;">101</td>
+      <td style="text-align:left;">2.05e-06</td>
+      <td style="text-align:left;">0.0085</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCGACATCGAA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YFR053C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">201</td>
+      <td style="text-align:left;">215</td>
+      <td style="text-align:left;">2.05e-06</td>
+      <td style="text-align:left;">0.0085</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGAACCGTCAGCGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YPL037C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">363</td>
+      <td style="text-align:left;">377</td>
+      <td style="text-align:left;">2.24e-06</td>
+      <td style="text-align:left;">0.0085</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCACCGGCAGAAGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YMR205C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1998</td>
+      <td style="text-align:left;">2012</td>
+      <td style="text-align:left;">2.24e-06</td>
+      <td style="text-align:left;">0.0085</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCATCGACACCGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGL167C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">807</td>
+      <td style="text-align:left;">821</td>
+      <td style="text-align:left;">2.36e-06</td>
+      <td style="text-align:left;">0.0085</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACACCATCACCAGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGL008C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">849</td>
+      <td style="text-align:left;">863</td>
+      <td style="text-align:left;">2.36e-06</td>
+      <td style="text-align:left;">0.0085</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACACCATCACCAGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YOL120C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">231</td>
+      <td style="text-align:left;">245</td>
+      <td style="text-align:left;">2.39e-06</td>
+      <td style="text-align:left;">0.0085</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCACCAGCAGTGAA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLL024C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1761</td>
+      <td style="text-align:left;">1775</td>
+      <td style="text-align:left;">2.39e-06</td>
+      <td style="text-align:left;">0.0085</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCGTCACCAAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBL030C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">540</td>
+      <td style="text-align:left;">554</td>
+      <td style="text-align:left;">2.52e-06</td>
+      <td style="text-align:left;">0.0085</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCACCAGCAGCACC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YCL025C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">741</td>
+      <td style="text-align:left;">755</td>
+      <td style="text-align:left;">2.52e-06</td>
+      <td style="text-align:left;">0.0085</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACCACCACCGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGL008C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">783</td>
+      <td style="text-align:left;">797</td>
+      <td style="text-align:left;">2.61e-06</td>
+      <td style="text-align:left;">0.0085</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCAGCATCAGTAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBL030C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">849</td>
+      <td style="text-align:left;">863</td>
+      <td style="text-align:left;">2.67e-06</td>
+      <td style="text-align:left;">0.0085</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GACAGCGGCACTGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YHR193C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">123</td>
+      <td style="text-align:left;">137</td>
+      <td style="text-align:left;">2.7e-06</td>
+      <td style="text-align:left;">0.0085</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GTCACCGGCATCAAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLL024C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">702</td>
+      <td style="text-align:left;">716</td>
+      <td style="text-align:left;">2.98e-06</td>
+      <td style="text-align:left;">0.00893</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GACACCACCAGCAGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YHR094C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">486</td>
+      <td style="text-align:left;">500</td>
+      <td style="text-align:left;">3.02e-06</td>
+      <td style="text-align:left;">0.00893</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACACCAACAGAGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YKL164C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">468</td>
+      <td style="text-align:left;">482</td>
+      <td style="text-align:left;">3.09e-06</td>
+      <td style="text-align:left;">0.00893</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACAGCAGCAGCAGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YKL164C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">768</td>
+      <td style="text-align:left;">782</td>
+      <td style="text-align:left;">3.09e-06</td>
+      <td style="text-align:left;">0.00893</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACAGCAGCAGCAGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YKL164C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">471</td>
+      <td style="text-align:left;">485</td>
+      <td style="text-align:left;">3.26e-06</td>
+      <td style="text-align:left;">0.00902</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCAGCAGTGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YKL164C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">771</td>
+      <td style="text-align:left;">785</td>
+      <td style="text-align:left;">3.26e-06</td>
+      <td style="text-align:left;">0.00902</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCAGCAGTGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YNL069C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">45</td>
+      <td style="text-align:left;">59</td>
+      <td style="text-align:left;">3.75e-06</td>
+      <td style="text-align:left;">0.0102</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCAGCAGAAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YFR053C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">750</td>
+      <td style="text-align:left;">764</td>
+      <td style="text-align:left;">3.89e-06</td>
+      <td style="text-align:left;">0.0104</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GACACCAGTACCGAA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBL030C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">546</td>
+      <td style="text-align:left;">560</td>
+      <td style="text-align:left;">3.98e-06</td>
+      <td style="text-align:left;">0.0104</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCACCACCAGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YOR116C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1110</td>
+      <td style="text-align:left;">1124</td>
+      <td style="text-align:left;">4.64e-06</td>
+      <td style="text-align:left;">0.0119</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCAATAGCAGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YPL058C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">2331</td>
+      <td style="text-align:left;">2345</td>
+      <td style="text-align:left;">4.86e-06</td>
+      <td style="text-align:left;">0.0122</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCATCACAGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLR153C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1092</td>
+      <td style="text-align:left;">1106</td>
+      <td style="text-align:left;">5.09e-06</td>
+      <td style="text-align:left;">0.0126</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GTCACCGGCAGTGAA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGL008C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1071</td>
+      <td style="text-align:left;">1085</td>
+      <td style="text-align:left;">5.39e-06</td>
+      <td style="text-align:left;">0.0131</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACAGCATCACCAGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YER145C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">477</td>
+      <td style="text-align:left;">491</td>
+      <td style="text-align:left;">5.77e-06</td>
+      <td style="text-align:left;">0.0135</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ATCACCACCACTGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YFR031C-A</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">597</td>
+      <td style="text-align:left;">611</td>
+      <td style="text-align:left;">5.77e-06</td>
+      <td style="text-align:left;">0.0135</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCACCTCTACCGGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDR502C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">294</td>
+      <td style="text-align:left;">308</td>
+      <td style="text-align:left;">6.03e-06</td>
+      <td style="text-align:left;">0.0139</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCGTAAGCAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLL024C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">810</td>
+      <td style="text-align:left;">824</td>
+      <td style="text-align:left;">6.52e-06</td>
+      <td style="text-align:left;">0.0148</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCGTAAGCAAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YEL060C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">951</td>
+      <td style="text-align:left;">965</td>
+      <td style="text-align:left;">6.97e-06</td>
+      <td style="text-align:left;">0.0155</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GACACCGCGACCGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YOL120C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">252</td>
+      <td style="text-align:left;">266</td>
+      <td style="text-align:left;">7.04e-06</td>
+      <td style="text-align:left;">0.0155</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCAACAGTGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YEL046C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1044</td>
+      <td style="text-align:left;">1058</td>
+      <td style="text-align:left;">7.2e-06</td>
+      <td style="text-align:left;">0.0155</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GTCACCGATAGAGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YFR044C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">99</td>
+      <td style="text-align:left;">113</td>
+      <td style="text-align:left;">7.36e-06</td>
+      <td style="text-align:left;">0.0155</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCATCATCGCC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDR345C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">486</td>
+      <td style="text-align:left;">500</td>
+      <td style="text-align:left;">7.36e-06</td>
+      <td style="text-align:left;">0.0155</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GACACCAACAGAAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YHR064C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1347</td>
+      <td style="text-align:left;">1361</td>
+      <td style="text-align:left;">7.51e-06</td>
+      <td style="text-align:left;">0.0155</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCACCGTTAGCGCA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YKL164C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">525</td>
+      <td style="text-align:left;">539</td>
+      <td style="text-align:left;">7.84e-06</td>
+      <td style="text-align:left;">0.016</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GACAGCTGCAGCAGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YPL058C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">4158</td>
+      <td style="text-align:left;">4172</td>
+      <td style="text-align:left;">8.18e-06</td>
+      <td style="text-align:left;">0.0164</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCATCAACACCGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGR037C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">147</td>
+      <td style="text-align:left;">161</td>
+      <td style="text-align:left;">8.36e-06</td>
+      <td style="text-align:left;">0.0165</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GTCACCTACAGTGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YKL056C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">366</td>
+      <td style="text-align:left;">380</td>
+      <td style="text-align:left;">9.2e-06</td>
+      <td style="text-align:left;">0.0177</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCGATATCGAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YPR138C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">336</td>
+      <td style="text-align:left;">350</td>
+      <td style="text-align:left;">9.3e-06</td>
+      <td style="text-align:left;">0.0177</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCACCGATATAGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBL039C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">624</td>
+      <td style="text-align:left;">638</td>
+      <td style="text-align:left;">9.39e-06</td>
+      <td style="text-align:left;">0.0177</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GATACCGTCTGCGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YHR092C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">486</td>
+      <td style="text-align:left;">500</td>
+      <td style="text-align:left;">9.49e-06</td>
+      <td style="text-align:left;">0.0177</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACACCAACAGAAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YML123C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">582</td>
+      <td style="text-align:left;">596</td>
+      <td style="text-align:left;">9.59e-06</td>
+      <td style="text-align:left;">0.0177</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ATTACCGACAGCAGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YOR335C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1218</td>
+      <td style="text-align:left;">1232</td>
+      <td style="text-align:left;">9.68e-06</td>
+      <td style="text-align:left;">0.0177</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCGTCATCAAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGL026C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1428</td>
+      <td style="text-align:left;">1442</td>
+      <td style="text-align:left;">1e-05</td>
+      <td style="text-align:left;">0.0178</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TACACCGTCAGCAAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDL171C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">3165</td>
+      <td style="text-align:left;">3179</td>
+      <td style="text-align:left;">1e-05</td>
+      <td style="text-align:left;">0.0178</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATACCAACACCAAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YMR205C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1800</td>
+      <td style="text-align:left;">1814</td>
+      <td style="text-align:left;">1.02e-05</td>
+      <td style="text-align:left;">0.0179</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCAATAGTAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLR304C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1713</td>
+      <td style="text-align:left;">1727</td>
+      <td style="text-align:left;">1.05e-05</td>
+      <td style="text-align:left;">0.0182</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ATCAGCACCACCAAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YJR045C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1224</td>
+      <td style="text-align:left;">1238</td>
+      <td style="text-align:left;">1.06e-05</td>
+      <td style="text-align:left;">0.0182</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GTCACCGTTAGTGGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBL072C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">159</td>
+      <td style="text-align:left;">173</td>
+      <td style="text-align:left;">1.09e-05</td>
+      <td style="text-align:left;">0.0185</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCTCTAGCAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBL030C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">234</td>
+      <td style="text-align:left;">248</td>
+      <td style="text-align:left;">1.12e-05</td>
+      <td style="text-align:left;">0.0187</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCAGTAGTAAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YMR116C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">180</td>
+      <td style="text-align:left;">194</td>
+      <td style="text-align:left;">1.14e-05</td>
+      <td style="text-align:left;">0.0188</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATACCGGTAGCAGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YPR102C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">222</td>
+      <td style="text-align:left;">236</td>
+      <td style="text-align:left;">1.2e-05</td>
+      <td style="text-align:left;">0.0193</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GTTACCGGTAGCAGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGR085C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">222</td>
+      <td style="text-align:left;">236</td>
+      <td style="text-align:left;">1.2e-05</td>
+      <td style="text-align:left;">0.0193</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GTTACCGGTAGCAGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YAR002C-A</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">111</td>
+      <td style="text-align:left;">125</td>
+      <td style="text-align:left;">1.28e-05</td>
+      <td style="text-align:left;">0.0201</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACAGCTTCAGAGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGR285C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">186</td>
+      <td style="text-align:left;">200</td>
+      <td style="text-align:left;">1.28e-05</td>
+      <td style="text-align:left;">0.0201</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GTCAGCATCACCAAA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YHR094C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">297</td>
+      <td style="text-align:left;">311</td>
+      <td style="text-align:left;">1.33e-05</td>
+      <td style="text-align:left;">0.0203</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GTTAGCAGCACTGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLL024C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1497</td>
+      <td style="text-align:left;">1511</td>
+      <td style="text-align:left;">1.34e-05</td>
+      <td style="text-align:left;">0.0203</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GACAGCGTCATTGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGL008C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">558</td>
+      <td style="text-align:left;">572</td>
+      <td style="text-align:left;">1.35e-05</td>
+      <td style="text-align:left;">0.0203</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTAGCAACATCAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YER043C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">672</td>
+      <td style="text-align:left;">686</td>
+      <td style="text-align:left;">1.35e-05</td>
+      <td style="text-align:left;">0.0203</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ATCACCGTAACCAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YMR205C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1533</td>
+      <td style="text-align:left;">1547</td>
+      <td style="text-align:left;">1.38e-05</td>
+      <td style="text-align:left;">0.0203</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCTTCTGCAAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YJL171C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">726</td>
+      <td style="text-align:left;">740</td>
+      <td style="text-align:left;">1.41e-05</td>
+      <td style="text-align:left;">0.0203</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGTAGCTTCACTGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YEL047C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">93</td>
+      <td style="text-align:left;">107</td>
+      <td style="text-align:left;">1.42e-05</td>
+      <td style="text-align:left;">0.0203</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACACCGCCAGAAAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGL189C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">213</td>
+      <td style="text-align:left;">227</td>
+      <td style="text-align:left;">1.44e-05</td>
+      <td style="text-align:left;">0.0203</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCAGCGGCTTCAAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGL026C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">897</td>
+      <td style="text-align:left;">911</td>
+      <td style="text-align:left;">1.44e-05</td>
+      <td style="text-align:left;">0.0203</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCGGTTTCAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLR027C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">924</td>
+      <td style="text-align:left;">938</td>
+      <td style="text-align:left;">1.44e-05</td>
+      <td style="text-align:left;">0.0203</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCCGTACCAGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLR355C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1098</td>
+      <td style="text-align:left;">1112</td>
+      <td style="text-align:left;">1.45e-05</td>
+      <td style="text-align:left;">0.0203</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCAGCACGGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YHR064C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">480</td>
+      <td style="text-align:left;">494</td>
+      <td style="text-align:left;">1.51e-05</td>
+      <td style="text-align:left;">0.0209</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCACCGGATGCAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YMR205C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1092</td>
+      <td style="text-align:left;">1106</td>
+      <td style="text-align:left;">1.55e-05</td>
+      <td style="text-align:left;">0.0213</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCGACATTAAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YJL190C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">63</td>
+      <td style="text-align:left;">77</td>
+      <td style="text-align:left;">1.57e-05</td>
+      <td style="text-align:left;">0.0213</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GATACCAGCAGAGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBR067C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">33</td>
+      <td style="text-align:left;">47</td>
+      <td style="text-align:left;">1.58e-05</td>
+      <td style="text-align:left;">0.0213</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCGAAAGAGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBR084C-A</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">513</td>
+      <td style="text-align:left;">527</td>
+      <td style="text-align:left;">1.6e-05</td>
+      <td style="text-align:left;">0.0213</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CTTACCGACACCGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLR333C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">282</td>
+      <td style="text-align:left;">296</td>
+      <td style="text-align:left;">1.63e-05</td>
+      <td style="text-align:left;">0.0215</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCAGCGGCTTTGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDL081C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">84</td>
+      <td style="text-align:left;">98</td>
+      <td style="text-align:left;">1.85e-05</td>
+      <td style="text-align:left;">0.0237</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TTCACCACCAGCGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGR279C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">906</td>
+      <td style="text-align:left;">920</td>
+      <td style="text-align:left;">1.85e-05</td>
+      <td style="text-align:left;">0.0237</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGAAGCAGCAGCGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YMR205C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">2256</td>
+      <td style="text-align:left;">2270</td>
+      <td style="text-align:left;">1.85e-05</td>
+      <td style="text-align:left;">0.0237</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCATCACCACCGGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLR153C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">270</td>
+      <td style="text-align:left;">284</td>
+      <td style="text-align:left;">1.88e-05</td>
+      <td style="text-align:left;">0.0239</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ATCACCTTCAGTAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLR333C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">276</td>
+      <td style="text-align:left;">290</td>
+      <td style="text-align:left;">1.95e-05</td>
+      <td style="text-align:left;">0.0246</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGAGCGGCAGCGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDR224C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">39</td>
+      <td style="text-align:left;">53</td>
+      <td style="text-align:left;">1.99e-05</td>
+      <td style="text-align:left;">0.0249</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACCTTCAGAGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YIL133C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">48</td>
+      <td style="text-align:left;">62</td>
+      <td style="text-align:left;">2.01e-05</td>
+      <td style="text-align:left;">0.0249</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTAGCATTAGCAGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGR027C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">282</td>
+      <td style="text-align:left;">296</td>
+      <td style="text-align:left;">2.05e-05</td>
+      <td style="text-align:left;">0.0251</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCGGCTTTGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YKL164C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">876</td>
+      <td style="text-align:left;">890</td>
+      <td style="text-align:left;">2.08e-05</td>
+      <td style="text-align:left;">0.0251</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACAGCAATACCGAA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBL039C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1686</td>
+      <td style="text-align:left;">1700</td>
+      <td style="text-align:left;">2.08e-05</td>
+      <td style="text-align:left;">0.0251</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACACCTTTACCGAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDR508C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1497</td>
+      <td style="text-align:left;">1511</td>
+      <td style="text-align:left;">2.14e-05</td>
+      <td style="text-align:left;">0.0256</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACCAATACCAGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDL081C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">123</td>
+      <td style="text-align:left;">137</td>
+      <td style="text-align:left;">2.16e-05</td>
+      <td style="text-align:left;">0.0256</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCACCAGCGCT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLR304C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1233</td>
+      <td style="text-align:left;">1247</td>
+      <td style="text-align:left;">2.22e-05</td>
+      <td style="text-align:left;">0.0259</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ATTAGCAACAGCAAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBR069C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1530</td>
+      <td style="text-align:left;">1544</td>
+      <td style="text-align:left;">2.22e-05</td>
+      <td style="text-align:left;">0.0259</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACCTATACCGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGL008C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">804</td>
+      <td style="text-align:left;">818</td>
+      <td style="text-align:left;">2.26e-05</td>
+      <td style="text-align:left;">0.0261</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GACAGCAATACCAGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YJR139C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1041</td>
+      <td style="text-align:left;">1055</td>
+      <td style="text-align:left;">2.29e-05</td>
+      <td style="text-align:left;">0.0262</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCACCGATAACGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YCL030C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">582</td>
+      <td style="text-align:left;">596</td>
+      <td style="text-align:left;">2.35e-05</td>
+      <td style="text-align:left;">0.0267</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCATCTTCATCGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBR143C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">96</td>
+      <td style="text-align:left;">110</td>
+      <td style="text-align:left;">2.41e-05</td>
+      <td style="text-align:left;">0.0267</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCACCAATACCACC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDL081C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">108</td>
+      <td style="text-align:left;">122</td>
+      <td style="text-align:left;">2.41e-05</td>
+      <td style="text-align:left;">0.0267</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GACACCAGCTGGGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YOR116C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1101</td>
+      <td style="text-align:left;">1115</td>
+      <td style="text-align:left;">2.41e-05</td>
+      <td style="text-align:left;">0.0267</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCAATAGCACC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLL045C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">417</td>
+      <td style="text-align:left;">431</td>
+      <td style="text-align:left;">2.48e-05</td>
+      <td style="text-align:left;">0.0271</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TTCAGCGATAGCGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBR143C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">693</td>
+      <td style="text-align:left;">707</td>
+      <td style="text-align:left;">2.48e-05</td>
+      <td style="text-align:left;">0.0271</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACAGCAACTTCGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YER145C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">453</td>
+      <td style="text-align:left;">467</td>
+      <td style="text-align:left;">2.5e-05</td>
+      <td style="text-align:left;">0.0271</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ATTACCATCACCGCC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YNL069C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">48</td>
+      <td style="text-align:left;">62</td>
+      <td style="text-align:left;">2.59e-05</td>
+      <td style="text-align:left;">0.0278</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCAGAAGCAGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGL008C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">810</td>
+      <td style="text-align:left;">824</td>
+      <td style="text-align:left;">2.61e-05</td>
+      <td style="text-align:left;">0.0279</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATACCAGTATCAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YMR205C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1524</td>
+      <td style="text-align:left;">1538</td>
+      <td style="text-align:left;">2.64e-05</td>
+      <td style="text-align:left;">0.0279</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCGATAGCACC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLR304C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1473</td>
+      <td style="text-align:left;">1487</td>
+      <td style="text-align:left;">2.68e-05</td>
+      <td style="text-align:left;">0.0282</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCGATTTCAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YIL094C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">186</td>
+      <td style="text-align:left;">200</td>
+      <td style="text-align:left;">2.76e-05</td>
+      <td style="text-align:left;">0.0285</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATACCTTTACCAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YNL302C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">210</td>
+      <td style="text-align:left;">224</td>
+      <td style="text-align:left;">2.76e-05</td>
+      <td style="text-align:left;">0.0285</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CTTACCAACACCGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGR175C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">858</td>
+      <td style="text-align:left;">872</td>
+      <td style="text-align:left;">2.83e-05</td>
+      <td style="text-align:left;">0.0289</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GATACCGTCACAGAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGL008C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1938</td>
+      <td style="text-align:left;">1952</td>
+      <td style="text-align:left;">2.83e-05</td>
+      <td style="text-align:left;">0.0289</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCTCTACCAAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGR279C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">957</td>
+      <td style="text-align:left;">971</td>
+      <td style="text-align:left;">2.86e-05</td>
+      <td style="text-align:left;">0.0289</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCAGCTGGAGCGGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBR143C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">630</td>
+      <td style="text-align:left;">644</td>
+      <td style="text-align:left;">2.88e-05</td>
+      <td style="text-align:left;">0.0289</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GTCAGCAGAACCAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDR345C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">300</td>
+      <td style="text-align:left;">314</td>
+      <td style="text-align:left;">2.93e-05</td>
+      <td style="text-align:left;">0.029</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCTGTAGCAAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDL171C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">2004</td>
+      <td style="text-align:left;">2018</td>
+      <td style="text-align:left;">2.93e-05</td>
+      <td style="text-align:left;">0.029</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATACCACCAGTAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YOR116C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">2301</td>
+      <td style="text-align:left;">2315</td>
+      <td style="text-align:left;">2.99e-05</td>
+      <td style="text-align:left;">0.0293</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CATAGCATTAGCGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YMR205C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1656</td>
+      <td style="text-align:left;">1670</td>
+      <td style="text-align:left;">3.04e-05</td>
+      <td style="text-align:left;">0.0297</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GTCAGCGGAAGTGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBL003C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">360</td>
+      <td style="text-align:left;">374</td>
+      <td style="text-align:left;">3.07e-05</td>
+      <td style="text-align:left;">0.0297</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCTGAACCAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDR155C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">282</td>
+      <td style="text-align:left;">296</td>
+      <td style="text-align:left;">3.15e-05</td>
+      <td style="text-align:left;">0.0301</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GTTACCAGCAGTGAA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YJR016C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">855</td>
+      <td style="text-align:left;">869</td>
+      <td style="text-align:left;">3.15e-05</td>
+      <td style="text-align:left;">0.0301</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACAGCATTAGTGGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLR333C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">9</td>
+      <td style="text-align:left;">23</td>
+      <td style="text-align:left;">3.34e-05</td>
+      <td style="text-align:left;">0.0317</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCAGCTCTGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBR069C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1077</td>
+      <td style="text-align:left;">1091</td>
+      <td style="text-align:left;">3.4e-05</td>
+      <td style="text-align:left;">0.032</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GTCACCTGCACCACC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YMR205C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1977</td>
+      <td style="text-align:left;">1991</td>
+      <td style="text-align:left;">3.43e-05</td>
+      <td style="text-align:left;">0.0321</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GTCACCACCACAAAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDR508C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1041</td>
+      <td style="text-align:left;">1055</td>
+      <td style="text-align:left;">3.46e-05</td>
+      <td style="text-align:left;">0.0321</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGTACCTGCACCACC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLR304C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1509</td>
+      <td style="text-align:left;">1523</td>
+      <td style="text-align:left;">3.49e-05</td>
+      <td style="text-align:left;">0.0322</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CATACCAGTAGCGGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGL008C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">2319</td>
+      <td style="text-align:left;">2333</td>
+      <td style="text-align:left;">3.52e-05</td>
+      <td style="text-align:left;">0.0323</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACACCGAAATCGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDL171C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">3171</td>
+      <td style="text-align:left;">3185</td>
+      <td style="text-align:left;">3.54e-05</td>
+      <td style="text-align:left;">0.0323</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACACCAACTTCGGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YER145C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">459</td>
+      <td style="text-align:left;">473</td>
+      <td style="text-align:left;">3.58e-05</td>
+      <td style="text-align:left;">0.0324</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ATCACCGCCTTCGGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBL003C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">252</td>
+      <td style="text-align:left;">266</td>
+      <td style="text-align:left;">3.64e-05</td>
+      <td style="text-align:left;">0.0327</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCAGAACCAAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLR153C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1536</td>
+      <td style="text-align:left;">1550</td>
+      <td style="text-align:left;">3.67e-05</td>
+      <td style="text-align:left;">0.0328</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCAATACGAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGL167C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">2499</td>
+      <td style="text-align:left;">2513</td>
+      <td style="text-align:left;">3.73e-05</td>
+      <td style="text-align:left;">0.0331</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACAGCATCATCAAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YOL120C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">288</td>
+      <td style="text-align:left;">302</td>
+      <td style="text-align:left;">3.86e-05</td>
+      <td style="text-align:left;">0.0341</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCATCGTCAGTAAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YML123C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1419</td>
+      <td style="text-align:left;">1433</td>
+      <td style="text-align:left;">4.09e-05</td>
+      <td style="text-align:left;">0.0354</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACCAACAGAAGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YML123C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1545</td>
+      <td style="text-align:left;">1559</td>
+      <td style="text-align:left;">4.09e-05</td>
+      <td style="text-align:left;">0.0354</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAAACCAACACCAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGL008C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">2280</td>
+      <td style="text-align:left;">2294</td>
+      <td style="text-align:left;">4.09e-05</td>
+      <td style="text-align:left;">0.0354</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAAACCAACACCAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDL171C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">3093</td>
+      <td style="text-align:left;">3107</td>
+      <td style="text-align:left;">4.13e-05</td>
+      <td style="text-align:left;">0.0355</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCTGTACCACC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YPL058C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1884</td>
+      <td style="text-align:left;">1898</td>
+      <td style="text-align:left;">4.16e-05</td>
+      <td style="text-align:left;">0.0356</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TTTACCAGCACCGGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YOR116C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">102</td>
+      <td style="text-align:left;">116</td>
+      <td style="text-align:left;">4.19e-05</td>
+      <td style="text-align:left;">0.0356</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGAACCGGTACCGAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBL072C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">387</td>
+      <td style="text-align:left;">401</td>
+      <td style="text-align:left;">4.23e-05</td>
+      <td style="text-align:left;">0.0357</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GATACCTTCAGAAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGR279C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">90</td>
+      <td style="text-align:left;">104</td>
+      <td style="text-align:left;">4.26e-05</td>
+      <td style="text-align:left;">0.0358</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ATCAGCACCACAGGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDR050C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">42</td>
+      <td style="text-align:left;">56</td>
+      <td style="text-align:left;">4.3e-05</td>
+      <td style="text-align:left;">0.0359</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGAAGCACCACCGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YKL056C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">342</td>
+      <td style="text-align:left;">356</td>
+      <td style="text-align:left;">4.44e-05</td>
+      <td style="text-align:left;">0.0369</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GTCACCACCTTCAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YMR205C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">2088</td>
+      <td style="text-align:left;">2102</td>
+      <td style="text-align:left;">4.51e-05</td>
+      <td style="text-align:left;">0.0372</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGTACCACCTTCAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YJR045C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">765</td>
+      <td style="text-align:left;">779</td>
+      <td style="text-align:left;">4.59e-05</td>
+      <td style="text-align:left;">0.0374</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CACAGCAGCACCAAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGL008C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1701</td>
+      <td style="text-align:left;">1715</td>
+      <td style="text-align:left;">4.59e-05</td>
+      <td style="text-align:left;">0.0374</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GTAAGCAGCACCGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YEL047C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">510</td>
+      <td style="text-align:left;">524</td>
+      <td style="text-align:left;">4.82e-05</td>
+      <td style="text-align:left;">0.039</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATAGCTGCAGTGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YPL058C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">3381</td>
+      <td style="text-align:left;">3395</td>
+      <td style="text-align:left;">4.86e-05</td>
+      <td style="text-align:left;">0.0391</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACAGCTTTATCAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YPR010C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1206</td>
+      <td style="text-align:left;">1220</td>
+      <td style="text-align:left;">4.97e-05</td>
+      <td style="text-align:left;">0.0398</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACCATAACCGAA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YKL056C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">321</td>
+      <td style="text-align:left;">335</td>
+      <td style="text-align:left;">5.06e-05</td>
+      <td style="text-align:left;">0.0401</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCTTCTTCAAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YNL069C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">42</td>
+      <td style="text-align:left;">56</td>
+      <td style="text-align:left;">5.1e-05</td>
+      <td style="text-align:left;">0.0401</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGAAGCAGCAGCAGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YHR094C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1530</td>
+      <td style="text-align:left;">1544</td>
+      <td style="text-align:left;">5.1e-05</td>
+      <td style="text-align:left;">0.0401</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GACACCTTTTCCGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLL024C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">255</td>
+      <td style="text-align:left;">269</td>
+      <td style="text-align:left;">5.22e-05</td>
+      <td style="text-align:left;">0.0408</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GTCACCAGCTTCAGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGR279C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1092</td>
+      <td style="text-align:left;">1106</td>
+      <td style="text-align:left;">5.26e-05</td>
+      <td style="text-align:left;">0.0408</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GTTAGCGGGAGCAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YMR142C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">309</td>
+      <td style="text-align:left;">323</td>
+      <td style="text-align:left;">5.3e-05</td>
+      <td style="text-align:left;">0.0408</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACAGCAATACCAAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGR279C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">918</td>
+      <td style="text-align:left;">932</td>
+      <td style="text-align:left;">5.3e-05</td>
+      <td style="text-align:left;">0.0408</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGTAGCTACAGAAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YER043C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">150</td>
+      <td style="text-align:left;">164</td>
+      <td style="text-align:left;">5.43e-05</td>
+      <td style="text-align:left;">0.0415</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GACACCAACTTCGAA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YFR044C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">282</td>
+      <td style="text-align:left;">296</td>
+      <td style="text-align:left;">5.52e-05</td>
+      <td style="text-align:left;">0.042</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCATCATGGAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YER043C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">648</td>
+      <td style="text-align:left;">662</td>
+      <td style="text-align:left;">5.6e-05</td>
+      <td style="text-align:left;">0.0424</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCAGCAGCACAACC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBR067C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">192</td>
+      <td style="text-align:left;">206</td>
+      <td style="text-align:left;">5.69e-05</td>
+      <td style="text-align:left;">0.0426</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCAGCAGAAGAGGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBL039C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1593</td>
+      <td style="text-align:left;">1607</td>
+      <td style="text-align:left;">5.69e-05</td>
+      <td style="text-align:left;">0.0426</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACCTGCATCAAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGL026C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">90</td>
+      <td style="text-align:left;">104</td>
+      <td style="text-align:left;">5.82e-05</td>
+      <td style="text-align:left;">0.0431</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ATCACCTCTACCAGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YER043C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1131</td>
+      <td style="text-align:left;">1145</td>
+      <td style="text-align:left;">5.82e-05</td>
+      <td style="text-align:left;">0.0431</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCACCCAAAGCAAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YJR045C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1026</td>
+      <td style="text-align:left;">1040</td>
+      <td style="text-align:left;">5.91e-05</td>
+      <td style="text-align:left;">0.0436</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCATCAGCAGTGAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YMR116C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">711</td>
+      <td style="text-align:left;">725</td>
+      <td style="text-align:left;">6e-05</td>
+      <td style="text-align:left;">0.044</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GTTACCGGCAGAAAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YMR205C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1413</td>
+      <td style="text-align:left;">1427</td>
+      <td style="text-align:left;">6.1e-05</td>
+      <td style="text-align:left;">0.0445</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACAGCAGTACCACC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YOR369C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">147</td>
+      <td style="text-align:left;">161</td>
+      <td style="text-align:left;">6.39e-05</td>
+      <td style="text-align:left;">0.0463</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CTTAGCATCAGCAAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YCL030C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">96</td>
+      <td style="text-align:left;">110</td>
+      <td style="text-align:left;">6.53e-05</td>
+      <td style="text-align:left;">0.0465</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACAGCTCTACCGAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLR304C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1503</td>
+      <td style="text-align:left;">1517</td>
+      <td style="text-align:left;">6.53e-05</td>
+      <td style="text-align:left;">0.0465</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGTACCCATACCAGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDL171C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">2013</td>
+      <td style="text-align:left;">2027</td>
+      <td style="text-align:left;">6.53e-05</td>
+      <td style="text-align:left;">0.0465</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTAGCACCAGAGAA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YJR145C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">249</td>
+      <td style="text-align:left;">263</td>
+      <td style="text-align:left;">6.58e-05</td>
+      <td style="text-align:left;">0.0465</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CTTACCGGCATCGAA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YHR203C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">249</td>
+      <td style="text-align:left;">263</td>
+      <td style="text-align:left;">6.58e-05</td>
+      <td style="text-align:left;">0.0465</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CTTACCGGCATCGAA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGL026C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1125</td>
+      <td style="text-align:left;">1139</td>
+      <td style="text-align:left;">6.69e-05</td>
+      <td style="text-align:left;">0.047</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GACAGCTTCATCAAA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDR086C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">54</td>
+      <td style="text-align:left;">68</td>
+      <td style="text-align:left;">6.74e-05</td>
+      <td style="text-align:left;">0.0471</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GATACCGACTGCAAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLR304C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1710</td>
+      <td style="text-align:left;">1724</td>
+      <td style="text-align:left;">6.89e-05</td>
+      <td style="text-align:left;">0.048</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCATCAGCACCACC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YHR019C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">378</td>
+      <td style="text-align:left;">392</td>
+      <td style="text-align:left;">6.94e-05</td>
+      <td style="text-align:left;">0.0481</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCTTCTGCAAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDR502C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1065</td>
+      <td style="text-align:left;">1079</td>
+      <td style="text-align:left;">6.99e-05</td>
+      <td style="text-align:left;">0.0482</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATAGCATCAGAAAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGL147C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">180</td>
+      <td style="text-align:left;">194</td>
+      <td style="text-align:left;">7.31e-05</td>
+      <td style="text-align:left;">0.0499</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACACCATCTCTAAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YJR016C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1053</td>
+      <td style="text-align:left;">1067</td>
+      <td style="text-align:left;">7.31e-05</td>
+      <td style="text-align:left;">0.0499</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TTCAGCGGCAGAAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGL189C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">18</td>
+      <td style="text-align:left;">32</td>
+      <td style="text-align:left;">7.37e-05</td>
+      <td style="text-align:left;">0.0501</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCATCAGCAGGGGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGL008C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">792</td>
+      <td style="text-align:left;">806</td>
+      <td style="text-align:left;">7.65e-05</td>
+      <td style="text-align:left;">0.0517</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTAGCACCTTCGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDL171C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">2178</td>
+      <td style="text-align:left;">2192</td>
+      <td style="text-align:left;">7.76e-05</td>
+      <td style="text-align:left;">0.0522</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACCAGAAGTAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGR175C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">447</td>
+      <td style="text-align:left;">461</td>
+      <td style="text-align:left;">7.82e-05</td>
+      <td style="text-align:left;">0.0523</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CATACCACCACCAGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YEL054C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">426</td>
+      <td style="text-align:left;">440</td>
+      <td style="text-align:left;">7.94e-05</td>
+      <td style="text-align:left;">0.0529</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCACCGACTTCACC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YMR145C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">831</td>
+      <td style="text-align:left;">845</td>
+      <td style="text-align:left;">8.11e-05</td>
+      <td style="text-align:left;">0.0535</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGGACCACCACCAAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YPL240C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1788</td>
+      <td style="text-align:left;">1802</td>
+      <td style="text-align:left;">8.11e-05</td>
+      <td style="text-align:left;">0.0535</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TACATCGGCACCAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YPR102C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">207</td>
+      <td style="text-align:left;">221</td>
+      <td style="text-align:left;">8.48e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATACCGAAACCGAA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGR085C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">207</td>
+      <td style="text-align:left;">221</td>
+      <td style="text-align:left;">8.48e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATACCGAAACCGAA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLR355C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">297</td>
+      <td style="text-align:left;">311</td>
+      <td style="text-align:left;">8.48e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGTAGCTTCTTCGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGR175C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">132</td>
+      <td style="text-align:left;">146</td>
+      <td style="text-align:left;">8.54e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAAAGCGACAGCGAA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YOL120C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">303</td>
+      <td style="text-align:left;">317</td>
+      <td style="text-align:left;">8.54e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACCAACAACGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGR279C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">33</td>
+      <td style="text-align:left;">47</td>
+      <td style="text-align:left;">8.6e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACACCGTAAGCACC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBR181C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">543</td>
+      <td style="text-align:left;">557</td>
+      <td style="text-align:left;">8.6e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GTTACCACCAGAGAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YCL025C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1243</td>
+      <td style="text-align:left;">1257</td>
+      <td style="text-align:left;">8.6e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GTCACCAATTCCAGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDR155C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">42</td>
+      <td style="text-align:left;">56</td>
+      <td style="text-align:left;">8.72e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCACCGGAAGGAGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YKL164C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">585</td>
+      <td style="text-align:left;">599</td>
+      <td style="text-align:left;">8.72e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCAGCTTTGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YKL164C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">714</td>
+      <td style="text-align:left;">728</td>
+      <td style="text-align:left;">8.72e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCAGCTTTGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YPL058C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">3390</td>
+      <td style="text-align:left;">3404</td>
+      <td style="text-align:left;">8.79e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ATCAGCAGGACCGAA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YFR031C-A</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">78</td>
+      <td style="text-align:left;">92</td>
+      <td style="text-align:left;">8.85e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCTCTAGAGAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGR285C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">285</td>
+      <td style="text-align:left;">299</td>
+      <td style="text-align:left;">8.92e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GTCAGCTTTTGCGGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YPR010C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">3567</td>
+      <td style="text-align:left;">3581</td>
+      <td style="text-align:left;">8.92e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ATCAGCAGTTCTGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDR050C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">219</td>
+      <td style="text-align:left;">233</td>
+      <td style="text-align:left;">8.98e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCCAAACCGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YHR092C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">438</td>
+      <td style="text-align:left;">452</td>
+      <td style="text-align:left;">8.98e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCCTTAGAAGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YJR139C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">630</td>
+      <td style="text-align:left;">644</td>
+      <td style="text-align:left;">8.98e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAAACCAGCACCGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDL171C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">4098</td>
+      <td style="text-align:left;">4112</td>
+      <td style="text-align:left;">8.98e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GATACCTGCATCAAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDL171C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">4233</td>
+      <td style="text-align:left;">4247</td>
+      <td style="text-align:left;">8.98e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACACCATCACAACC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YKL164C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">852</td>
+      <td style="text-align:left;">866</td>
+      <td style="text-align:left;">9.04e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGAAGCAGTAGTGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YIL133C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">39</td>
+      <td style="text-align:left;">53</td>
+      <td style="text-align:left;">9.1e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TTCAGCAGCAGTAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLR355C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">216</td>
+      <td style="text-align:left;">230</td>
+      <td style="text-align:left;">9.17e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCTCTTCTGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YPL058C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">915</td>
+      <td style="text-align:left;">929</td>
+      <td style="text-align:left;">9.17e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCACCACCAACAGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YHR092C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1713</td>
+      <td style="text-align:left;">1727</td>
+      <td style="text-align:left;">9.17e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCAGCTTCTTCAGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGL008C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">765</td>
+      <td style="text-align:left;">779</td>
+      <td style="text-align:left;">9.24e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATATCAGCAGCAGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YGL167C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">2457</td>
+      <td style="text-align:left;">2471</td>
+      <td style="text-align:left;">9.24e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAAACCGACAGTGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YPR010C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1869</td>
+      <td style="text-align:left;">1883</td>
+      <td style="text-align:left;">9.37e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGGACCAGCAGCAAA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBR143C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">129</td>
+      <td style="text-align:left;">143</td>
+      <td style="text-align:left;">9.44e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GGCACCTTCTGAAGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YLL045C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">411</td>
+      <td style="text-align:left;">425</td>
+      <td style="text-align:left;">9.44e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CTTACCTTCAGCGAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YPL240C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1758</td>
+      <td style="text-align:left;">1772</td>
+      <td style="text-align:left;">9.44e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAAACCAACACCGAA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YOL040C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">30</td>
+      <td style="text-align:left;">44</td>
+      <td style="text-align:left;">9.51e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCACCGGCTCTACC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDR224C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">303</td>
+      <td style="text-align:left;">317</td>
+      <td style="text-align:left;">9.51e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CTTACCATCAGTGGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDR345C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1170</td>
+      <td style="text-align:left;">1184</td>
+      <td style="text-align:left;">9.51e-05</td>
+      <td style="text-align:left;">0.054</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACACCCAAACCGGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YFR053C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">66</td>
+      <td style="text-align:left;">80</td>
+      <td style="text-align:left;">9.78e-05</td>
+      <td style="text-align:left;">0.055</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAGCACCTGCACC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YBL030C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">168</td>
+      <td style="text-align:left;">182</td>
+      <td style="text-align:left;">9.78e-05</td>
+      <td style="text-align:left;">0.055</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACAGCTTGACCGGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YEL060C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">570</td>
+      <td style="text-align:left;">584</td>
+      <td style="text-align:left;">9.85e-05</td>
+      <td style="text-align:left;">0.055</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATACCGACTTCAAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YMR205C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1971</td>
+      <td style="text-align:left;">1985</td>
+      <td style="text-align:left;">9.85e-05</td>
+      <td style="text-align:left;">0.055</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGAACCGTCACCACC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">RRCACCRDCASCRRC</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">YDR086C</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">144</td>
+      <td style="text-align:left;">158</td>
+      <td style="text-align:left;">9.98e-05</td>
+      <td style="text-align:left;">0.0556</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACCTTCTCTGAC</td>
+   </tr>
+</tbody>
+</table>
+
+<hr>
+<center><big><b><a name="debugging_information">DEBUGGING INFORMATION</a></b></big></center>
+<hr>
+<p>
+Command line:
+</p>
+<pre>
+fimo --parse-genomic-coord --verbosity 1 --oc fimo_out_1 --bgfile ./background --motif RRCACCRDCASCRRC meme_out/meme.xml Cbp80Hpr1_G0.fa
+</pre>
+<p>
+Settings:
+</p>
+<pre>
+<table>
+  <tr>
+    <td style="padding-right: 2em">output_directory = fimo_out_1</td>
+    <td style="padding-left: 5em; padding-right: 2em">MEME file name = meme_out/meme.xml</td>
+    <td style="padding-left: 5em; padding-right: 2em">sequence file name = Cbp80Hpr1_G0.fa</td>
+  </tr>  <tr>
+    <td style="padding-right: 2em">background file name = ./background</td>
+    <td style="padding-left: 5em; padding-right: 2em">alphabet = RNA</td>
+    <td style="padding-left: 5em; padding-right: 2em">max stored scores = 100000</td>
+  </tr>  <tr>
+    <td style="padding-right: 2em">allow clobber = true</td>
+    <td style="padding-left: 5em; padding-right: 2em">compute q-values = true</td>
+    <td style="padding-left: 5em; padding-right: 2em">parse genomic coord. = true</td>
+  </tr>
+  <tr>
+    <td style="padding-right: 2em">text only = false</td>
+    <td style="padding-left: 5em; padding-right: 2em">scan both strands = false</td>
+    <td style="padding-left: 5em; padding-right: 2em">max strand = false</td>
+  </tr>
+  <tr>
+    <td style="padding-right: 2em">threshold type = p-value</td>
+    <td style="padding-left: 5em; padding-right: 2em">output theshold = 0.0001</td>
+    <td style="padding-left: 5em; padding-right: 2em">pseudocount = 0.1</td>
+  </tr>
+  <tr>
+    <td style="padding-right: 2em">alpha = 1</td>
+    <td style="padding-left: 5em; padding-right: 2em">verbosity = 1</td>
+    <td style="padding-left: 5em; padding-right: 2em"></td>
+  </tr>
+
+</table>
+</pre>
+<p>
+This information can be useful in the event you wish to report a
+problem with the FIMO software.
+</p>
+<hr>
+<span style="background-color: #DDDDFF"><a href="#top_buttons"><b>Go to top</b></a></span>
+</body>
+</html>

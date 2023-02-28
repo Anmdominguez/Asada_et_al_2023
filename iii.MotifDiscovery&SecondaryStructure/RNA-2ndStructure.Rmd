@@ -21,19 +21,17 @@ fastaImport <- function(fasta){
   return(Transcript.Dataframe)
 }
 
-
-
 ```
 
 ```{r}
 library(ggplot2)
-Cbp80 <- fastaImport("Cbp80/mRNA_Cbp80.fa")
+Cbp80 <- fastaImport("Outputs/Cbp80/FASTA/Cbp80_cDNA.fa")
 Cbp80.length <- vector("numeric", length(Cbp80$sequence))
 for (i in seq_along(Cbp80$sequence)){
   Cbp80.length[i] <- nchar(Cbp80$sequence[i]) 
 }
 
-Cbp80Hpr1 <- fastaImport("Cbp80Hpr1/mRNA_Cbp80Hpr1.fa")
+Cbp80Hpr1 <- fastaImport("Outputs/Cbp80Hpr1/FASTA/Cbp80Hpr1_cDNA.fa")
 Cbp80Hpr1.length <- vector("numeric", length(Cbp80Hpr1$sequence))
 for (i in seq_along(Cbp80Hpr1$sequence)){
   Cbp80Hpr1.length[i] <- nchar(Cbp80Hpr1$sequence[i]) 
@@ -61,7 +59,77 @@ predict structure using Ufold
 Fragments less than 200bps need to be filled with "-"
 
 ```{r}
-library(stringr)
+library(tidyverse)
+new.colnames <- c("seq_name", "Group")
+Cbp80.Comms <- read.csv("Outputs/Cbp80/SEEKR/Cbp80_comms.csv")
+Cbp80.Comms$X <- substring(Cbp80.Comms$X, 2)
+colnames(Cbp80.Comms) <- new.colnames
+Cbp80Hpr1.Comms <- read.csv("Outputs/Cbp80Hpr1/SEEKR/Cbp80Hpr1_comms.csv")
+Cbp80Hpr1.Comms$X <-substring(Cbp80Hpr1.Comms$X, 2)
+colnames(Cbp80Hpr1.Comms) <- new.colnames
+
+Cbp80 <- merge(Cbp80,Cbp80.Comms, by= "seq_name")
+Cbp80Hpr1 <- merge(Cbp80Hpr1,Cbp80Hpr1.Comms, by= "seq_name")
+
+```
+
+***if both "mins" are 200, the samples have been "padded" and are ready to be input into RNApar***
+Samples will need to be converted to fasta with their RNA sequences
+
+```{r}
+library(clusterProfiler)
+library(org.Sc.sgd.db)
+
+#function taken from https://bootstrappers.umassmed.edu/guides/main/r_writeFasta.html
+writeFasta<-function(data, filename){
+  fastaLines = c()
+  for (rowNum in 1:nrow(data)){
+    fastaLines = c(fastaLines, as.character(paste(">", data[rowNum,"seq_name"], sep = "")))
+    fastaLines = c(fastaLines,as.character(data[rowNum,"sequence"]))
+  }
+  fileConn<-file(filename)
+  writeLines(fastaLines, fileConn)
+  close(fileConn)
+}
+
+GeneSubset<-function(data, Community){
+  plotname <- deparse(substitute(data))
+  GeneSet <- subset(data, data$Group==Community)
+  GeneSet.GO <- enrichGO(gene   = GeneSet$seq_name,
+                OrgDb         = org.Sc.sgd.db,
+                keyType       = 'ORF',
+                ont           = "CC",
+                pAdjustMethod = "BH",
+                pvalueCutoff  = 0.01,
+                qvalueCutoff  = 0.05)
+  GO.plot <- dotplot(GeneSet.GO, showCategory=10) + ggtitle(paste0(plotname,"_", Community))
+  return(list(GeneSet, plot(GO.plot)))
+}
+#specify which subsets to generate Fasta files for
+```
+
+```{r}
+library(patchwork)
+Cbp80_0 <- GeneSubset(Cbp80, 0)
+Cbp80_1 <- GeneSubset(Cbp80, 1)
+Cbp80_2 <- GeneSubset(Cbp80, 2)
+Cbp80_3 <- GeneSubset(Cbp80, 3)
+Cbp80_4 <- GeneSubset(Cbp80, 4)
+Cbp80_5 <- GeneSubset(Cbp80, 5)
+
+Cbp80Hpr1_0 <- GeneSubset(Cbp80Hpr1, 0)
+#Cbp80Hpr1_1 <- GeneSubset(Cbp80Hpr1, 1) No GO terms for this gene set
+Cbp80Hpr1_2 <- GeneSubset(Cbp80Hpr1, 2)
+Cbp80Hpr1_3 <- GeneSubset(Cbp80Hpr1, 3)
+Cbp80Hpr1_4 <- GeneSubset(Cbp80Hpr1, 4)
+Cbp80Hpr1_5 <- GeneSubset(Cbp80Hpr1, 5)
+```
+
+Input these newly formatted fasta files into RNApar
+
+```{r Generate Modifications motifs}
+ModificationMotifs <- read.csv("RMBase_sacCer3_all_MODs_site.csv")
+CDSMotifs <- subset(ModificationMotifs, ModificationMotifs$GeneType == "protein_coding")
 
 RNAprep <- function(sequence) {
   RNA.seq <- vector("numeric", length(sequence))
@@ -72,52 +140,19 @@ RNAprep <- function(sequence) {
   return(RNA.seq)
 }
 
-
-
-Cbp80$RNA_sequence <- RNAprep(Cbp80$sequence)
-Cbp80Hpr1$RNA_sequence <- RNAprep(Cbp80Hpr1$sequence)
-
-Cbp80.fill <- vector("numeric", length(Cbp80$RNA_sequence))
-for (i in seq_along(Cbp80$RNA_sequence)){
-  Cbp80.fill[i] <- nchar(Cbp80$RNA_sequence[i]) 
-}
-
-Cbp80Hpr1.fill <- vector("numeric", length(Cbp80Hpr1$RNA_sequence))
-for (i in seq_along(Cbp80Hpr1$RNA_sequence)){
-  Cbp80Hpr1.fill[i] <- nchar(Cbp80Hpr1$RNA_sequence[i]) 
-}
-
-print(c("Min_Cbp80:",min(Cbp80.fill)))
-print(c("Min_Cbp80Hpr1:",min(Cbp80Hpr1.fill)))
-```
-
-***if both "mins" are 200, the samples have been "padded" and are ready to be input into RNApar***
-Samples will need to be converted to fasta with their RNA sequences
-
-```{r}
-#function taken from https://bootstrappers.umassmed.edu/guides/main/r_writeFasta.html
 writeFasta<-function(data, filename){
   fastaLines = c()
   for (rowNum in 1:nrow(data)){
-    fastaLines = c(fastaLines, as.character(paste(">", data[rowNum,"seq_name"], sep = "")))
-    fastaLines = c(fastaLines,as.character(data[rowNum,"RNA_sequence"]))
+    fastaLines = c(fastaLines, as.character(paste(">", data[rowNum,"Mod_ID"], sep = "")))
+    fastaLines = c(fastaLines,as.character(data[rowNum,"RNA_Sequence"]))
   }
   fileConn<-file(filename)
   writeLines(fastaLines, fileConn)
   close(fileConn)
 }
 
-#specify which subsets to generate Fasta files for
-writeFasta(Cbp80, "Cbp80_RNA.fa")
-writeFasta(Cbp80Hpr1, "Cbp80Hpr1_RNA.fa")
-
-```
-
-Input these newly formatted fasta files into RNApar
-
-```{bash}
-conda activate AD_RNAseq
-python /RNAPar-main/predict.py -i Cbp80_RNApar.fa -o Cbp80_RNApar.data -w ./RNAPar-main/models/weight-1.h5 -K 6 -C 61 -U 115 -N 53
+CDSMotifs$RNA_Sequence <- RNAprep(CDSMotifs$Sequence)
+writeFasta(CDSMotifs, "RNA_modifications.fa")
 ```
 
 

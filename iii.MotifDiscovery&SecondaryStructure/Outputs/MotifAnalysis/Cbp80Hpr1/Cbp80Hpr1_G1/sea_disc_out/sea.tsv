@@ -1,0 +1,11 @@
+RANK	DB	ID	ALT_ID	CONSENSUS	TP	TP%	FP	FP%	ENR_RATIO	SCORE_THR	PVALUE	LOG_PVALUE	EVALUE	LOG_EVALUE	QVALUE	LOG_QVALUE
+1	streme_out/streme.xml	1-AUGACGAUGAAGAW	STREME-1	AUGACGAUGAAGAW	69	72.63	17	17.89	3.89	9.8	1.07e-14	-32.16	6.45e-14	-30.37	6.45e-14	-30.37
+2	meme_out/meme.xml	GAKGAWGANGAMGAD	MEME-1	GAKGAWGANGAMGAD	49	51.58	6	6.32	7.14	13	1.01e-12	-27.62	6.04e-12	-25.83	3.02e-12	-26.52
+3	meme_out/meme.xml	YGAHRAURAYGAURA	MEME-2	YGAHRAURAYGAURA	63	66.32	23	24.21	2.67	11	3.94e-9	-19.35	2.36e-8	-17.56	7.88e-9	-18.66
+4	streme_out/streme.xml	3-AAYAACAGUAAU	STREME-3	AAYAACAGUAAU	73	76.84	36	37.89	2	8.1	4.31e-8	-16.96	2.59e-7	-15.17	6.47e-8	-16.55
+5	streme_out/streme.xml	4-GAAAAGGAAAAAGA	STREME-4	GAAAAGGAAAAAGA	48	50.53	19	20.00	2.45	9.3	8.61e-6	-11.66	5.17e-5	-9.87	1.03e-5	-11.48
+6	streme_out/streme.xml	2-AAUGAUAAUAACAAU	STREME-2	AAUGAUAAUAACAAU	77	81.05	54	56.84	1.42	5.6	2.52e-4	-8.28	1.51e-3	-6.49	2.52e-4	-8.28
+
+# SEA (Simple Enrichment Analysis): Version 5.5.1 compiled on Feb  5 2023 at 16:40:34
+# The format of this file is described at https://meme-suite.org/meme/doc/sea-output-format.html.
+# sea --verbosity 1 --oc sea_disc_out --qvalue --thresh 1 --order 2 --bfile ./background --seed 0 --align center --motif-pseudo 0.01 --noseqs --m meme_out/meme.xml --m streme_out/streme.xml --p Cbp80Hpr1_G1.fa

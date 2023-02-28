@@ -1,0 +1,762 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!-- Document definition -->
+<!-- http://zlab.bu.edu/~phaverty/SupplementalData/CisML/cisml.dtd -->
+<!DOCTYPE cis-element-search[
+<!ELEMENT cis-element-search (program-name, parameters, (pattern | multi-pattern-scan)*)>
+<!ELEMENT program-name (#PCDATA)>
+<!ELEMENT parameters (
+  pattern-file, 
+  sequence-file, 
+  background-seq-file?,
+  pattern-pvalue-cutoff?,
+  sequence-pvalue-cutoff?,
+  site-pvalue-cutoff?,
+  sequence-filtering,
+  ANY*
+ )>
+<!ELEMENT command-line (#PCDATA)>
+<!ELEMENT pattern-file (#PCDATA)>
+<!ELEMENT sequence-file (#PCDATA)>
+<!ELEMENT background-seq-file (#PCDATA)>
+<!ELEMENT pattern-pvalue-cutoff (#PCDATA)>
+<!ELEMENT sequence-pvalue-cutoff (#PCDATA)>
+<!ELEMENT site-pvalue-cutoff (#PCDATA)>
+<!ELEMENT sequence-filtering EMPTY>
+<!ELEMENT multi-pattern-scan (pattern+, ANY*)>
+<!ELEMENT pattern (scanned-sequence+, ANY*)>
+<!ELEMENT scanned-sequence (matched-element*, ANY*)>
+<!ELEMENT matched-element (sequence)>
+<!ELEMENT sequence (#PCDATA)>
+<!ATTLIST cis-element-search
+xmlns:xsi CDATA #IMPLIED
+xmlns:mem CDATA #IMPLIED
+xsi:schemaLocation CDATA #IMPLIED
+>
+<!ATTLIST sequence-filtering
+on-off CDATA #REQUIRED
+type CDATA #IMPLIED
+>
+<!ATTLIST multi-pattern-scan
+score CDATA #IMPLIED
+pvalue CDATA #IMPLIED
+>
+<!ATTLIST pattern
+accession CDATA #REQUIRED
+name CDATA #REQUIRED
+pvalue CDATA #IMPLIED
+score CDATA #IMPLIED
+db CDATA #IMPLIED
+lsid CDATA #IMPLIED
+>
+<!ATTLIST scanned-sequence
+accession CDATA #REQUIRED
+name CDATA #REQUIRED
+score CDATA #IMPLIED
+pvalue CDATA #IMPLIED
+length CDATA #IMPLIED
+db CDATA #IMPLIED
+lsid CDATA #IMPLIED
+>
+<!ATTLIST matched-element
+start CDATA #REQUIRED
+stop CDATA #REQUIRED
+score CDATA #IMPLIED
+pvalue CDATA #IMPLIED
+clusterid CDATA #IMPLIED
+>
+
+]>
+<cis-element-search
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://zlab.bu.edu/schema/cisml cisml.xsd"
+  xmlns="http://zlab.bu.edu/schema/cisml"
+  xmlns:mem="http://noble.gs.washington.edu/meme"
+>
+<program-name>fimo</program-name>
+<parameters>
+<command-line>fimo --parse-genomic-coord --verbosity 1 --oc fimo_out_1 --bgfile ./background --motif CCAKCUGCYGMYKCY meme_out/meme.xml Cbp80Hpr1_G3.fa</command-line>
+<pattern-file>meme_out/meme.xml</pattern-file>
+<sequence-file>Cbp80Hpr1_G3.fa</sequence-file>
+<site-pvalue-cutoff>0.0001</site-pvalue-cutoff>
+<sequence-filtering on-off="off"/>
+</parameters>
+<pattern accession="CCAKCUGCYGMYKCY" name="MEME-4">
+<scanned-sequence accession="YAL038W" name="YAL038W">
+</scanned-sequence>
+<scanned-sequence accession="YBL002W" name="YBL002W">
+<matched-element start="24" stop="38" score="14.5" pvalue="5.63e-06">
+<sequence>CCAGCTTCCAAAGCT</sequence>
+<mem:qvalue>0.0136</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YBL099W" name="YBL099W">
+<matched-element start="69" stop="83" score="11.2045" pvalue="2.53e-05">
+<sequence>CCTGCCGCTGCTGCT</sequence>
+<mem:qvalue>0.0418</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YBR031W" name="YBR031W">
+<matched-element start="381" stop="395" score="15.5341" pvalue="3.13e-06">
+<sequence>GCTACTGCTGTTGCC</sequence>
+<mem:qvalue>0.0109</mem:qvalue>
+</matched-element>
+<matched-element start="42" stop="56" score="15.4091" pvalue="3.38e-06">
+<sequence>GCTACTGCCAATGCC</sequence>
+<mem:qvalue>0.0111</mem:qvalue>
+</matched-element>
+<matched-element start="366" stop="380" score="12.6705" pvalue="1.36e-05">
+<sequence>GCTTCTGCTATTGCT</sequence>
+<mem:qvalue>0.0257</mem:qvalue>
+</matched-element>
+<matched-element start="372" stop="386" score="10.6818" pvalue="3.1e-05">
+<sequence>GCTATTGCTGCTACT</sequence>
+<mem:qvalue>0.0474</mem:qvalue>
+</matched-element>
+<matched-element start="1050" stop="1064" score="8.94318" pvalue="5.85e-05">
+<sequence>CCAGCTGCTGTTTTC</sequence>
+<mem:qvalue>0.0715</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YBR054W" name="YBR054W">
+<matched-element start="699" stop="713" score="17.8295" pvalue="6.64e-07">
+<sequence>CCAGATTCTGCTACC</sequence>
+<mem:qvalue>0.00476</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YBR106W" name="YBR106W">
+</scanned-sequence>
+<scanned-sequence accession="YBR118W" name="YBR118W">
+<matched-element start="837" stop="851" score="16.6136" pvalue="1.58e-06">
+<sequence>CCAGCTGGTGTTACC</sequence>
+<mem:qvalue>0.00787</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YCR012W" name="YCR012W">
+<matched-element start="873" stop="887" score="12.9091" pvalue="1.23e-05">
+<sequence>GCTGATGCCAACACC</sequence>
+<mem:qvalue>0.0256</mem:qvalue>
+</matched-element>
+<matched-element start="1083" stop="1097" score="12.1932" pvalue="1.68e-05">
+<sequence>GCTGCTGGTAACACC</sequence>
+<mem:qvalue>0.0297</mem:qvalue>
+</matched-element>
+<matched-element start="858" stop="872" score="10.2273" pvalue="3.68e-05">
+<sequence>GCTGATGCTTTCTCT</sequence>
+<mem:qvalue>0.0534</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YDL022W" name="YDL022W">
+<matched-element start="534" stop="548" score="8.43182" pvalue="6.98e-05">
+<sequence>CTATCTGGTGCTAAC</sequence>
+<mem:qvalue>0.0786</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YDL075W" name="YDL075W">
+</scanned-sequence>
+<scanned-sequence accession="YDL084W" name="YDL084W">
+<matched-element start="90" stop="104" score="7.65909" pvalue="9.08e-05">
+<sequence>GAAACTGGCGCCGCC</sequence>
+<mem:qvalue>0.0876</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YDL130W" name="YDL130W">
+<matched-element start="514" stop="528" score="17.4886" pvalue="8.55e-07">
+<sequence>GCTTCTGGCGCTGCC</sequence>
+<mem:qvalue>0.00517</mem:qvalue>
+</matched-element>
+<matched-element start="505" stop="519" score="8.11364" pvalue="7.79e-05">
+<sequence>GCTGGTGCTGCTTCT</sequence>
+<mem:qvalue>0.0827</mem:qvalue>
+</matched-element>
+<matched-element start="511" stop="525" score="7.47727" pvalue="9.65e-05">
+<sequence>GCTGCTTCTGGCGCT</sequence>
+<mem:qvalue>0.0916</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YDL137W" name="YDL137W">
+</scanned-sequence>
+<scanned-sequence accession="YDL192W" name="YDL192W">
+</scanned-sequence>
+<scanned-sequence accession="YDL229W" name="YDL229W">
+<matched-element start="531" stop="545" score="19.7273" pvalue="1.27e-07">
+<sequence>CCTACTGCCGCTGCT</sequence>
+<mem:qvalue>0.00176</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YDR012W" name="YDR012W">
+<matched-element start="42" stop="56" score="15.4091" pvalue="3.38e-06">
+<sequence>GCTACTGCCAATGCC</sequence>
+<mem:qvalue>0.0111</mem:qvalue>
+</matched-element>
+<matched-element start="381" stop="395" score="14.6364" pvalue="5.21e-06">
+<sequence>GCTACTGCTGTTGCT</sequence>
+<mem:qvalue>0.0133</mem:qvalue>
+</matched-element>
+<matched-element start="366" stop="380" score="12.6705" pvalue="1.36e-05">
+<sequence>GCTTCTGCTATTGCT</sequence>
+<mem:qvalue>0.0257</mem:qvalue>
+</matched-element>
+<matched-element start="372" stop="386" score="10.6818" pvalue="3.1e-05">
+<sequence>GCTATTGCTGCTACT</sequence>
+<mem:qvalue>0.0474</mem:qvalue>
+</matched-element>
+<matched-element start="1050" stop="1064" score="8.94318" pvalue="5.85e-05">
+<sequence>CCAGCTGCTGTTTTC</sequence>
+<mem:qvalue>0.0715</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YDR033W" name="YDR033W">
+</scanned-sequence>
+<scanned-sequence accession="YDR035W" name="YDR035W">
+</scanned-sequence>
+<scanned-sequence accession="YDR225W" name="YDR225W">
+</scanned-sequence>
+<scanned-sequence accession="YDR226W" name="YDR226W">
+</scanned-sequence>
+<scanned-sequence accession="YDR232W" name="YDR232W">
+<matched-element start="168" stop="182" score="19.5" pvalue="1.59e-07">
+<sequence>GCAGCAGCCGCTGCT</sequence>
+<mem:qvalue>0.00176</mem:qvalue>
+</matched-element>
+<matched-element start="126" stop="140" score="18.5" pvalue="3.85e-07">
+<sequence>GCTGCTGCCACTGCC</sequence>
+<mem:qvalue>0.0034</mem:qvalue>
+</matched-element>
+<matched-element start="171" stop="185" score="12.4205" pvalue="1.53e-05">
+<sequence>GCAGCCGCTGCTGCC</sequence>
+<mem:qvalue>0.0282</mem:qvalue>
+</matched-element>
+<matched-element start="117" stop="131" score="10.0114" pvalue="3.99e-05">
+<sequence>GCTGGTGCCGCTGCT</sequence>
+<mem:qvalue>0.0573</mem:qvalue>
+</matched-element>
+<matched-element start="165" stop="179" score="9.38636" pvalue="5e-05">
+<sequence>GCAGCAGCAGCCGCT</sequence>
+<mem:qvalue>0.0645</mem:qvalue>
+</matched-element>
+<matched-element start="123" stop="137" score="9.29545" pvalue="5.17e-05">
+<sequence>GCCGCTGCTGCCACT</sequence>
+<mem:qvalue>0.0659</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YDR382W" name="YDR382W">
+<matched-element start="210" stop="224" score="16.3182" pvalue="1.93e-06">
+<sequence>GCTTCTTCTGCTGCT</sequence>
+<mem:qvalue>0.00819</mem:qvalue>
+</matched-element>
+<matched-element start="213" stop="227" score="10.5227" pvalue="3.3e-05">
+<sequence>TCTTCTGCTGCTGCC</sequence>
+<mem:qvalue>0.0498</mem:qvalue>
+</matched-element>
+<matched-element start="219" stop="233" score="10.4205" pvalue="3.43e-05">
+<sequence>GCTGCTGCCGGTGCT</sequence>
+<mem:qvalue>0.0507</mem:qvalue>
+</matched-element>
+<matched-element start="198" stop="212" score="8.96591" pvalue="5.81e-05">
+<sequence>CCAACTGGTGGTGCT</sequence>
+<mem:qvalue>0.0715</mem:qvalue>
+</matched-element>
+<matched-element start="51" stop="65" score="8.68182" pvalue="6.41e-05">
+<sequence>CCATCCGCCGCTGAC</sequence>
+<mem:qvalue>0.0749</mem:qvalue>
+</matched-element>
+<matched-element start="222" stop="236" score="8.32955" pvalue="7.23e-05">
+<sequence>GCTGCCGGTGCTGCC</sequence>
+<mem:qvalue>0.0806</mem:qvalue>
+</matched-element>
+<matched-element start="231" stop="245" score="7.43182" pvalue="9.79e-05">
+<sequence>GCTGCCGGTGCTGCT</sequence>
+<mem:qvalue>0.0921</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YDR385W" name="YDR385W">
+<matched-element start="984" stop="998" score="23.3409" pvalue="1.19e-09">
+<sequence>CCAGCTGCCGATGCC</sequence>
+<mem:qvalue>6.83e-05</mem:qvalue>
+</matched-element>
+<matched-element start="1077" stop="1091" score="12.9773" pvalue="1.19e-05">
+<sequence>CCAGCTGACGATGCC</sequence>
+<mem:qvalue>0.0253</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YDR418W" name="YDR418W">
+<matched-element start="222" stop="236" score="17.3409" pvalue="9.55e-07">
+<sequence>CCATCTGCTTCCTCT</sequence>
+<mem:qvalue>0.00548</mem:qvalue>
+</matched-element>
+<matched-element start="201" stop="215" score="11.0341" pvalue="2.71e-05">
+<sequence>CAAGCTGCTGCTTCT</sequence>
+<mem:qvalue>0.0432</mem:qvalue>
+</matched-element>
+<matched-element start="66" stop="80" score="8.09091" pvalue="7.85e-05">
+<sequence>GGTGCTTCCGCCGCC</sequence>
+<mem:qvalue>0.0827</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YDR432W" name="YDR432W">
+<matched-element start="501" stop="515" score="16.3182" pvalue="1.93e-06">
+<sequence>GCAGAATCCGCTGCC</sequence>
+<mem:qvalue>0.00819</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YDR450W" name="YDR450W">
+</scanned-sequence>
+<scanned-sequence accession="YDR510W" name="YDR510W">
+</scanned-sequence>
+<scanned-sequence accession="YEL026W" name="YEL026W">
+<matched-element start="27" stop="41" score="13.5568" pvalue="9.07e-06">
+<sequence>CCATTAGCCGATGCT</sequence>
+<mem:qvalue>0.0204</mem:qvalue>
+</matched-element>
+<matched-element start="294" stop="308" score="10.9432" pvalue="2.81e-05">
+<sequence>GCTGCTTCTATTACC</sequence>
+<mem:qvalue>0.0441</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YER025W" name="YER025W">
+</scanned-sequence>
+<scanned-sequence accession="YER070W" name="YER070W">
+<matched-element start="213" stop="227" score="7.60227" pvalue="9.26e-05">
+<sequence>CCAGATTACGCCACC</sequence>
+<mem:qvalue>0.0886</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YER073W" name="YER073W">
+<matched-element start="102" stop="116" score="9.57955" pvalue="4.67e-05">
+<sequence>CCAAATGGTTTCACC</sequence>
+<mem:qvalue>0.0626</mem:qvalue>
+</matched-element>
+<matched-element start="612" stop="626" score="7.67045" pvalue="9.04e-05">
+<sequence>GCTACAGGTAACACC</sequence>
+<mem:qvalue>0.0876</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YER102W" name="YER102W">
+</scanned-sequence>
+<scanned-sequence accession="YER117W" name="YER117W">
+</scanned-sequence>
+<scanned-sequence accession="YGL030W" name="YGL030W">
+</scanned-sequence>
+<scanned-sequence accession="YGL055W" name="YGL055W">
+</scanned-sequence>
+<scanned-sequence accession="YGL062W" name="YGL062W">
+</scanned-sequence>
+<scanned-sequence accession="YGL105W" name="YGL105W">
+<matched-element start="666" stop="680" score="19.4886" pvalue="1.61e-07">
+<sequence>CCAGATGCCGACTCC</sequence>
+<mem:qvalue>0.00176</mem:qvalue>
+</matched-element>
+<matched-element start="423" stop="437" score="15.6591" pvalue="2.9e-06">
+<sequence>GCTGATGCCGCAGCC</sequence>
+<mem:qvalue>0.0107</mem:qvalue>
+</matched-element>
+<matched-element start="186" stop="200" score="9.93182" pvalue="4.11e-05">
+<sequence>CCAACATCTACCGAC</sequence>
+<mem:qvalue>0.0576</mem:qvalue>
+</matched-element>
+<matched-element start="48" stop="62" score="8.03409" pvalue="8.01e-05">
+<sequence>CCAGTTTCTTTCACT</sequence>
+<mem:qvalue>0.0828</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YGL123W" name="YGL123W">
+</scanned-sequence>
+<scanned-sequence accession="YGL135W" name="YGL135W">
+</scanned-sequence>
+<scanned-sequence accession="YGL148W" name="YGL148W">
+</scanned-sequence>
+<scanned-sequence accession="YGL225W" name="YGL225W">
+</scanned-sequence>
+<scanned-sequence accession="YGR094W" name="YGR094W">
+<matched-element start="1827" stop="1841" score="8.25" pvalue="7.42e-05">
+<sequence>GCTGCTGCCAAATAC</sequence>
+<mem:qvalue>0.082</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YGR124W" name="YGR124W">
+<matched-element start="759" stop="773" score="14.4773" pvalue="5.7e-06">
+<sequence>GCTAATGCTGATGCT</sequence>
+<mem:qvalue>0.0136</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YGR155W" name="YGR155W">
+<matched-element start="378" stop="392" score="21.9091" pvalue="1.07e-08">
+<sequence>CCAACTGCTGCTGCC</sequence>
+<mem:qvalue>0.00041</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YGR214W" name="YGR214W">
+</scanned-sequence>
+<scanned-sequence accession="YGR254W" name="YGR254W">
+<matched-element start="105" stop="119" score="18.0341" pvalue="5.58e-07">
+<sequence>CCATCTGGTGCTTCT</sequence>
+<mem:qvalue>0.00458</mem:qvalue>
+</matched-element>
+<matched-element start="891" stop="905" score="7.75" pvalue="8.8e-05">
+<sequence>CCATTTGCTGAAGAT</sequence>
+<mem:qvalue>0.087</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YHR174W" name="YHR174W">
+<matched-element start="105" stop="119" score="18.5227" pvalue="3.79e-07">
+<sequence>CCATCTGGTGCCTCC</sequence>
+<mem:qvalue>0.0034</mem:qvalue>
+</matched-element>
+<matched-element start="891" stop="905" score="7.75" pvalue="8.8e-05">
+<sequence>CCATTTGCTGAAGAT</sequence>
+<mem:qvalue>0.087</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YHR183W" name="YHR183W">
+<matched-element start="1182" stop="1196" score="13.5795" pvalue="8.95e-06">
+<sequence>GCTGATGCCGTCACC</sequence>
+<mem:qvalue>0.0204</mem:qvalue>
+</matched-element>
+<matched-element start="1371" stop="1385" score="12.7727" pvalue="1.3e-05">
+<sequence>CCAGAATGTGCTTCT</sequence>
+<mem:qvalue>0.0257</mem:qvalue>
+</matched-element>
+<matched-element start="1029" stop="1043" score="11.2614" pvalue="2.47e-05">
+<sequence>GCTGCTGCTACTTAT</sequence>
+<mem:qvalue>0.0417</mem:qvalue>
+</matched-element>
+<matched-element start="1026" stop="1040" score="8.88636" pvalue="5.97e-05">
+<sequence>GAAGCTGCTGCTACT</sequence>
+<mem:qvalue>0.0719</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YIL018W" name="YIL018W">
+</scanned-sequence>
+<scanned-sequence accession="YIL053W" name="YIL053W">
+<matched-element start="540" stop="554" score="15.1023" pvalue="4.02e-06">
+<sequence>CCAGCTGGTATTGCT</sequence>
+<mem:qvalue>0.012</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YIL125W" name="YIL125W">
+</scanned-sequence>
+<scanned-sequence accession="YIL148W" name="YIL148W">
+</scanned-sequence>
+<scanned-sequence accession="YJL034W" name="YJL034W">
+<matched-element start="29" stop="43" score="12.3977" pvalue="1.55e-05">
+<sequence>GCTGCTGGTACCACT</sequence>
+<mem:qvalue>0.0282</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YJL159W" name="YJL159W">
+<matched-element start="489" stop="503" score="15.8182" pvalue="2.65e-06">
+<sequence>GCTGCTGCCGTTTCT</sequence>
+<mem:qvalue>0.0105</mem:qvalue>
+</matched-element>
+<matched-element start="561" stop="575" score="15.8182" pvalue="2.65e-06">
+<sequence>GCTGCTGCCGTTTCT</sequence>
+<mem:qvalue>0.0105</mem:qvalue>
+</matched-element>
+<matched-element start="891" stop="905" score="14.875" pvalue="4.57e-06">
+<sequence>GCTACTTCCGCTTCT</sequence>
+<mem:qvalue>0.012</mem:qvalue>
+</matched-element>
+<matched-element start="345" stop="359" score="14.8636" pvalue="4.61e-06">
+<sequence>GCTGCTGCTGTCTCT</sequence>
+<mem:qvalue>0.012</mem:qvalue>
+</matched-element>
+<matched-element start="618" stop="632" score="14.8636" pvalue="4.61e-06">
+<sequence>GCTGCTGCTGTCTCT</sequence>
+<mem:qvalue>0.012</mem:qvalue>
+</matched-element>
+<matched-element start="732" stop="746" score="14.8636" pvalue="4.61e-06">
+<sequence>GCTGCTGCTGTCTCT</sequence>
+<mem:qvalue>0.012</mem:qvalue>
+</matched-element>
+<matched-element start="174" stop="188" score="13.1591" pvalue="1.09e-05">
+<sequence>GCATCATCTGCAGCC</sequence>
+<mem:qvalue>0.0241</mem:qvalue>
+</matched-element>
+<matched-element start="90" stop="104" score="11.5227" pvalue="2.23e-05">
+<sequence>CCAACAGCCACTTAC</sequence>
+<mem:qvalue>0.0388</mem:qvalue>
+</matched-element>
+<matched-element start="669" stop="683" score="9.47727" pvalue="4.85e-05">
+<sequence>ACTACTGCTGCCGCC</sequence>
+<mem:qvalue>0.0635</mem:qvalue>
+</matched-element>
+<matched-element start="900" stop="914" score="8.73864" pvalue="6.28e-05">
+<sequence>GCTTCTGCAGCCGCT</sequence>
+<mem:qvalue>0.0743</mem:qvalue>
+</matched-element>
+<matched-element start="906" stop="920" score="8.05682" pvalue="7.94e-05">
+<sequence>GCAGCCGCTACCTCC</sequence>
+<mem:qvalue>0.0828</mem:qvalue>
+</matched-element>
+<matched-element start="903" stop="917" score="7.89773" pvalue="8.37e-05">
+<sequence>TCTGCAGCCGCTACC</sequence>
+<mem:qvalue>0.0854</mem:qvalue>
+</matched-element>
+<matched-element start="417" stop="431" score="7.85227" pvalue="8.5e-05">
+<sequence>GCCGCTGCCGTTTCT</sequence>
+<mem:qvalue>0.0856</mem:qvalue>
+</matched-element>
+<matched-element start="246" stop="260" score="7.38636" pvalue="9.94e-05">
+<sequence>CAAGCTGCTACCACT</sequence>
+<mem:qvalue>0.0928</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YJR105W" name="YJR105W">
+<matched-element start="183" stop="197" score="9.03409" pvalue="5.67e-05">
+<sequence>GCAGGTGGTGCTGCT</sequence>
+<mem:qvalue>0.0715</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YJR121W" name="YJR121W">
+<matched-element start="1347" stop="1361" score="14.1023" pvalue="6.89e-06">
+<sequence>CCATTTGCTGTCGCC</sequence>
+<mem:qvalue>0.0162</mem:qvalue>
+</matched-element>
+<matched-element start="1056" stop="1070" score="8.625" pvalue="6.53e-05">
+<sequence>CCTGCTCCTGCCACT</sequence>
+<mem:qvalue>0.075</mem:qvalue>
+</matched-element>
+<matched-element start="924" stop="938" score="8.18182" pvalue="7.6e-05">
+<sequence>CCATCTGCCGTCGGT</sequence>
+<mem:qvalue>0.0827</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YJR123W" name="YJR123W">
+</scanned-sequence>
+<scanned-sequence accession="YKL096W-A" name="YKL096W-A">
+<matched-element start="252" stop="266" score="17.5795" pvalue="7.93e-07">
+<sequence>CTAGCTGCTGCTGCT</sequence>
+<mem:qvalue>0.00517</mem:qvalue>
+</matched-element>
+<matched-element start="57" stop="71" score="14.4886" pvalue="5.66e-06">
+<sequence>GCTGAATCCGCTGCC</sequence>
+<mem:qvalue>0.0136</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YKR042W" name="YKR042W">
+<matched-element start="150" stop="164" score="19.4432" pvalue="1.69e-07">
+<sequence>CCAGCTGCCACCACC</sequence>
+<mem:qvalue>0.00176</mem:qvalue>
+</matched-element>
+<matched-element start="204" stop="218" score="15.2045" pvalue="3.79e-06">
+<sequence>GCTGCTGCCACCACT</sequence>
+<mem:qvalue>0.0118</mem:qvalue>
+</matched-element>
+<matched-element start="201" stop="215" score="12.7386" pvalue="1.32e-05">
+<sequence>GTTGCTGCTGCCACC</sequence>
+<mem:qvalue>0.0257</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YKR059W" name="YKR059W">
+</scanned-sequence>
+<scanned-sequence accession="YLL026W" name="YLL026W">
+<matched-element start="1764" stop="1778" score="10.4091" pvalue="3.44e-05">
+<sequence>GCTGTTTCCAATGCC</sequence>
+<mem:qvalue>0.0507</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YLR061W" name="YLR061W">
+<matched-element start="476" stop="490" score="17.5" pvalue="8.51e-07">
+<sequence>CCAGCTTCCTACGCT</sequence>
+<mem:qvalue>0.00517</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YLR075W" name="YLR075W">
+</scanned-sequence>
+<scanned-sequence accession="YLR109W" name="YLR109W">
+<matched-element start="162" stop="176" score="16.5568" pvalue="1.65e-06">
+<sequence>CCAGCTGCTTTCTCC</sequence>
+<mem:qvalue>0.00791</mem:qvalue>
+</matched-element>
+<matched-element start="27" stop="41" score="14.875" pvalue="4.57e-06">
+<sequence>CCAGCTGGCGACTAC</sequence>
+<mem:qvalue>0.012</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YLR150W" name="YLR150W">
+<matched-element start="372" stop="386" score="9.60227" pvalue="4.63e-05">
+<sequence>GCCGATGCTGCTGCT</sequence>
+<mem:qvalue>0.0626</mem:qvalue>
+</matched-element>
+<matched-element start="405" stop="419" score="8.86364" pvalue="6.01e-05">
+<sequence>GCAGAAGCTGAAGAC</sequence>
+<mem:qvalue>0.0719</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YLR167W" name="YLR167W">
+</scanned-sequence>
+<scanned-sequence accession="YLR258W" name="YLR258W">
+<matched-element start="2097" stop="2111" score="14.9091" pvalue="4.5e-06">
+<sequence>CCATATGCTGATGAC</sequence>
+<mem:qvalue>0.012</mem:qvalue>
+</matched-element>
+<matched-element start="2070" stop="2084" score="12.6818" pvalue="1.35e-05">
+<sequence>CCTGCAGCTGACGAT</sequence>
+<mem:qvalue>0.0257</mem:qvalue>
+</matched-element>
+<matched-element start="195" stop="209" score="11.0568" pvalue="2.69e-05">
+<sequence>CCTGAAGCCTTTTCC</sequence>
+<mem:qvalue>0.0432</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YLR300W" name="YLR300W">
+</scanned-sequence>
+<scanned-sequence accession="YLR340W" name="YLR340W">
+<matched-element start="831" stop="845" score="19.5341" pvalue="1.5e-07">
+<sequence>CCAGCTGCTACCTCC</sequence>
+<mem:qvalue>0.00176</mem:qvalue>
+</matched-element>
+<matched-element start="741" stop="755" score="9.56818" pvalue="4.69e-05">
+<sequence>GCTGTTGCCATTGCT</sequence>
+<mem:qvalue>0.0626</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YML063W" name="YML063W">
+</scanned-sequence>
+<scanned-sequence accession="YMR251W-A" name="YMR251W-A">
+<matched-element start="126" stop="140" score="9.57955" pvalue="4.67e-05">
+<sequence>GTTGCAGGCGCCGCT</sequence>
+<mem:qvalue>0.0626</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YNL160W" name="YNL160W">
+</scanned-sequence>
+<scanned-sequence accession="YNL178W" name="YNL178W">
+<matched-element start="606" stop="620" score="16.375" pvalue="1.87e-06">
+<sequence>CCAGATGCTGTCACC</sequence>
+<mem:qvalue>0.00819</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YNL209W" name="YNL209W">
+<matched-element start="531" stop="545" score="19.7273" pvalue="1.27e-07">
+<sequence>CCTACTGCCGCTGCT</sequence>
+<mem:qvalue>0.00176</mem:qvalue>
+</matched-element>
+<matched-element start="120" stop="134" score="7.70455" pvalue="8.94e-05">
+<sequence>CCATCTTTCGTTGCC</sequence>
+<mem:qvalue>0.0876</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YOL030W" name="YOL030W">
+<matched-element start="1290" stop="1304" score="15.2841" pvalue="3.62e-06">
+<sequence>GCATCTTCCTCCTCC</sequence>
+<mem:qvalue>0.0115</mem:qvalue>
+</matched-element>
+<matched-element start="1101" stop="1115" score="12.7727" pvalue="1.3e-05">
+<sequence>GCTGCTTCTGCTTAC</sequence>
+<mem:qvalue>0.0257</mem:qvalue>
+</matched-element>
+<matched-element start="1095" stop="1109" score="9.46591" pvalue="4.87e-05">
+<sequence>CCAAGTGCTGCTTCT</sequence>
+<mem:qvalue>0.0635</mem:qvalue>
+</matched-element>
+<matched-element start="1242" stop="1256" score="8.65909" pvalue="6.46e-05">
+<sequence>TCATCTTCCGCTTCT</sequence>
+<mem:qvalue>0.0749</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YOL039W" name="YOL039W">
+<matched-element start="222" stop="236" score="17.8977" pvalue="6.33e-07">
+<sequence>GCTGCTGCTGCCTCT</sequence>
+<mem:qvalue>0.00476</mem:qvalue>
+</matched-element>
+<matched-element start="33" stop="47" score="12.1932" pvalue="1.68e-05">
+<sequence>GCTGCTGGTAACACC</sequence>
+<mem:qvalue>0.0297</mem:qvalue>
+</matched-element>
+<matched-element start="204" stop="218" score="11.3409" pvalue="2.39e-05">
+<sequence>CCAGCTTCTGCTGGC</sequence>
+<mem:qvalue>0.041</mem:qvalue>
+</matched-element>
+<matched-element start="219" stop="233" score="9.94318" pvalue="4.09e-05">
+<sequence>GGTGCTGCTGCTGCC</sequence>
+<mem:qvalue>0.0576</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YOL059W" name="YOL059W">
+</scanned-sequence>
+<scanned-sequence accession="YOR063W" name="YOR063W">
+<matched-element start="648" stop="662" score="8.13636" pvalue="7.73e-05">
+<sequence>GCTATTGCTGTCACC</sequence>
+<mem:qvalue>0.0827</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YOR096W" name="YOR096W">
+</scanned-sequence>
+<scanned-sequence accession="YOR133W" name="YOR133W">
+<matched-element start="984" stop="998" score="23.3409" pvalue="1.19e-09">
+<sequence>CCAGCTGCCGATGCC</sequence>
+<mem:qvalue>6.83e-05</mem:qvalue>
+</matched-element>
+<matched-element start="1077" stop="1091" score="12.9773" pvalue="1.19e-05">
+<sequence>CCAGCTGACGATGCC</sequence>
+<mem:qvalue>0.0253</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YOR204W" name="YOR204W">
+</scanned-sequence>
+<scanned-sequence accession="YOR332W" name="YOR332W">
+</scanned-sequence>
+<scanned-sequence accession="YOR341W" name="YOR341W">
+<matched-element start="2406" stop="2420" score="8.55682" pvalue="6.69e-05">
+<sequence>CCAGAAGTCGCTGCT</sequence>
+<mem:qvalue>0.0761</mem:qvalue>
+</matched-element>
+<matched-element start="1977" stop="1991" score="7.88636" pvalue="8.4e-05">
+<sequence>CCAACTTCTGGTTCT</sequence>
+<mem:qvalue>0.0854</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YPL028W" name="YPL028W">
+</scanned-sequence>
+<scanned-sequence accession="YPL048W" name="YPL048W">
+<matched-element start="96" stop="110" score="21.0455" pvalue="3e-08">
+<sequence>CCAGATGCCGCCGCT</sequence>
+<mem:qvalue>0.000785</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YPL093W" name="YPL093W">
+</scanned-sequence>
+<scanned-sequence accession="YPL131W" name="YPL131W">
+<matched-element start="225" stop="239" score="15.6932" pvalue="2.83e-06">
+<sequence>GCTGCTGCCTACTCC</sequence>
+<mem:qvalue>0.0107</mem:qvalue>
+</matched-element>
+<matched-element start="285" stop="299" score="15.6023" pvalue="3e-06">
+<sequence>GCTGCTGCTTACGCT</sequence>
+<mem:qvalue>0.0108</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YPL160W" name="YPL160W">
+<matched-element start="1067" stop="1081" score="11.1818" pvalue="2.55e-05">
+<sequence>CCAAAAGCTAACACC</sequence>
+<mem:qvalue>0.0418</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YPL220W" name="YPL220W">
+</scanned-sequence>
+<scanned-sequence accession="YPL226W" name="YPL226W">
+<matched-element start="99" stop="113" score="20.9659" pvalue="3.42e-08">
+<sequence>CCTGCTGCTGATGCC</sequence>
+<mem:qvalue>0.000785</mem:qvalue>
+</matched-element>
+<matched-element start="354" stop="368" score="17.1136" pvalue="1.12e-06">
+<sequence>CCATCTGCTTCTACT</sequence>
+<mem:qvalue>0.00612</mem:qvalue>
+</matched-element>
+<matched-element start="2331" stop="2345" score="8.13636" pvalue="7.73e-05">
+<sequence>CCTGAAGCTAAATCT</sequence>
+<mem:qvalue>0.0827</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="YPR035W" name="YPR035W">
+</scanned-sequence>
+<scanned-sequence accession="YPR080W" name="YPR080W">
+<matched-element start="837" stop="851" score="16.6136" pvalue="1.58e-06">
+<sequence>CCAGCTGGTGTTACC</sequence>
+<mem:qvalue>0.00787</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+</cis-element-search>

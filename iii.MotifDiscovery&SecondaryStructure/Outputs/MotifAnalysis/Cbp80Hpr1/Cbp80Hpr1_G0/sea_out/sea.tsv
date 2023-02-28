@@ -1,0 +1,10 @@
+RANK	DB	ID	ALT_ID	CONSENSUS	TP	TP%	FP	FP%	ENR_RATIO	SCORE_THR	PVALUE	LOG_PVALUE	EVALUE	LOG_EVALUE	QVALUE	LOG_QVALUE
+1	meme_out/meme.xml	RRCACCRDCASCRRC	MEME-1	RRCACCRDCASCRRC	68	68.69	11	11.11	5.75	11	2.49e-11	-24.42	7.22e-10	-21.05	7.22e-10	-21.05
+2	meme_out/meme.xml	ABCADCRGMWKCASC	MEME-2	ABCADCRGMWKCASC	64	64.65	13	13.13	4.64	11	2.05e-9	-20.00	5.95e-8	-16.64	2.97e-8	-17.33
+3	streme_out/streme.xml	1-WUACCACCAMCAG	STREME-1	WUACCACCAMCAG	46	46.46	7	7.07	5.87	11	2.53e-8	-17.49	7.33e-7	-14.13	2.44e-7	-15.23
+4	streme_out/streme.xml	2-GCACCRGCAGCGGC	STREME-2	GCACCRGCAGCGGC	73	73.74	22	22.22	3.22	8	9.94e-8	-16.12	2.88e-6	-12.76	7.20e-7	-14.14
+5	meme_out/meme.xml	WUACCACCRGC	MEME-3	WUACCACCRGC	76	76.77	37	37.37	2.03	9.3	1.97e-4	-8.53	5.70e-3	-5.17	1.14e-3	-6.78
+
+# SEA (Simple Enrichment Analysis): Version 5.5.1 compiled on Feb  5 2023 at 16:40:34
+# The format of this file is described at https://meme-suite.org/meme/doc/sea-output-format.html.
+# sea --verbosity 1 --oc sea_out --thresh 0.05 --order 2 --bfile ./background --seed 0 --align center --motif-pseudo 0.01 --m meme_out/meme.xml --m streme_out/streme.xml --m motifs.meme --noseqs --p Cbp80Hpr1_G0.fa

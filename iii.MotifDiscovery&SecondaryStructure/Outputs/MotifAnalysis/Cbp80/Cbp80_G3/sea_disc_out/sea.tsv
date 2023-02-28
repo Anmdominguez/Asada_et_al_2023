@@ -1,0 +1,14 @@
+RANK	DB	ID	ALT_ID	CONSENSUS	TP	TP%	FP	FP%	ENR_RATIO	SCORE_THR	PVALUE	LOG_PVALUE	EVALUE	LOG_EVALUE	QVALUE	LOG_QVALUE
+1	streme_out/streme.xml	3-AGCACCGACRGCD	STREME-3	AGCACCGACRGCD	115	71.43	35	21.74	3.22	9	9.13e-20	-43.84	8.22e-19	-41.64	8.22e-19	-41.64
+2	meme_out/meme.xml	ASCRAYACCRDCAVC	MEME-1	ASCRAYACCRDCAVC	100	62.11	25	15.53	3.88	11	2.07e-18	-40.72	1.87e-17	-38.52	9.33e-18	-39.21
+3	meme_out/meme.xml	YRDYASCACCRDHRG	MEME-2	YRDYASCACCRDHRG	109	67.70	36	22.36	2.97	10	1.05e-16	-36.79	9.46e-16	-34.59	3.15e-16	-35.69
+4	meme_out/meme.xml	RGCAMCRDWAVCAGC	MEME-3	RGCAMCRDWAVCAGC	102	63.35	31	19.25	3.22	10	3.25e-16	-35.66	2.93e-15	-33.46	7.32e-16	-34.85
+5	streme_out/streme.xml	2-UUACCRGC	STREME-2	UUACCRGC	94	58.39	32	19.88	2.88	10	7.38e-13	-27.93	6.64e-12	-25.74	1.33e-12	-27.35
+6	streme_out/streme.xml	1-UUAGCCAAAGCAGCD	STREME-1	UUAGCCAAAGCAGCD	85	52.80	28	17.39	2.97	9	1.50e-11	-24.92	1.35e-10	-22.72	2.26e-11	-24.52
+7	streme_out/streme.xml	4-CCUUACCSU	STREME-4	CCUUACCSU	128	79.50	91	56.52	1.4	2.9	7.33e-6	-11.82	6.60e-5	-9.63	9.43e-6	-11.57
+8	streme_out/streme.xml	5-CUUCAAAGCAUU	STREME-5	CUUCAAAGCAUU	132	81.99	112	69.57	1.18	4.1	6.58e-3	-5.02	5.92e-2	-2.83	7.40e-3	-4.91
+9	streme_out/streme.xml	6-CUUCUGGAG	STREME-6	CUUCUGGAG	146	90.68	133	82.61	1.1	0.29	2.42e-2	-3.72	2.18e-1	-1.53	2.42e-2	-3.72
+
+# SEA (Simple Enrichment Analysis): Version 5.5.1 compiled on Feb  5 2023 at 16:40:34
+# The format of this file is described at https://meme-suite.org/meme/doc/sea-output-format.html.
+# sea --verbosity 1 --oc sea_disc_out --qvalue --thresh 1 --order 2 --bfile ./background --seed 0 --align center --motif-pseudo 0.01 --noseqs --m meme_out/meme.xml --m streme_out/streme.xml --p Cbp80_G3.fa

@@ -1,0 +1,13 @@
+RANK	DB	ID	ALT_ID	CONSENSUS	TP	TP%	FP	FP%	ENR_RATIO	SCORE_THR	PVALUE	LOG_PVALUE	EVALUE	LOG_EVALUE	QVALUE	LOG_QVALUE
+1	meme_out/meme.xml	WUCHUYUUCKUCWUC	MEME-1	WUCHUYUUCKUCWUC	42	46.67	2	2.22	14.3	13	1.69e-13	-29.41	1.35e-12	-27.33	1.35e-12	-27.33
+2	streme_out/streme.xml	5-CGUUACUA	STREME-5	CGUUACUA	44	48.89	6	6.67	6.43	10	6.66e-11	-23.43	5.33e-10	-21.35	2.67e-10	-22.05
+3	streme_out/streme.xml	1-UUCUUCUUCUUCUUC	STREME-1	UUCUUCUUCUUCUUC	32	35.56	1	1.11	16.5	13	1.65e-10	-22.53	1.32e-9	-20.45	4.39e-10	-21.55
+4	streme_out/streme.xml	4-AUCAUCAUCAUUAUC	STREME-4	AUCAUCAUCAUUAUC	63	70.00	23	25.56	2.67	9.1	1.65e-9	-20.22	1.32e-8	-18.14	3.31e-9	-19.53
+5	meme_out/meme.xml	GCUGYUGYUGYURCU	MEME-2	GCUGYUGYUGYURCU	25	27.78	1	1.11	13	11	6.66e-8	-16.52	5.33e-7	-14.44	1.07e-7	-16.05
+6	streme_out/streme.xml	2-UGCUGCUGUU	STREME-2	UGCUGCUGUU	21	23.33	0	0.00	22	14	1.27e-7	-15.88	1.02e-6	-13.80	1.70e-7	-15.59
+7	streme_out/streme.xml	6-UCUUCCUCCUG	STREME-6	UCUUCCUCCUG	15	16.67	2	2.22	5.33	12	7.23e-4	-7.23	5.78e-3	-5.15	8.26e-4	-7.10
+8	streme_out/streme.xml	3-UCAGCAC	STREME-3	UCAGCAC	53	58.89	35	38.89	1.5	6.5	5.52e-3	-5.20	4.42e-2	-3.12	5.52e-3	-5.20
+
+# SEA (Simple Enrichment Analysis): Version 5.5.1 compiled on Feb  5 2023 at 16:40:34
+# The format of this file is described at https://meme-suite.org/meme/doc/sea-output-format.html.
+# sea --verbosity 1 --oc sea_disc_out --qvalue --thresh 1 --order 2 --bfile ./background --seed 0 --align center --motif-pseudo 0.01 --noseqs --m meme_out/meme.xml --m streme_out/streme.xml --p Cbp80Hpr1_G2.fa

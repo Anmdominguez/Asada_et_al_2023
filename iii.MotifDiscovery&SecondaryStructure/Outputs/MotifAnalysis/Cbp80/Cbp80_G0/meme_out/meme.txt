@@ -1,0 +1,2670 @@
+********************************************************************************
+MEME - Motif discovery tool
+********************************************************************************
+MEME version 5.5.1 (Release date: Sun Jan 29 10:33:12 2023 -0800)
+
+For further information on how to interpret these results please access https://meme-suite.org/meme.
+To get a copy of the MEME Suite software please access https://meme-suite.org.
+
+********************************************************************************
+
+
+********************************************************************************
+REFERENCE
+********************************************************************************
+If you use this program in your research, please cite:
+
+Timothy L. Bailey and Charles Elkan,
+"Fitting a mixture model by expectation maximization to
+discover motifs in biopolymers",
+Proceedings of the Second International Conference on Intelligent Systems
+for Molecular Biology, pp. 28-36, AAAI Press, Menlo Park, California, 1994.
+********************************************************************************
+
+
+********************************************************************************
+TRAINING SET
+********************************************************************************
+PRIMARY SEQUENCES= Cbp80_G0.fa
+CONTROL SEQUENCES= --none--
+ALPHABET= ACGU
+Sequence name            Weight Length  Sequence name            Weight Length  
+-------------            ------ ------  -------------            ------ ------  
+YAL041W                  1.0000   2564  YAR042W                  1.0000   3566  
+YBL005W                  1.0000   2930  YBL011W                  1.0000   2279  
+YBL019W                  1.0000   1562  YBL037W                  1.0000   3077  
+YBL046W                  1.0000   1325  YBL098W                  1.0000   1382  
+YBR041W                  1.0000   2009  YBR094W                  1.0000   2261  
+YBR097W                  1.0000   4364  YBR114W                  1.0000   2372  
+YBR135W                  1.0000    452  YBR136W                  1.0000   7106  
+YBR155W                  1.0000   1157  YBR163W                  1.0000   1757  
+YBR168W                  1.0000   1241  YBR171W                  1.0000    620  
+YBR237W                  1.0000   2549  YBR257W                  1.0000    839  
+YBR279W                  1.0000   1337  YCL039W                  1.0000   2237  
+YCR033W                  1.0000   3680  YCR036W                  1.0000   1001  
+YCR081W                  1.0000   4283  YCR093W                  1.0000   6326  
+YDL010W                  1.0000    695  YDL060W                  1.0000   2366  
+YDL070W                  1.0000   1916  YDL073W                  1.0000   2954  
+YDL112W                  1.0000   4310  YDL116W                  1.0000   2180  
+YDL117W                  1.0000   2657  YDL132W                  1.0000   2447  
+YDL150W                  1.0000   1268  YDL195W                  1.0000   3821  
+YDL225W                  1.0000   1655  YDL240W                  1.0000   3053  
+YDR014W                  1.0000   1943  YDR049W                  1.0000   1898  
+YDR063W                  1.0000    449  YDR073W                  1.0000    509  
+YDR076W                  1.0000   1220  YDR089W                  1.0000   2609  
+YDR096W                  1.0000   2684  YDR118W                  1.0000   1958  
+YDR138W                  1.0000   2258  YDR152W                  1.0000    797  
+YDR160W                  1.0000   2558  YDR161W                  1.0000   1163  
+YDR168W                  1.0000   1520  YDR189W                  1.0000   2000  
+YDR195W                  1.0000   1601  YDR211W                  1.0000   2138  
+YDR221W                  1.0000   2108  YDR244W                  1.0000   1838  
+YDR279W                  1.0000   1052  YDR288W                  1.0000    911  
+YDR334W                  1.0000   4544  YDR337W                  1.0000    860  
+YDR358W                  1.0000   1673  YDR371W                  1.0000   1535  
+YDR387C                  1.0000   1667  YDR392W                  1.0000   1013  
+YDR409W                  1.0000   2714  YDR412W                  1.0000    707  
+YDR416W                  1.0000   2579  YDR463W                  1.0000   1559  
+YDR466W                  1.0000   2696  YDR515W                  1.0000   1343  
+YDR528W                  1.0000   1271  YEL012W                  1.0000    779  
+YEL051W                  1.0000    770  YER001W                  1.0000   2288  
+YER013W                  1.0000   3437  YER014W                  1.0000   1619  
+YER030W                  1.0000    461  YER059W                  1.0000   1262  
+YER063W                  1.0000    656  YER068W                  1.0000   1763  
+YER098W                  1.0000   2264  YER127W                  1.0000   1073  
+YER128W                  1.0000    611  YER129W                  1.0000   3428  
+YER133W                  1.0000   1463  YER164W                  1.0000   4406  
+YER173W                  1.0000   1979  YFL021W                  1.0000   1532  
+YFL036W                  1.0000   4055  YFL049W                  1.0000   1871  
+YGL006W                  1.0000   3521  YGL016W                  1.0000   3245  
+YGL021W                  1.0000   2282  YGL060W                  1.0000   1925  
+YGL066W                  1.0000   1973  YGL090W                  1.0000   1265  
+YGL113W                  1.0000   2006  YGL133W                  1.0000   3794  
+YGL145W                  1.0000   2105  YGL151W                  1.0000   3398  
+YGL171W                  1.0000   1694  YGL178W                  1.0000   3219  
+YGL181W                  1.0000   1190  YGL207W                  1.0000   3107  
+YGL244W                  1.0000   1676  YGR003W                  1.0000   2234  
+YGR046W                  1.0000   1157  YGR072W                  1.0000   1163  
+YGR092W                  1.0000   1718  YGR093W                  1.0000   1523  
+YGR097W                  1.0000   3440  YGR108W                  1.0000   1415  
+YGR142W                  1.0000   1232  YGR145W                  1.0000   2123  
+YGR156W                  1.0000   1277  YGR167W                  1.0000    701  
+YGR198W                  1.0000   2453  YGR212W                  1.0000   1406  
+YGR217W                  1.0000   6119  YGR218W                  1.0000   3254  
+YGR222W                  1.0000    881  YGR227W                  1.0000   1577  
+YGR251W                  1.0000    590  YGR275W                  1.0000    473  
+YHL036W                  1.0000   1640  YHL039W                  1.0000   1757  
+YHR002W                  1.0000   1073  YHR011W                  1.0000   1340  
+YHR036W                  1.0000   1415  YHR066W                  1.0000   1361  
+YHR073W                  1.0000   2990  YHR084W                  1.0000   2066  
+YHR099W                  1.0000  11234  YHR102W                  1.0000   3242  
+YHR114W                  1.0000   1901  YHR155W                  1.0000   3686  
+YHR167W                  1.0000    785  YHR206W                  1.0000   1868  
+YIL036W                  1.0000   1763  YIL045W                  1.0000   1616  
+YIL049W                  1.0000    761  YIL130W                  1.0000   2894  
+YJL019W                  1.0000   2048  YJL033W                  1.0000   2312  
+YJL042W                  1.0000   4196  YJL061W                  1.0000   2141  
+YJL082W                  1.0000   2195  YJL083W                  1.0000   1814  
+YJL092W                  1.0000   3524  YJL102W                  1.0000   2459  
+YJR035W                  1.0000   3257  YJR042W                  1.0000   2234  
+YJR050W                  1.0000    707  YJR052W                  1.0000   1697  
+YJR112W                  1.0000    605  YJR147W                  1.0000   1076  
+YKL027W                  1.0000   1343  YKL061W                  1.0000    341  
+YKL062W                  1.0000   1892  YKL068W                  1.0000   2879  
+YKL108W                  1.0000   1361  YKL109W                  1.0000   1664  
+YKL117W                  1.0000    650  YKL124W                  1.0000   1739  
+YKL125W                  1.0000   1883  YKL142W                  1.0000    659  
+YKL160W                  1.0000    437  YKL185W                  1.0000   1766  
+YKL189W                  1.0000   1199  YKL195W                  1.0000   1211  
+YKL204W                  1.0000   1898  YKL208W                  1.0000    815  
+YKR025W                  1.0000    848  YKR027W                  1.0000   2297  
+YKR058W                  1.0000   1850  YLL001W                  1.0000   2273  
+YLR033W                  1.0000   1508  YLR057W                  1.0000   2549  
+YLR090W                  1.0000   1379  YLR115W                  1.0000   2579  
+YLR135W                  1.0000   2246  YLR143W                  1.0000   2057  
+YLR148W                  1.0000   2756  YLR174W                  1.0000   1238  
+YLR182W                  1.0000   2411  YLR196W                  1.0000   1730  
+YLR200W                  1.0000    344  YLR206W                  1.0000   1841  
+YLR219W                  1.0000   2186  YLR256W                  1.0000   4508  
+YLR260W                  1.0000   2063  YLR403W                  1.0000   2051  
+YLR427W                  1.0000   2012  YLR439W                  1.0000    959  
+YLR449W                  1.0000   1178  YLR455W                  1.0000    914  
+YML010W                  1.0000   3191  YML017W                  1.0000   2143  
+YML027W                  1.0000   1157  YML030W                  1.0000    479  
+YML034W                  1.0000   2630  YML069W                  1.0000   1658  
+YML070W                  1.0000   1754  YML081W                  1.0000   3755  
+YML094W                  1.0000    574  YML111W                  1.0000   2762  
+YML116W                  1.0000   1628  YML117W                  1.0000   3404  
+YMR017W                  1.0000   1193  YMR044W                  1.0000   1427  
+YMR052W                  1.0000    614  YMR100W                  1.0000   1862  
+YMR109W                  1.0000   3659  YMR119W                  1.0000   1874  
+YMR125W                  1.0000   2907  YMR129W                  1.0000   4013  
+YMR134W                  1.0000    713  YMR136W                  1.0000   1682  
+YMR176W                  1.0000   4235  YMR179W                  1.0000   2276  
+YMR194W                  1.0000    765  YMR230W                  1.0000    727  
+YMR234W                  1.0000   1046  YMR263W                  1.0000    605  
+YMR277W                  1.0000   2198  YNL009W                  1.0000   1262  
+YNL027W                  1.0000   2036  YNL042W                  1.0000   1190  
+YNL075W                  1.0000    872  YNL102W                  1.0000   4406  
+YNL103W                  1.0000   2018  YNL126W                  1.0000   2540  
+YNL155W                  1.0000    824  YNL186W                  1.0000   2378  
+YNL192W                  1.0000   3395  YNL207W                  1.0000   1277  
+YNL212W                  1.0000   2348  YNL218W                  1.0000   1763  
+YNL278W                  1.0000   3182  YNR006W                  1.0000   1868  
+YNR023W                  1.0000   1700  YOL049W                  1.0000   1475  
+YOL051W                  1.0000   3245  YOL081W                  1.0000   9239  
+YOL113W                  1.0000   1967  YOL115W                  1.0000   1754  
+YOL123W                  1.0000   1604  YOL137W                  1.0000   1493  
+YOR014W                  1.0000   2273  YOR018W                  1.0000   2513  
+YOR027W                  1.0000   1769  YOR030W                  1.0000   1859  
+YOR066W                  1.0000   1889  YOR069W                  1.0000   2027  
+YOR109W                  1.0000   3323  YOR147W                  1.0000   1868  
+YOR158W                  1.0000    956  YOR160W                  1.0000   2918  
+YOR165W                  1.0000   2330  YOR181W                  1.0000   1901  
+YOR227W                  1.0000   3740  YOR252W                  1.0000    536  
+YOR257W                  1.0000    485  YOR264W                  1.0000   1292  
+YOR274W                  1.0000   1286  YOR278W                  1.0000    827  
+YOR293W                  1.0000    754  YOR295W                  1.0000    686  
+YOR336W                  1.0000   4097  YOR346W                  1.0000   2957  
+YOR349W                  1.0000   3044  YOR359W                  1.0000   1571  
+YOR367W                  1.0000    602  YOR368W                  1.0000   1205  
+YOR386W                  1.0000   1697  YPL018W                  1.0000   1109  
+YPL075W                  1.0000   3108  YPL125W                  1.0000   3098  
+YPL166W                  1.0000    641  YPL168W                  1.0000   1292  
+YPL181W                  1.0000   1520  YPL204W                  1.0000   1484  
+YPL207W                  1.0000   2432  YPL228W                  1.0000   1649  
+YPL232W                  1.0000    872  YPL233W                  1.0000    650  
+YPL260W                  1.0000   1655  YPL267W                  1.0000    629  
+YPL268W                  1.0000   2609  YPR008W                  1.0000   2084  
+YPR030W                  1.0000   3365  YPR034W                  1.0000   1433  
+YPR046W                  1.0000    545  YPR065W                  1.0000   1106  
+YPR070W                  1.0000   1700  YPR072W                  1.0000   1682  
+YPR101W                  1.0000    527  YPR106W                  1.0000   1331  
+YPR122W                  1.0000   3626  YPR125W                  1.0000   1364  
+YPR129W                  1.0000   1049  YPR154W                  1.0000    647  
+YPR168W                  1.0000    473  
+********************************************************************************
+
+********************************************************************************
+COMMAND LINE SUMMARY
+********************************************************************************
+This information can also be useful in the event you wish to report a
+problem with the MEME software.
+
+command: meme -oc meme_out -mod zoops -minw 6 -maxw 15 -bfile ./background -markov_order 2 -seed 0 -rna -evt 0.05 -nostatus -time 7124 -searchsize 100000 Cbp80_G0.fa 
+
+model:  mod=         zoops    nmotifs=      1000    evt=          0.05
+objective function:           em=       E-value of product of p-values
+                              starts=   E-value of product of p-values
+width:  minw=            6    maxw=           15
+nsites: minsites=        2    maxsites=      303    wnsites=       0.8
+theta:  spmap=         uni    spfuzz=        0.5
+em:     prior=   dirichlet    b=            0.01    maxiter=        50
+        distance=    1e-05
+trim:   wg=             11    ws=              1    endgaps=       yes
+data:   n=          603849    N=             303
+sample: seed=            0    hsfrac=          0
+        searchsize= 100000    norand=         no    csites=       1000
+Letter frequencies in dataset:
+A 0.343 C 0.187 G 0.197 U 0.273 
+Background letter frequencies (from file ./background):
+A 0.343 C 0.187 G 0.197 U 0.273 
+Background model order: 2
+********************************************************************************
+
+
+********************************************************************************
+MOTIF GAUGAHGAUGWUGAA MEME-1	width =  15  sites = 296  llr = 2458  E-value = 2.0e-012
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif GAUGAHGAUGWUGAA MEME-1 Description
+--------------------------------------------------------------------------------
+Simplified        A  29219426235::95
+pos.-specific     C  ::1:13112::2:12
+probability       G  8119:1711612a:1
+matrix            U  ::6::3:25246::2
+
+         bits    2.4                
+                 2.2             *  
+                 1.9             *  
+                 1.7    *        *  
+Relative         1.4 *  *        *  
+Entropy          1.2 *  *        *  
+(12.0 bits)      1.0 ** ** *     ** 
+                 0.7 ** ** *  * *** 
+                 0.5 ** ** *  ***** 
+                 0.2 ***** *********
+                 0.0 ---------------
+
+Multilevel           GAUGAAGAUGAUGAA
+consensus            A A  CAUCAUG  C
+sequence                  U     C   
+                                    
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GAUGAHGAUGWUGAA MEME-1 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value                 Site    
+-------------             ----- ---------            ---------------
+YMR277W                    1374  1.84e-09 ACTACTAGTT GATGACGATGATGAA CTATACTACT
+YML070W                     777  8.47e-09 TGTAAAGTTT GATGAAGATGATGAA GTTGTCTTGT
+YAR042W                    1404  1.51e-08 TGATGATTAT GATGATGATGATGAA AGTAGACCCC
+YBL046W                     885  2.13e-08 CACAGATGAC GATGAAGATGATGAC GAAGATAGGC
+YML034W                     366  2.87e-08 TGATGATGAT GATGATGATGATGAC AATGATAAAA
+YFL021W                     456  3.71e-08 GTTTGACGAC GATGACGATGATGAT GACGTGGAGA
+YDR409W                    1731  3.71e-08 GAACGATAAT GATGACGATGATGAT GATCGACTTA
+YBR237W                     528  9.11e-08 AGGAACCGAC GATGAGGATGTTGAA GATAATACGG
+YJR042W                    2097  1.19e-07 AACTAAATGG GATGACGCTGATGAA AAAAGTTCAA
+YJL019W                     261  1.19e-07 CCAACATAAT GATGACGACGATGAT GATCCGTACA
+YNL102W                     801  1.48e-07 TTTGGCTGAT GAAGAAGATGATGAA GATAGTGATG
+YOL115W                    1713  1.90e-07 TGTCTCTAGC GAAGATGATGATGAA GATGGATATA
+YLR115W                    1467  1.90e-07 GGGGGGTGAC GAAGATGATGATGAA GAGGAAGAAA
+YKL117W                     603  1.90e-07 CAAAGAAAAC GATGAAGAAGATGAA GAAGAGGAAA
+YER164W                     111  1.90e-07 CGATAGCGAT GATGAGGACGATGAA GATAATATTA
+YNL212W                    1173  2.49e-07 TGATAGCGAA GATGAGGATGACGAA AACGATCACT
+YGR251W                     495  3.26e-07 TAGTGCCAGT GATGAAGAGGATGAA GATGCAGGGA
+YGL244W                     555  3.26e-07 TAATGAAGAC GAAGACGATGAGGAA GATTACAGGG
+YER030W                     417  4.16e-07 TGGTGAAAAA GAAGAAGACGATGAA GACGAAGAAG
+YDL195W                    1317  5.12e-07 CAAAGTTATT GATGACGTTAATGAA GAAGATTGGA
+YGL066W                     432  6.26e-07 TGATGATGAT GATGACGATAACGAC GACAACGAAG
+YDR515W                    1155  6.26e-07 AAGTAATTTT GATGAAAATGATGAC GAAACTGAAA
+YOR264W                    1194  7.78e-07 TGATGATGGA GATGACAACGATGAC GAGGATAGGG
+YHR066W                     906  7.78e-07 AGAAACAGAA GAAGAAGATGTGGAA ATGGAGGAAC
+YDR160W                     675  7.78e-07 TATTGCAATA GATGAAAATGTTGAC ATAACACATA
+YKL160W                     264  9.73e-07 AAGTGACACA GATGATGGTGACGAA GGTTCTGATA
+YNL103W                    1695  1.45e-06 GTATTCTGAT AATGAAGACGATGAA TATGACGATG
+YKL125W                     756  1.45e-06 TGAATTAGAT GATGATGTAGATGAC GATGATCTAG
+YKL108W                     987  1.45e-06 ATTTCAAGAG GATGATGATAATGAT GATAGCCAAG
+YKL068W                    2307  1.45e-06 TGACCTAAAA GATGATCATGATGAA AGCACTCCTG
+YHR036W                     237  1.45e-06 AATGGAAATA GATGAGGTTGATGAT ACAAGTTTTG
+YGR142W                    1158  1.45e-06 AGACGTTGAG GATGAGGAAGTTGAC AGATACAACG
+YDR152W                     279  1.45e-06 CGAGGAAGAT GAAGACGAGGTTGAA TATGACGACC
+YLR449W                     594  1.75e-06 AGAAGAAGAA GAGGACGATGAGGAA CTAAGTTCCG
+YJL033W                    1677  1.75e-06 TCAAGCACAA GAAGACGAGGATGAC GATTTCATTT
+YBR279W                    1095  1.75e-06 TGAAGAAGAC GATGAAGACGAGGAG CAACCAGAAG
+YPL232W                     468  2.11e-06 AGAGGCCACC GAAGATGAAGTTGAA GCAGCCATAA
+YOR293W                     644  2.11e-06 CACCTTGACT GAAGAAGGTGTTGAA TACTTGAGAG
+YMR230W                     617  2.11e-06 CACTTTGACT GAAGAAGGTGTTGAA TACTTGAGAG
+YKR025W                      30  2.11e-06 GTTTGTTACT GAAGAGGATGAGGAA GACAGGACGC
+YJR035W                     528  2.11e-06 CGAACAAAAA GATGAGGATTTTGAA ATGGCAACAG
+YDL060W                    1215  2.11e-06 GTGGTACTTG GATGACGTCATTGAC GCAAATGAGG
+YMR125W                    2662  2.55e-06 TGTCAATGCT GATGAAGATATTGAG ATACCTAAAG
+YDL225W                     759  2.55e-06 TGACCCTGAA GATGATGATTTGGAA TCCATGGAAG
+YPR101W                     237  3.06e-06 ACCGGATTTT AATGACGACGATGAT ACTTTATTTT
+YNL186W                     690  3.06e-06 TGACGAAATA GAAGACGACGAGGAT GAGGATGACA
+YLR143W                     264  3.06e-06 TGCTACTCAG GATGATGAAATTGAA GAACTATTTG
+YGL060W                     315  3.06e-06 TGGCGACTCC GATGAAGAGAATGAA GATTTAAATG
+YGL021W                     147  3.06e-06 ATCTGATAAT GATGACGATTGTGAC ACTGATTTGA
+YNL278W                    2370  3.64e-06 CATAACCCCC GATGACGATATCGAG AGACAATACA
+YML069W                     999  3.64e-06 GAATCTAGAA GATGAAGATTATGAG GAAAATTATA
+YLR135W                     357  3.64e-06 AAGCCGACTT GATGACGCAGAGGAA GAAACAAATC
+YKL124W                    1146  3.64e-06 CGATCCACAT GATGAAAGTGATGAA ATGACGTCAG
+YGL181W                     330  3.64e-06 TTTTCCTTTT GATGGAGATGATGAC AAAGCCATCG
+YDR416W                      60  3.64e-06 CATAAGAAAT GATGAAGATGTGGCT TTTGAGTACG
+YDL073W                    2241  3.64e-06 TTTTGAATAT GATGAAGATGTGGCT GATTTTGCAG
+YLR439W                     582  4.30e-06 GGATATCCCT GATGACGAAGTCGCC TCCATGCTCA
+YLR182W                    1890  4.30e-06 AGCAGGAATT GAAGAAGAAGAGGAA AGTTTTAGGG
+YKL109W                    1626  4.30e-06 CGACGACCTT GACGAAGATGTCGAT TTTTTAAAGG
+YPL181W                     531  5.09e-06 CAGCAATACC GATGATAACGTCGAC GATATCGGCG
+YLR196W                    1707  5.09e-06 AGAAGGTGGA GATGAGCATGATGAC ATGGCATAA 
+YKL061W                     159  5.09e-06 ATTCAAGTTA AAAGATGATGTTGAA CTTGATGATG
+YDR221W                     573  5.09e-06 TAATTGCTTA GAAGAAGATAAGGAA AAAGCTTCTG
+YDL150W                     510  5.09e-06 CAATCTCATA GAGGACGAAGATGAC GGCGAAAGTG
+YPL075W                    2380  6.02e-06 CGAGGTAGCT GGTGATGATGTTGAT AGGGAGAAAC
+YOR368W                     300  6.02e-06 CAGGAATTCG GATGACATTGTTGAG TGTACTTTAT
+YLR260W                    1554  6.02e-06 TGAAGATGCG GATGCGGATGACGAA GACTCCCACT
+YKL142W                     312  6.02e-06 CTCTTTGAAA AAAGATGATGATGAC GTTATAGCGC
+YGL207W                     351  6.02e-06 AAAGTTATTT GATGACGTTATTGCC TTAATCAATA
+YBR114W                    1623  6.02e-06 ATTATGTAAC GATGAAGCTGAGGAG CCCATTGAAT
+YPL267W                     567  7.08e-06 CCGTTCTACC GATGACGTCAGTGAA AAAAAAGTAG
+YOR336W                     174  7.08e-06 TACCGGTTTG GATGACGAGATTGAT ATTCAAGAAA
+YKL208W                     311  7.08e-06 CAGTCTTTAT GAAGAGGAAGTTGAC AAACTCAGCG
+YER127W                     591  7.08e-06 AGAAAACGGG GAAGAAAACGATGAC AATGAGACTG
+YBR094W                     762  7.08e-06 TGCTGAGATC GAAGACGGTAATGAA TCATCATCGA
+YOR165W                      30  8.26e-06 TCAGTTGATA GATGAAGAGAAGGAA TTTCATCAAA
+YLR033W                    1209  8.26e-06 TTACATTGGA GATGACGAAATTGAG AACTTTCGAA
+YJR052W                     222  8.26e-06 AGTAGTTGAA GATGAAGAAATTGAT GAAATTGGAA
+YHR099W                     564  8.26e-06 CTCCAAAAAT GATGAAGAAAAGGAC TTTCCATCGA
+YCR081W                    4002  8.26e-06 CGACTACGGG GAAGAAGAAGATGCA GACCAAGAAG
+YOL049W                     762  9.64e-06 GTTGACGTTT GATGATGTTAACGAT AAATTGTTCA
+YMR176W                    2538  9.64e-06 GCTTGTTCAC AATGAAGATTTTGAA AAAAAGTGGG
+YKL027W                     816  9.64e-06 ACCCTTACCA GATGAGGAATATGAA AGAGGAAAGG
+YGR167W                     162  9.64e-06 TTCCCCCGCC AAAGATGATGACGAA ATTAGGGATT
+YOL113W                    1677  1.12e-05 AAAGGGATAT GATGAAAAAGTCGAC GTTTGGTCTC
+YML027W                     956  1.12e-05 TAAACCCACA AAAGAAGACGTTGAC TCCCGTGAAA
+YLL001W                    1773  1.12e-05 TGACTACGAT GATGATGGTATCGAC GCAGAATCGA
+YKL195W                     405  1.12e-05 TTCAAAAGTA GCTGAAGATGGTGAA TTGGTTGTTC
+YJL042W                    3612  1.12e-05 CCCAGATGCA GAAGATGCCGTCGAA TTCAGAGAAG
+YGR108W                     576  1.12e-05 GTACGAATGG GATGACCTAGATGAA GAAGATTGTG
+YGL090W                     909  1.12e-05 CAAAATGGAA GACGACGATTTTGAT GACTTTCAAT
+YDR211W                     654  1.12e-05 AGAATTGTTG GATAATGTCGATGAA TTTGTCATAA
+YBL011W                    2205  1.12e-05 TACTGCCAGG GAAGAGGAAGAGGAA GAAGAAGAGG
+YPR129W                     603  1.30e-05 CGATATTCCG AATGAAGATTTTGAC TTTCAATCAA
+YMR109W                    3615  1.30e-05 ATTAGAGAGT GATGACGAGGAGGCT AACGAAGATG
+YMR100W                     735  1.30e-05 GGAAAGACAC GACGACGACATTGAT ATTGATAGTG
+YHR206W                     125  1.30e-05 GGCCTCGACT GATGAACACGATGCA GCCAAACAAC
+YHR084W                      57  1.30e-05 TCAAGCTAAT AATGAAAACGATGAA GTCAGTAAAG
+YHR002W                     741  1.30e-05 ACTTTCAGAA GATGATGAATTGGAA AGAGTACAGA
+YDL070W                    1350  1.30e-05 ATATTCATCT GATGATGAATATGAT GATGAAGACA
+YBR097W                    3078  1.50e-05 CAACAGCTAT GAAGGCGACGTTGAA AGCATAGAAA
+YJL083W                    1407  1.73e-05 CTCTCTCGCG AATGAAGACGACGAG TCTCACTTAC
+YHR073W                     999  1.73e-05 CGACATTCTT GACGATGACAAGGAA GTAATTAATA
+YGR145W                    2019  1.73e-05 TTCATCGGAT GAAGAAGGTATTGAC GAAAATGGTA
+YGL171W                     111  1.73e-05 GAATCATAAG GAAGATAATAATGAA AGCCAGATCG
+YER173W                     177  1.73e-05 AAGTATCAAC GACGACGGCGGTGAA CAGTGGTACG
+YDR392W                     468  1.73e-05 TTTAGAAAAT AATGACGACAATGAT GATATGGATG
+YDR334W                    4404  1.73e-05 CGAAATTGAC AATGACGATTTCGAC GAAAGCACAG
+YDR089W                     134  1.73e-05 ATTCGGGCAT GGAGAAGTTGTTGAA TCAATGTTCA
+YDR049W                    1647  1.73e-05 AGAACAAGTT GATGAAATCAATGAA AAGAAAAAAG
+YDL132W                    2412  1.73e-05 CCTACAGAGG GGAGACGATGGTGAA TCGTATGCTT
+YCR033W                    2244  1.73e-05 AAGAAGTAAT GACGAGGAAGTCGAA GTTGATGAGA
+YPL233W                     498  1.99e-05 TGATAGTACC GACGATGCCGATGAT CACATCAACT
+YOR227W                    3276  1.99e-05 GAGACAGGAA GAAGAGGAAGGTGAA TTACATAAAT
+YNL207W                    1164  1.99e-05 TGAAAGTTCT GAAGATGACAGTGAA GATGCACAAG
+YNL192W                     957  1.99e-05 TTTTTCAAGG GATGACGAGTACGAT GATCTCAACA
+YKR058W                     987  1.99e-05 TAGTACAGTG GAAGAAAACGTGGAC AACCAGAACG
+YHR102W                    1047  1.99e-05 GAGAGTGAAC GAAGGCGATGTGGAA ATGAAATGGG
+YGR097W                     300  1.99e-05 CCTTGCAGGT GATGAAGCTATCGAT GGGCAGTTTG
+YER133W                    1275  1.99e-05 TCAAGTTGTG GAAGATGGTTATGAA TTCTTTAGTA
+YAL041W                    2457  1.99e-05 CAAATATCAG GACGAAGATGGGGAT TTTGTTGTGT
+YOL123W                     879  2.28e-05 GTATGACTCC GCTGACGCCGTTGAC AGAGTTTGTC
+YLR174W                     263  2.28e-05 AATTTCATTT GAAAAAGATGTGGAA ATCTCCAAAT
+YLR090W                     231  2.28e-05 CTTGTATGGT GATGATAATGGTGCC GCTAGCAGCG
+YKL062W                    1233  2.28e-05 TTCAGAAGAA AATGAAGACGATGCT TTTGGTGCGC
+YGR093W                      42  2.28e-05 AAGTGAAAGC GATGCCGATGAGGCT ATCAGAAAGA
+YEL012W                     744  2.28e-05 AGATGTCAGT GATGACGATGACTAC GACGAAGTCG
+YPL260W                     498  2.61e-05 GTACGATGAG GATGGAAATGATGAC CGATTAAGGG
+YMR017W                     501  2.61e-05 GCCTGAGGAG GATGAAATAGTTGAT AGACTCAGGT
+YML081W                    1347  2.61e-05 CCATCACGCG GATGCTCATGATGAC TCCTTCATAG
+YGL006W                     834  2.61e-05 ATTAGATATA GGTGACGTTAACGAA GACGGTAACA
+YER129W                    2954  2.61e-05 ATGACAGTGA GACGACGATAACGCC GCAAAATATG
+YDR195W                     755  2.61e-05 CTACCTCTTC AATGAAGAAATTGAA GTCGGGTTTA
+YOR027W                     954  2.97e-05 TTCTACCTTG AATGATGCTGTTGAG CAAGGTAGAG
+YOL081W                     956  2.97e-05 AAAACTTATC GGTGACGTTAAGGAA AACGATTTAT
+YML117W                    2685  2.97e-05 GAGGAGGCAG AATGAAATCGATGAA AAGGAAAAGG
+YHR114W                    1518  2.97e-05 ATACGTACAA AAGGATGATGACGAA ATCACCATTA
+YGL133W                     438  2.97e-05 TCCTCAACCT GATGATATGGTCGAA ATCAACAGTG
+YDR528W                     456  2.97e-05 AACTATAAAT GAAGAAATAGATGAA GATGACACCA
+YDL112W                    2844  2.97e-05 CATAAAAGGC GATGAACTTTATGAA AAGGTGTACG
+YMR044W                    1389  3.38e-05 GAGCTTTAGT GAAGACGTAAAGGAA GAAGAAAGCA
+YGL151W                    3156  3.38e-05 AGAAGAAGAG AATGAGGATAACGAC GGCAATAATA
+YER098W                     786  3.38e-05 TGCAAAGAAA GATGATAACAATGAG ATGGAACGGC
+YER001W                     450  3.38e-05 CATAAATGAT AATGAAGGAGTTGAC GAAGGTAAAG
+YDL010W                     225  3.38e-05 TGAAGTAGAC GAAGAAATTAATGAA ATAAAACAGA
+YNR006W                    1596  3.83e-05 TCCAAAAGAA GAGGCCGAAGATGAA GGAACACAGG
+YNL075W                     807  3.83e-05 AGAAAATAAG GACGCTGATGTTGAG TGGCAGTTGA
+YMR129W                    1691  3.83e-05 AAGACAAGTC GAAAAAGATAATGAA TGTTACTACA
+YLR427W                     789  3.83e-05 TGTTCTGTAT GAGGACGACTTTGAT GTAACCAGGT
+YLR057W                    1386  3.83e-05 TTCAGAGGTA GAAGCAGTCGACGAA ATAATTGAGA
+YIL045W                     996  3.83e-05 GTTAATAAAC GATGACGACGATTAT TTAGAAACAA
+YGL016W                     216  3.83e-05 TACGCGGGGT GAAAACGATTATGAA ACCCTATGGA
+YER059W                     918  3.83e-05 TAACGAAAAT AATGAAAATGACGAT TCAGATGATG
+YDR279W                     579  3.83e-05 TGAAACCATT GAGGAAGCTGGTGAC GTCTATTACA
+YDR161W                    1116  3.83e-05 AGTGAATGAG AATGAAGACTTGGAA GAGTTGGACA
+YCR036W                     618  3.83e-05 TGTATTTGAT AATGAACTTGTTGAA GAAATAAGGG
+YNL042W                     597  4.34e-05 TTCCATTAAG GAGGAAGATGTGGCT AGGCGAATTC
+YJL102W                    1605  4.34e-05 TAATGACCTA AAAGCAGATGTTGAA TTTGGTCAGT
+YBR171W                     198  4.34e-05 ATCCATATTT GACGAAAACGATGCC CATGATCTGT
+YOR158W                     675  4.89e-05 GGTTTTTAAC GATGAAACGGAGGAA TTCACTGATG
+YOL051W                    1608  4.89e-05 TTCTTTATCC AATGAAGAAAAGGAA AAAATTAAAA
+YLR206W                      26  4.89e-05 TTCGTTCTGC AAAGAACATGATGAA GGGCTACTCA
+YHR167W                     756  4.89e-05 CTATCCTGTA GATAAAGAAGGTGAC ATAGTTTTAG
+YER014W                     474  4.89e-05 TCCTGGCCAA GACGAAAGTGTCGAA TCCATTTGTG
+YDR387C                     712  4.89e-05 CGATAGATAT GCTGATGAGGAGGAC ATTGTGTTGC
+YDR244W                    1407  4.89e-05 ATTTTACACG AAAGATGATTTTGAC AAAACCATAG
+YDR138W                    1782  4.89e-05 GTTCGATTTT GATAAAGTTAACGAA AAGACTGGTG
+YPL125W                    2058  5.51e-05 GTTGTTAAGC GAAGACGGGTATGAA CTATGGGGCA
+YOR069W                     759  5.51e-05 TTCAAGTCCT GCTGAGGTCGAGGAA AACTCAGAAA
+YOR018W                     960  5.51e-05 TGAAGCTGCC GACGAAGGGGTTGAT ACGGACACAG
+YOR014W                    1487  5.51e-05 AGGTTTTCTT GGTGAGGATATTGAT ACCATTACAC
+YNL126W                    2493  5.51e-05 AGATTTAAAG AACGATGGCGATGAA GAGCTTTTCT
+YLR256W                    4058  5.51e-05 CCATCAAGCA AATGACGCCTATGAC AAGTGCATTC
+YJL082W                    1077  5.51e-05 CCAATTTACA GATGCTGACTTTGAT ATACCACCAA
+YIL036W                    1671  5.51e-05 TTTCGGAAGC GATACTGACGATGAC GATATAGATC
+YPR154W                      81  6.19e-05 TGTCATTTCA AATGACGTTTACGAT CAAATAAATA
+YPL268W                    1067  6.19e-05 AACCGACTCA GCTGACGATGGGGCA AGATGGTTTT
+YMR179W                    2121  6.19e-05 GGAATTATCT GAGGACATAGTTGAA GAAGAGCAAG
+YLR200W                     105  6.19e-05 CAAGATTGTA AATGAAGAGTTTGAC CAATTAGAAG
+YHL039W                    1554  6.19e-05 CATTGAAAAA GAAGATGTTATGGAG TTTTTGCCGT
+YEL051W                     705  6.19e-05 TTCAGAAGTA GCTGCTGATGAGGAA CCTCAAGGTG
+YDR358W                     858  6.19e-05 GCTTATTGAG GAAGAACGCGATGAC GATGCGCTTG
+YDR096W                    1059  6.19e-05 CTCCATTACT GATAATGATAACGAT TTATTTCAAA
+YBL005W                    1326  6.19e-05 AGAAATCCAA AATGAAATTGATGAG CGTTTTGGAT
+YPR072W                      72  6.94e-05 TGAAGACTTC GATGACATATACGAA AAATTTCAGT
+YPR034W                     117  6.94e-05 TAAAAGAACA GATGAGGGGGGGGAA GCTGAGTTTA
+YBR136W                    1988  6.94e-05 GTTTACGAAT AATGATGACTTTGCA AATTAAAAAT
+YBL037W                    1793  6.94e-05 ATGTGGCTAA GGCGATGATATTGAC TACGATGATC
+YPR008W                     933  7.78e-05 TTGGCCATTT GATGAAAGTATTGAG AGAAATTTCA
+YMR134W                     555  7.78e-05 TATAATTAAG AATGAGGGCGGTGAA GGGGCAAGAA
+YML017W                    2016  7.78e-05 GGTTCGAGAG GAAGAGGATTTGGCA GAGGAAGGGG
+YGR218W                     489  7.78e-05 ACTGCTATCC GAAGAAGTCTTCGAT TTCTCTGCGG
+YGR217W                    6078  7.78e-05 AGAACCAATA GATAATAATGACGAT AGCGCAAATG
+YFL036W                    2871  7.78e-05 TGCTGCCTTG GGTGGTGACGTTGAA GGGGCTACTC
+YDR014W                     489  7.78e-05 GAAAATATAC AATGACATCAATGAA TTCATATTGA
+YBR163W                     609  7.78e-05 TATGGATATT GATAATGATATGGAT GCCCTGCTAG
+YPR030W                    3276  8.68e-05 TTATAATGAT AATGATAATAATGAT AATGATACAG
+YPL228W                     270  8.68e-05 TGAAGAAACC GATACGGATGACGAA ATGGGTGCAA
+YLR148W                    2067  8.68e-05 AAACTTATTC GAGGATGCCATTGAC TTGGCATTGA
+YGR275W                     275  8.68e-05 GAAGAATACT GAAAAAGTCGTTGAT GACATCGCAC
+YDL240W                    1917  8.68e-05 AAAACTAAAA GAAACCGATGACGAA ACTTCGAATG
+YPR125W                    1146  9.66e-05 AAACGTCGTT AAGGAAGATGAGGCA TCCGCTAAGC
+YOR257W                     429  9.66e-05 GTTTGATTTG GATGGTGATGGCGAG ATTAATGAAA
+YOR147W                     657  9.66e-05 AAATGTCAGG GATGAGATTTTGGAC TTAGACTTAA
+YMR119W                    1086  9.66e-05 TAACATCCCG GATAATGTTAATGAG AAATTTTTTA
+YGR222W                     395  9.66e-05 ACAAGATCAG GGTGAAAATGACGCC ATTGGCGCAA
+YCR093W                    1779  9.66e-05 CGCAGGGATT AATAATGATATTGAA AAGGAGATGC
+YPL204W                    1158  1.07e-04 GAACGCACTA GATAAAGGTATGGAA AACTTGAGAC
+YOR252W                     498  1.07e-04 GATCAGAATT AATGATAAAGGTGAA CAAGTCGTTG
+YOL137W                     828  1.07e-04 CAATGATGTG GAAGAAGCGGGTGAT AACTCGCTGA
+YJL092W                     396  1.07e-04 TGTCATTTTA GATGATATGATCGAA AAAGTTCCCG
+YIL130W                    2751  1.07e-04 TTTGAACATA GAAGATAAAGAGGAG ATGTCACCTA
+YER068W                      81  1.07e-04 TTTATCGGAG GATGAAGAAGATTAT TGCCCTCTTT
+YER063W                     264  1.07e-04 CGAACCCAAG GAGGAAAATAAGGAC GTTCAAAAGC
+YDR412W                     375  1.07e-04 TGATAAAGAT GACGGCGATAACGAC AATAATGAAA
+YOR066W                     134  1.19e-04 CCAAACCTTT GATGAAAGTGGGGCA ATCTAGTCCA
+YML030W                     408  1.19e-04 GAAGACCCTT GAGAACGAAGAGGAA ATCAAGAACT
+YKR027W                    1059  1.19e-04 TCTATTGAAC AATAACGACTATGAA CTTTCTTTAT
+YGR092W                      15  1.19e-04 ATCAAAATCA GAAAAAAATGTCGAC CTCTTGGCAG
+YGL145W                     345  1.19e-04 ATTCACTCTA GATGACGTAAAGGCG CTACACTCAA
+YPR070W                    1392  1.32e-04 TACAACTATG GATGGTGCCAATGAC CTCGGATTCA
+YOR181W                    1881  1.32e-04 TGACGATATG GACAATGGTGATGAT TGGTAA    
+YLR219W                     950  1.32e-04 AGCAAGCATC GACGACAAGAAGGAA GAAAAGACCG
+YKL204W                     701  1.32e-04 TTGAAGATTG GAAGGCAAAGATGAA AGAATTAGAA
+YDR118W                    1389  1.32e-04 GTCTGATATG GAAAAAGATATTGCA CAAAGTAATG
+YNL155W                     798  1.46e-04 TTTAGTACAC AATAACGCCGACGAA AAATCTAATT
+YMR136W                     570  1.46e-04 TGAAGTGCTG GACAATATTGATGAA CGTTCCTGTC
+YGR212W                    1077  1.46e-04 TAAAATAATA GATAAAGTAAACGAA GTAAAGTTAT
+YDR463W                     933  1.46e-04 TTTCAACAAG GATGCCGTAGAGGCT ATGACCATAG
+YDR189W                    1434  1.46e-04 CTATTTCAAG GAAAACGATTACGAT ATCAATGCTT
+YDR076W                     795  1.46e-04 TAGGGATTGG AATGAACAAGTGGAC GAAACCGTTT
+YBR155W                     183  1.46e-04 CGGTGCAGGT GGTGAAAACGTGGAG TTAGAAGCTT
+YML111W                     633  1.61e-04 ACCGTTCGAA GATGATCTAAACGAC TCGGATAACA
+YGR227W                      33  1.61e-04 TGAAGCCAAT AATGATGTATTGGAA GAGGAAGCAG
+YDR466W                    2262  1.61e-04 TTTGTCAAGC AATAACGCTGGTGAA ACTCCGAAAA
+YDR288W                     741  1.61e-04 GGAGAAATCC GATACCGACGGGGAA GTGATATCAT
+YBR257W                     711  1.61e-04 CCCAATATCA GATGACGACGATTCG GCATTGAGAT
+YPR168W                     408  1.78e-04 TCCAGAGTTG AAAGAACCTGTTGAA GATATTATAA
+YHR155W                     675  1.78e-04 CAAGGACACC AAGGACGTTATCGAC ATTACTCCCG
+YGR198W                     960  1.78e-04 AAACCTAAGC GATAACAGTAATGAC GAAATAAAGA
+YER128W                     180  1.78e-04 TACAGAGTAT AATGAAGCCGTGGCT CAATTAAAAC
+YER013W                    1059  1.78e-04 ACAACAACGA GACGAGACGGATGAA ATTGATGTCG
+YDR063W                     150  1.78e-04 AGACGAACAA GAAGAGCTAGACGAA ATTGAAGATT
+YCL039W                      36  1.78e-04 CGTGTTGAAC AATGACACGGAGGAA ACAGCCTCGC
+YBR135W                     105  1.78e-04 GCGGTACTCA GACGATAACTATGAG TACAGGCATG
+YOR109W                    2456  1.95e-04 AAAAGGAAAG GACGCCGTCATGGAC AGATAGAATT
+YBR041W                    1977  1.95e-04 TGCTGATTGG GAAGCCATCGATGCA CAAACAATTA
+YBL019W                    1092  1.95e-04 AGATATACTG GACGACAGAATTGAA CCTGGTACGA
+YOR030W                     854  2.15e-04 TCCCATTTAA AATGAAAAAGGGGAC ACATATCATA
+YNL218W                    1182  2.15e-04 CCCAAAGGGA GATAACCATTATGAT ACAATCTCTG
+YKL189W                     225  2.15e-04 CCCAACTCCG GAAGCCATTGACGAG CTTTATACTG
+YBR168W                    1071  2.15e-04 TTTGCCCCCA GATGGACTTGGTGAA GAAGAATTAC
+YOR359W                    1496  2.35e-04 TGGGTGCAAG GAGAAAATTGTTGAA GGCTTTTGGA
+YGR072W                     321  2.35e-04 CATCTTACGA GATAATAATAACGAT GATGGTGATA
+YPL168W                     555  2.57e-04 TATGTGTAAT GATGAGGAGGTTTAT CAGAAAATAT
+YPL018W                     875  2.57e-04 GAAGACTCAC GACGATAAAATTGCA GATAAATTTC
+YHR011W                     195  2.57e-04 AAAAGAGATT GATAAAGTTATTGCG GATATTCAAA
+YGL113W                    1728  2.81e-04 TGGGAAACGT AAAGATATCAATGAA ACGATACGCC
+YDL116W                     570  2.81e-04 AATTTTGGCC GGTGCGATTGATGAA GCATTAGAAG
+YPL207W                    1941  3.07e-04 TTTCAATATG GGTGATGTCAGTGCA TATGCAGATC
+YDR371W                    1053  3.07e-04 CCATATCAAA GATAACAAATTCGAA CCATTCAATC
+YDR168W                    1281  3.07e-04 GGATAATATT AATAAAGTCTTTGAA GATATACCAA
+YJR112W                     345  3.34e-04 GCTCTCCAGC AAAGAGCTTGTGGAA TGCCATTTAT
+YPL166W                     510  3.94e-04 GAATAAGCCT AATGACAAATTGGAT AAGGATGGTA
+YMR234W                     504  3.94e-04 GAATATATCC AAAGAAAGTTTTGAA TCTAAGTATA
+YMR052W                     348  3.94e-04 AAATTTTATC GACGAACAGAATGCA ATAAGAGAAC
+YOR295W                      96  4.27e-04 GATGGCTTTG AAAGAAGTATATGCA ATCGACGTTG
+YNL009W                     483  4.63e-04 AGATGACGGT AAAGAAAACATCGAT TTAAAGGTTT
+YDL117W                      96  4.63e-04 CTTTCTGGAG GGAGATATTATGGAA GTCACAAGGA
+YOR386W                     825  5.01e-04 ATTAAAGTAC AACGAAACTTTTGAA CTGAAGCCAT
+YPR122W                    3000  5.40e-04 AGACCTATTA AATGAGATAGTGGCA AATGTGCAAA
+YKL185W                    1649  5.40e-04 CAAAGGGTGA AATAAACATTATGAA ATCCAATGGA
+YJL061W                     606  5.40e-04 CACAGAAGGC GGTGATATCTTTGCA TTTTATCCAT
+YPR046W                     354  5.83e-04 TGAATCAAGA GCAGAACGCGACGAA TTGATGTCAA
+YGR003W                    1806  6.27e-04 TATTCCCATA GATGACGTTAAGTCT CTTGTAATGT
+YNR023W                     435  6.74e-04 AAACAATGAG GCTGACCTTATGGCA CTGGAGAATG
+YGR156W                    1107  7.24e-04 CTCTAACGCG AATAAAGCGAATGAC AGCGGCACCA
+YML116W                    1599  8.32e-04 GGCAAGAGCT GCTGCAGAATACGAT TGCACTGTGG
+YML094W                     377  8.32e-04 AAAGAGCGCT GAAGCAGCAATCGCA TTTTACCAAA
+YFL049W                     756  9.51e-04 TAGCAATGCC AATGAAATTAGTGCG AACACTAATA
+YOR349W                     501  1.15e-03 CAAAAACTTC ACAGATGCCTTTGAC CAGCTACCGG
+YGL178W                    2968  1.23e-03 GAATGAAACC GACAAAATTAATGCT AATCACTTCT
+YMR194W                     712  1.30e-03 CACCAGAGCC AAGGCTAAGGTCGAA GAAATGAACA
+YJR050W                     225  1.30e-03 AATGCAGATT GCGGAACTTAACGAC GAACTTAATA
+YMR263W                      57  1.38e-03 ACCCACTCAG GGTGGTGGTTACGCA AGTAACAACA
+YGR046W                      89  1.47e-03 TGAGTACTCA AATAAAGGAGGGGAG AAGTTCCATA
+YBL098W                     837  1.47e-03 TATGGATTTG GACGATGCTGTCAAA AGGTTTATCA
+YDR337W                     441  1.65e-03 GAGGAACTCC GAGAATAAAAATGCC ATTAAAATGG
+YLR455W                     276  1.74e-03 TTATAAGGAA GCAAAAAATTTTGAT GATTTCAACG
+YPR106W                     860  1.94e-03 CAAATATTTT AATAACAGAAATGCA TGTTCTTAAT
+YOR278W                     594  2.04e-03 ATGCGATGAG GATGAAGTATTCTCG GACTGGGTGG
+YJR147W                     735  2.27e-03 GATGCGCTTC GCCGGCGTGTTCGAA TTTATGAACT
+YDR073W                     389  3.61e-03 TAAACCAAGG AGTGCCCTCAGCGAA ACCACTGATC
+YPR065W                     257  4.44e-03 AATACAAGCC GGTAAGAAAGTCTAA GAAGAAGCAA
+YIL049W                     292  4.98e-03 ATCATATTTG GACACTCATTGCGCC GACTTTATGA
+YOR367W                     588  6.40e-03 AGGACAACGG AGAGATATAGTTTAG           
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GAUGAHGAUGWUGAA MEME-1 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+YMR277W                           1.8e-09  1373_[1]_810
+YML070W                           8.5e-09  776_[1]_963
+YAR042W                           1.5e-08  1403_[1]_2148
+YBL046W                           2.1e-08  884_[1]_426
+YML034W                           2.9e-08  365_[1]_2250
+YFL021W                           3.7e-08  455_[1]_1062
+YDR409W                           3.7e-08  1730_[1]_969
+YBR237W                           9.1e-08  527_[1]_2007
+YJR042W                           1.2e-07  2096_[1]_123
+YJL019W                           1.2e-07  260_[1]_1773
+YNL102W                           1.5e-07  800_[1]_3591
+YOL115W                           1.9e-07  1712_[1]_27
+YLR115W                           1.9e-07  1466_[1]_1098
+YKL117W                           1.9e-07  602_[1]_33
+YER164W                           1.9e-07  110_[1]_4281
+YNL212W                           2.5e-07  1172_[1]_1161
+YGR251W                           3.3e-07  494_[1]_81
+YGL244W                           3.3e-07  554_[1]_1107
+YER030W                           4.2e-07  416_[1]_30
+YDL195W                           5.1e-07  1316_[1]_2490
+YGL066W                           6.3e-07  431_[1]_1527
+YDR515W                           6.3e-07  1154_[1]_174
+YOR264W                           7.8e-07  1193_[1]_84
+YHR066W                           7.8e-07  905_[1]_441
+YDR160W                           7.8e-07  674_[1]_1869
+YKL160W                           9.7e-07  263_[1]_159
+YNL103W                           1.4e-06  1694_[1]_309
+YKL125W                           1.4e-06  755_[1]_1113
+YKL108W                           1.4e-06  986_[1]_360
+YKL068W                           1.4e-06  2306_[1]_558
+YHR036W                           1.4e-06  236_[1]_1164
+YGR142W                           1.4e-06  1157_[1]_60
+YDR152W                           1.4e-06  278_[1]_504
+YLR449W                           1.7e-06  593_[1]_570
+YJL033W                           1.7e-06  1676_[1]_621
+YBR279W                           1.7e-06  1094_[1]_228
+YPL232W                           2.1e-06  467_[1]_390
+YOR293W                           2.1e-06  643_[1]_96
+YMR230W                           2.1e-06  616_[1]_96
+YKR025W                           2.1e-06  29_[1]_804
+YJR035W                           2.1e-06  527_[1]_2715
+YDL060W                           2.1e-06  1214_[1]_1137
+YMR125W                           2.5e-06  2661_[1]_231
+YDL225W                           2.5e-06  758_[1]_882
+YPR101W                           3.1e-06  236_[1]_276
+YNL186W                           3.1e-06  689_[1]_1674
+YLR143W                           3.1e-06  263_[1]_1779
+YGL060W                           3.1e-06  314_[1]_1596
+YGL021W                           3.1e-06  146_[1]_2121
+YNL278W                           3.6e-06  2369_[1]_798
+YML069W                           3.6e-06  998_[1]_645
+YLR135W                           3.6e-06  356_[1]_1875
+YKL124W                           3.6e-06  1145_[1]_579
+YGL181W                           3.6e-06  329_[1]_846
+YDR416W                           3.6e-06  59_[1]_2505
+YDL073W                           3.6e-06  2240_[1]_699
+YLR439W                           4.3e-06  581_[1]_363
+YLR182W                           4.3e-06  1889_[1]_507
+YKL109W                           4.3e-06  1625_[1]_24
+YPL181W                           5.1e-06  530_[1]_975
+YLR196W                           5.1e-06  1706_[1]_9
+YKL061W                           5.1e-06  158_[1]_168
+YDR221W                           5.1e-06  572_[1]_1521
+YDL150W                           5.1e-06  509_[1]_744
+YPL075W                             6e-06  2379_[1]_714
+YOR368W                             6e-06  299_[1]_891
+YLR260W                             6e-06  1553_[1]_495
+YKL142W                             6e-06  311_[1]_333
+YGL207W                             6e-06  350_[1]_2742
+YBR114W                             6e-06  1622_[1]_735
+YPL267W                           7.1e-06  566_[1]_48
+YOR336W                           7.1e-06  173_[1]_3909
+YKL208W                           7.1e-06  310_[1]_490
+YER127W                           7.1e-06  590_[1]_468
+YBR094W                           7.1e-06  761_[1]_1485
+YOR165W                           8.3e-06  29_[1]_2286
+YLR033W                           8.3e-06  1208_[1]_285
+YJR052W                           8.3e-06  221_[1]_1461
+YHR099W                           8.3e-06  563_[1]_10656
+YCR081W                           8.3e-06  4001_[1]_267
+YOL049W                           9.6e-06  761_[1]_699
+YMR176W                           9.6e-06  2537_[1]_1683
+YKL027W                           9.6e-06  815_[1]_513
+YGR167W                           9.6e-06  161_[1]_525
+YOL113W                           1.1e-05  1676_[1]_276
+YML027W                           1.1e-05  955_[1]_187
+YLL001W                           1.1e-05  1772_[1]_486
+YKL195W                           1.1e-05  404_[1]_792
+YJL042W                           1.1e-05  3611_[1]_570
+YGR108W                           1.1e-05  575_[1]_825
+YGL090W                           1.1e-05  908_[1]_342
+YDR211W                           1.1e-05  653_[1]_1470
+YBL011W                           1.1e-05  2204_[1]_60
+YPR129W                           1.3e-05  602_[1]_432
+YMR109W                           1.3e-05  3614_[1]_30
+YMR100W                           1.3e-05  734_[1]_1113
+YHR206W                           1.3e-05  124_[1]_1729
+YHR084W                           1.3e-05  56_[1]_1995
+YHR002W                           1.3e-05  740_[1]_318
+YDL070W                           1.3e-05  1349_[1]_552
+YBR097W                           1.5e-05  3077_[1]_1272
+YJL083W                           1.7e-05  1406_[1]_393
+YHR073W                           1.7e-05  998_[1]_1977
+YGR145W                           1.7e-05  2018_[1]_90
+YGL171W                           1.7e-05  110_[1]_1569
+YER173W                           1.7e-05  176_[1]_1788
+YDR392W                           1.7e-05  467_[1]_531
+YDR334W                           1.7e-05  4403_[1]_126
+YDR089W                           1.7e-05  133_[1]_2461
+YDR049W                           1.7e-05  1646_[1]_237
+YDL132W                           1.7e-05  2411_[1]_21
+YCR033W                           1.7e-05  2243_[1]_1422
+YPL233W                             2e-05  497_[1]_138
+YOR227W                             2e-05  3275_[1]_450
+YNL207W                             2e-05  1163_[1]_99
+YNL192W                             2e-05  956_[1]_2424
+YKR058W                             2e-05  986_[1]_849
+YHR102W                             2e-05  1046_[1]_2181
+YGR097W                             2e-05  299_[1]_3126
+YER133W                             2e-05  1274_[1]_174
+YAL041W                             2e-05  2456_[1]_93
+YOL123W                           2.3e-05  878_[1]_711
+YLR174W                           2.3e-05  262_[1]_961
+YLR090W                           2.3e-05  230_[1]_1134
+YKL062W                           2.3e-05  1232_[1]_645
+YGR093W                           2.3e-05  41_[1]_1467
+YEL012W                           2.3e-05  743_[1]_21
+YPL260W                           2.6e-05  497_[1]_1143
+YMR017W                           2.6e-05  500_[1]_678
+YML081W                           2.6e-05  1346_[1]_2394
+YGL006W                           2.6e-05  833_[1]_2673
+YER129W                           2.6e-05  2953_[1]_460
+YDR195W                           2.6e-05  754_[1]_832
+YOR027W                             3e-05  953_[1]_801
+YOL081W                             3e-05  955_[1]_8269
+YML117W                             3e-05  2684_[1]_705
+YHR114W                             3e-05  1517_[1]_369
+YGL133W                             3e-05  437_[1]_3342
+YDR528W                             3e-05  455_[1]_801
+YDL112W                             3e-05  2843_[1]_1452
+YMR044W                           3.4e-05  1388_[1]_24
+YGL151W                           3.4e-05  3155_[1]_228
+YER098W                           3.4e-05  785_[1]_1464
+YER001W                           3.4e-05  449_[1]_1824
+YDL010W                           3.4e-05  224_[1]_456
+YNR006W                           3.8e-05  1595_[1]_258
+YNL075W                           3.8e-05  806_[1]_51
+YMR129W                           3.8e-05  1690_[1]_2308
+YLR427W                           3.8e-05  788_[1]_1209
+YLR057W                           3.8e-05  1385_[1]_1149
+YIL045W                           3.8e-05  995_[1]_606
+YGL016W                           3.8e-05  215_[1]_3015
+YER059W                           3.8e-05  917_[1]_330
+YDR279W                           3.8e-05  578_[1]_459
+YDR161W                           3.8e-05  1115_[1]_33
+YCR036W                           3.8e-05  617_[1]_369
+YNL042W                           4.3e-05  596_[1]_579
+YJL102W                           4.3e-05  1604_[1]_840
+YBR171W                           4.3e-05  197_[1]_408
+YOR158W                           4.9e-05  674_[1]_267
+YOL051W                           4.9e-05  1607_[1]_1623
+YLR206W                           4.9e-05  25_[1]_1801
+YHR167W                           4.9e-05  755_[1]_15
+YER014W                           4.9e-05  473_[1]_1131
+YDR387C                           4.9e-05  711_[1]_941
+YDR244W                           4.9e-05  1406_[1]_417
+YDR138W                           4.9e-05  1781_[1]_462
+YPL125W                           5.5e-05  2057_[1]_1026
+YOR069W                           5.5e-05  758_[1]_1254
+YOR018W                           5.5e-05  959_[1]_1539
+YOR014W                           5.5e-05  1486_[1]_772
+YNL126W                           5.5e-05  2492_[1]_33
+YLR256W                           5.5e-05  4057_[1]_436
+YJL082W                           5.5e-05  1076_[1]_1104
+YIL036W                           5.5e-05  1670_[1]_78
+YPR154W                           6.2e-05  80_[1]_552
+YPL268W                           6.2e-05  1066_[1]_1528
+YMR179W                           6.2e-05  2120_[1]_141
+YLR200W                           6.2e-05  104_[1]_225
+YHL039W                           6.2e-05  1553_[1]_189
+YEL051W                           6.2e-05  704_[1]_51
+YDR358W                           6.2e-05  857_[1]_801
+YDR096W                           6.2e-05  1058_[1]_1611
+YBL005W                           6.2e-05  1325_[1]_1590
+YPR072W                           6.9e-05  71_[1]_1596
+YPR034W                           6.9e-05  116_[1]_1302
+YBR136W                           6.9e-05  1987_[1]_5104
+YBL037W                           6.9e-05  1792_[1]_1270
+YPR008W                           7.8e-05  932_[1]_1137
+YMR134W                           7.8e-05  554_[1]_144
+YML017W                           7.8e-05  2015_[1]_113
+YGR218W                           7.8e-05  488_[1]_2751
+YGR217W                           7.8e-05  6077_[1]_27
+YFL036W                           7.8e-05  2870_[1]_1170
+YDR014W                           7.8e-05  488_[1]_1440
+YBR163W                           7.8e-05  608_[1]_1134
+YPR030W                           8.7e-05  3275_[1]_75
+YPL228W                           8.7e-05  269_[1]_1365
+YLR148W                           8.7e-05  2066_[1]_675
+YGR275W                           8.7e-05  274_[1]_184
+YDL240W                           8.7e-05  1916_[1]_1122
+YPR125W                           9.7e-05  1145_[1]_204
+YOR257W                           9.7e-05  428_[1]_42
+YOR147W                           9.7e-05  656_[1]_1197
+YMR119W                           9.7e-05  1085_[1]_774
+YGR222W                           9.7e-05  394_[1]_472
+YCR093W                           9.7e-05  1778_[1]_4533
+YPL204W                           0.00011  1157_[1]_312
+YOR252W                           0.00011  497_[1]_24
+YOL137W                           0.00011  827_[1]_651
+YJL092W                           0.00011  395_[1]_3114
+YIL130W                           0.00011  2750_[1]_129
+YER068W                           0.00011  80_[1]_1668
+YER063W                           0.00011  263_[1]_378
+YDR412W                           0.00011  374_[1]_318
+YOR066W                           0.00012  133_[1]_1741
+YML030W                           0.00012  407_[1]_57
+YKR027W                           0.00012  1058_[1]_1224
+YGR092W                           0.00012  14_[1]_1689
+YGL145W                           0.00012  344_[1]_1746
+YPR070W                           0.00013  1391_[1]_294
+YOR181W                           0.00013  1880_[1]_6
+YLR219W                           0.00013  949_[1]_1222
+YKL204W                           0.00013  700_[1]_1183
+YDR118W                           0.00013  1388_[1]_555
+YNL155W                           0.00015  797_[1]_12
+YMR136W                           0.00015  569_[1]_1098
+YGR212W                           0.00015  1076_[1]_315
+YDR463W                           0.00015  932_[1]_612
+YDR189W                           0.00015  1433_[1]_552
+YDR076W                           0.00015  794_[1]_411
+YBR155W                           0.00015  182_[1]_960
+YML111W                           0.00016  632_[1]_2115
+YGR227W                           0.00016  32_[1]_1530
+YDR466W                           0.00016  2261_[1]_420
+YDR288W                           0.00016  740_[1]_156
+YBR257W                           0.00016  710_[1]_114
+YPR168W                           0.00018  407_[1]_51
+YHR155W                           0.00018  674_[1]_2997
+YGR198W                           0.00018  959_[1]_1479
+YER128W                           0.00018  179_[1]_417
+YER013W                           0.00018  1058_[1]_2364
+YDR063W                           0.00018  149_[1]_285
+YCL039W                           0.00018  35_[1]_2187
+YBR135W                           0.00018  104_[1]_333
+YOR109W                            0.0002  2455_[1]_853
+YBR041W                            0.0002  1976_[1]_18
+YBL019W                            0.0002  1091_[1]_456
+YOR030W                           0.00021  853_[1]_991
+YNL218W                           0.00021  1181_[1]_567
+YKL189W                           0.00021  224_[1]_960
+YBR168W                           0.00021  1070_[1]_156
+YOR359W                           0.00024  1495_[1]_61
+YGR072W                           0.00024  320_[1]_828
+YPL168W                           0.00026  554_[1]_723
+YPL018W                           0.00026  874_[1]_220
+YHR011W                           0.00026  194_[1]_1131
+YGL113W                           0.00028  1727_[1]_264
+YDL116W                           0.00028  569_[1]_1596
+YPL207W                           0.00031  1940_[1]_477
+YDR371W                           0.00031  1052_[1]_468
+YDR168W                           0.00031  1280_[1]_225
+YJR112W                           0.00033  344_[1]_246
+YPL166W                           0.00039  509_[1]_117
+YMR234W                           0.00039  503_[1]_528
+YMR052W                           0.00039  347_[1]_252
+YOR295W                           0.00043  95_[1]_576
+YNL009W                           0.00046  482_[1]_765
+YDL117W                           0.00046  95_[1]_2547
+YOR386W                            0.0005  824_[1]_858
+YPR122W                           0.00054  2999_[1]_612
+YKL185W                           0.00054  1648_[1]_103
+YJL061W                           0.00054  605_[1]_1521
+YPR046W                           0.00058  353_[1]_177
+YGR003W                           0.00063  1805_[1]_414
+YNR023W                           0.00067  434_[1]_1251
+YGR156W                           0.00072  1106_[1]_156
+YML116W                           0.00083  1598_[1]_15
+YML094W                           0.00083  376_[1]_183
+YFL049W                           0.00095  755_[1]_1101
+YOR349W                            0.0012  500_[1]_2529
+YGL178W                            0.0012  2967_[1]_237
+YMR194W                            0.0013  711_[1]_39
+YJR050W                            0.0013  224_[1]_468
+YMR263W                            0.0014  56_[1]_534
+YGR046W                            0.0015  88_[1]_1054
+YBL098W                            0.0015  836_[1]_531
+YDR337W                            0.0016  440_[1]_405
+YLR455W                            0.0017  275_[1]_624
+YPR106W                            0.0019  859_[1]_457
+YOR278W                             0.002  593_[1]_219
+YJR147W                            0.0023  734_[1]_327
+YDR073W                            0.0036  388_[1]_106
+YPR065W                            0.0044  256_[1]_835
+YIL049W                             0.005  291_[1]_455
+YOR367W                            0.0064  587_[1]
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GAUGAHGAUGWUGAA MEME-1 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF GAUGAHGAUGWUGAA width=15 seqs=296
+YMR277W                  ( 1374) GAUGACGAUGAUGAA  1 
+YML070W                  (  777) GAUGAAGAUGAUGAA  1 
+YAR042W                  ( 1404) GAUGAUGAUGAUGAA  1 
+YBL046W                  (  885) GAUGAAGAUGAUGAC  1 
+YML034W                  (  366) GAUGAUGAUGAUGAC  1 
+YFL021W                  (  456) GAUGACGAUGAUGAU  1 
+YDR409W                  ( 1731) GAUGACGAUGAUGAU  1 
+YBR237W                  (  528) GAUGAGGAUGUUGAA  1 
+YJR042W                  ( 2097) GAUGACGCUGAUGAA  1 
+YJL019W                  (  261) GAUGACGACGAUGAU  1 
+YNL102W                  (  801) GAAGAAGAUGAUGAA  1 
+YOL115W                  ( 1713) GAAGAUGAUGAUGAA  1 
+YLR115W                  ( 1467) GAAGAUGAUGAUGAA  1 
+YKL117W                  (  603) GAUGAAGAAGAUGAA  1 
+YER164W                  (  111) GAUGAGGACGAUGAA  1 
+YNL212W                  ( 1173) GAUGAGGAUGACGAA  1 
+YGR251W                  (  495) GAUGAAGAGGAUGAA  1 
+YGL244W                  (  555) GAAGACGAUGAGGAA  1 
+YER030W                  (  417) GAAGAAGACGAUGAA  1 
+YDL195W                  ( 1317) GAUGACGUUAAUGAA  1 
+YGL066W                  (  432) GAUGACGAUAACGAC  1 
+YDR515W                  ( 1155) GAUGAAAAUGAUGAC  1 
+YOR264W                  ( 1194) GAUGACAACGAUGAC  1 
+YHR066W                  (  906) GAAGAAGAUGUGGAA  1 
+YDR160W                  (  675) GAUGAAAAUGUUGAC  1 
+YKL160W                  (  264) GAUGAUGGUGACGAA  1 
+YNL103W                  ( 1695) AAUGAAGACGAUGAA  1 
+YKL125W                  (  756) GAUGAUGUAGAUGAC  1 
+YKL108W                  (  987) GAUGAUGAUAAUGAU  1 
+YKL068W                  ( 2307) GAUGAUCAUGAUGAA  1 
+YHR036W                  (  237) GAUGAGGUUGAUGAU  1 
+YGR142W                  ( 1158) GAUGAGGAAGUUGAC  1 
+YDR152W                  (  279) GAAGACGAGGUUGAA  1 
+YLR449W                  (  594) GAGGACGAUGAGGAA  1 
+YJL033W                  ( 1677) GAAGACGAGGAUGAC  1 
+YBR279W                  ( 1095) GAUGAAGACGAGGAG  1 
+YPL232W                  (  468) GAAGAUGAAGUUGAA  1 
+YOR293W                  (  644) GAAGAAGGUGUUGAA  1 
+YMR230W                  (  617) GAAGAAGGUGUUGAA  1 
+YKR025W                  (   30) GAAGAGGAUGAGGAA  1 
+YJR035W                  (  528) GAUGAGGAUUUUGAA  1 
+YDL060W                  ( 1215) GAUGACGUCAUUGAC  1 
+YMR125W                  ( 2662) GAUGAAGAUAUUGAG  1 
+YDL225W                  (  759) GAUGAUGAUUUGGAA  1 
+YPR101W                  (  237) AAUGACGACGAUGAU  1 
+YNL186W                  (  690) GAAGACGACGAGGAU  1 
+YLR143W                  (  264) GAUGAUGAAAUUGAA  1 
+YGL060W                  (  315) GAUGAAGAGAAUGAA  1 
+YGL021W                  (  147) GAUGACGAUUGUGAC  1 
+YNL278W                  ( 2370) GAUGACGAUAUCGAG  1 
+YML069W                  (  999) GAUGAAGAUUAUGAG  1 
+YLR135W                  (  357) GAUGACGCAGAGGAA  1 
+YKL124W                  ( 1146) GAUGAAAGUGAUGAA  1 
+YGL181W                  (  330) GAUGGAGAUGAUGAC  1 
+YDR416W                  (   60) GAUGAAGAUGUGGCU  1 
+YDL073W                  ( 2241) GAUGAAGAUGUGGCU  1 
+YLR439W                  (  582) GAUGACGAAGUCGCC  1 
+YLR182W                  ( 1890) GAAGAAGAAGAGGAA  1 
+YKL109W                  ( 1626) GACGAAGAUGUCGAU  1 
+YPL181W                  (  531) GAUGAUAACGUCGAC  1 
+YLR196W                  ( 1707) GAUGAGCAUGAUGAC  1 
+YKL061W                  (  159) AAAGAUGAUGUUGAA  1 
+YDR221W                  (  573) GAAGAAGAUAAGGAA  1 
+YDL150W                  (  510) GAGGACGAAGAUGAC  1 
+YPL075W                  ( 2380) GGUGAUGAUGUUGAU  1 
+YOR368W                  (  300) GAUGACAUUGUUGAG  1 
+YLR260W                  ( 1554) GAUGCGGAUGACGAA  1 
+YKL142W                  (  312) AAAGAUGAUGAUGAC  1 
+YGL207W                  (  351) GAUGACGUUAUUGCC  1 
+YBR114W                  ( 1623) GAUGAAGCUGAGGAG  1 
+YPL267W                  (  567) GAUGACGUCAGUGAA  1 
+YOR336W                  (  174) GAUGACGAGAUUGAU  1 
+YKL208W                  (  311) GAAGAGGAAGUUGAC  1 
+YER127W                  (  591) GAAGAAAACGAUGAC  1 
+YBR094W                  (  762) GAAGACGGUAAUGAA  1 
+YOR165W                  (   30) GAUGAAGAGAAGGAA  1 
+YLR033W                  ( 1209) GAUGACGAAAUUGAG  1 
+YJR052W                  (  222) GAUGAAGAAAUUGAU  1 
+YHR099W                  (  564) GAUGAAGAAAAGGAC  1 
+YCR081W                  ( 4002) GAAGAAGAAGAUGCA  1 
+YOL049W                  (  762) GAUGAUGUUAACGAU  1 
+YMR176W                  ( 2538) AAUGAAGAUUUUGAA  1 
+YKL027W                  (  816) GAUGAGGAAUAUGAA  1 
+YGR167W                  (  162) AAAGAUGAUGACGAA  1 
+YOL113W                  ( 1677) GAUGAAAAAGUCGAC  1 
+YML027W                  (  956) AAAGAAGACGUUGAC  1 
+YLL001W                  ( 1773) GAUGAUGGUAUCGAC  1 
+YKL195W                  (  405) GCUGAAGAUGGUGAA  1 
+YJL042W                  ( 3612) GAAGAUGCCGUCGAA  1 
+YGR108W                  (  576) GAUGACCUAGAUGAA  1 
+YGL090W                  (  909) GACGACGAUUUUGAU  1 
+YDR211W                  (  654) GAUAAUGUCGAUGAA  1 
+YBL011W                  ( 2205) GAAGAGGAAGAGGAA  1 
+YPR129W                  (  603) AAUGAAGAUUUUGAC  1 
+YMR109W                  ( 3615) GAUGACGAGGAGGCU  1 
+YMR100W                  (  735) GACGACGACAUUGAU  1 
+YHR206W                  (  125) GAUGAACACGAUGCA  1 
+YHR084W                  (   57) AAUGAAAACGAUGAA  1 
+YHR002W                  (  741) GAUGAUGAAUUGGAA  1 
+YDL070W                  ( 1350) GAUGAUGAAUAUGAU  1 
+YBR097W                  ( 3078) GAAGGCGACGUUGAA  1 
+YJL083W                  ( 1407) AAUGAAGACGACGAG  1 
+YHR073W                  (  999) GACGAUGACAAGGAA  1 
+YGR145W                  ( 2019) GAAGAAGGUAUUGAC  1 
+YGL171W                  (  111) GAAGAUAAUAAUGAA  1 
+YER173W                  (  177) GACGACGGCGGUGAA  1 
+YDR392W                  (  468) AAUGACGACAAUGAU  1 
+YDR334W                  ( 4404) AAUGACGAUUUCGAC  1 
+YDR089W                  (  134) GGAGAAGUUGUUGAA  1 
+YDR049W                  ( 1647) GAUGAAAUCAAUGAA  1 
+YDL132W                  ( 2412) GGAGACGAUGGUGAA  1 
+YCR033W                  ( 2244) GACGAGGAAGUCGAA  1 
+YPL233W                  (  498) GACGAUGCCGAUGAU  1 
+YOR227W                  ( 3276) GAAGAGGAAGGUGAA  1 
+YNL207W                  ( 1164) GAAGAUGACAGUGAA  1 
+YNL192W                  (  957) GAUGACGAGUACGAU  1 
+YKR058W                  (  987) GAAGAAAACGUGGAC  1 
+YHR102W                  ( 1047) GAAGGCGAUGUGGAA  1 
+YGR097W                  (  300) GAUGAAGCUAUCGAU  1 
+YER133W                  ( 1275) GAAGAUGGUUAUGAA  1 
+YAL041W                  ( 2457) GACGAAGAUGGGGAU  1 
+YOL123W                  (  879) GCUGACGCCGUUGAC  1 
+YLR174W                  (  263) GAAAAAGAUGUGGAA  1 
+YLR090W                  (  231) GAUGAUAAUGGUGCC  1 
+YKL062W                  ( 1233) AAUGAAGACGAUGCU  1 
+YGR093W                  (   42) GAUGCCGAUGAGGCU  1 
+YEL012W                  (  744) GAUGACGAUGACUAC  1 
+YPL260W                  (  498) GAUGGAAAUGAUGAC  1 
+YMR017W                  (  501) GAUGAAAUAGUUGAU  1 
+YML081W                  ( 1347) GAUGCUCAUGAUGAC  1 
+YGL006W                  (  834) GGUGACGUUAACGAA  1 
+YER129W                  ( 2954) GACGACGAUAACGCC  1 
+YDR195W                  (  755) AAUGAAGAAAUUGAA  1 
+YOR027W                  (  954) AAUGAUGCUGUUGAG  1 
+YOL081W                  (  956) GGUGACGUUAAGGAA  1 
+YML117W                  ( 2685) AAUGAAAUCGAUGAA  1 
+YHR114W                  ( 1518) AAGGAUGAUGACGAA  1 
+YGL133W                  (  438) GAUGAUAUGGUCGAA  1 
+YDR528W                  (  456) GAAGAAAUAGAUGAA  1 
+YDL112W                  ( 2844) GAUGAACUUUAUGAA  1 
+YMR044W                  ( 1389) GAAGACGUAAAGGAA  1 
+YGL151W                  ( 3156) AAUGAGGAUAACGAC  1 
+YER098W                  (  786) GAUGAUAACAAUGAG  1 
+YER001W                  (  450) AAUGAAGGAGUUGAC  1 
+YDL010W                  (  225) GAAGAAAUUAAUGAA  1 
+YNR006W                  ( 1596) GAGGCCGAAGAUGAA  1 
+YNL075W                  (  807) GACGCUGAUGUUGAG  1 
+YMR129W                  ( 1691) GAAAAAGAUAAUGAA  1 
+YLR427W                  (  789) GAGGACGACUUUGAU  1 
+YLR057W                  ( 1386) GAAGCAGUCGACGAA  1 
+YIL045W                  (  996) GAUGACGACGAUUAU  1 
+YGL016W                  (  216) GAAAACGAUUAUGAA  1 
+YER059W                  (  918) AAUGAAAAUGACGAU  1 
+YDR279W                  (  579) GAGGAAGCUGGUGAC  1 
+YDR161W                  ( 1116) AAUGAAGACUUGGAA  1 
+YCR036W                  (  618) AAUGAACUUGUUGAA  1 
+YNL042W                  (  597) GAGGAAGAUGUGGCU  1 
+YJL102W                  ( 1605) AAAGCAGAUGUUGAA  1 
+YBR171W                  (  198) GACGAAAACGAUGCC  1 
+YOR158W                  (  675) GAUGAAACGGAGGAA  1 
+YOL051W                  ( 1608) AAUGAAGAAAAGGAA  1 
+YLR206W                  (   26) AAAGAACAUGAUGAA  1 
+YHR167W                  (  756) GAUAAAGAAGGUGAC  1 
+YER014W                  (  474) GACGAAAGUGUCGAA  1 
+YDR387C                  (  712) GCUGAUGAGGAGGAC  1 
+YDR244W                  ( 1407) AAAGAUGAUUUUGAC  1 
+YDR138W                  ( 1782) GAUAAAGUUAACGAA  1 
+YPL125W                  ( 2058) GAAGACGGGUAUGAA  1 
+YOR069W                  (  759) GCUGAGGUCGAGGAA  1 
+YOR018W                  (  960) GACGAAGGGGUUGAU  1 
+YOR014W                  ( 1487) GGUGAGGAUAUUGAU  1 
+YNL126W                  ( 2493) AACGAUGGCGAUGAA  1 
+YLR256W                  ( 4058) AAUGACGCCUAUGAC  1 
+YJL082W                  ( 1077) GAUGCUGACUUUGAU  1 
+YIL036W                  ( 1671) GAUACUGACGAUGAC  1 
+YPR154W                  (   81) AAUGACGUUUACGAU  1 
+YPL268W                  ( 1067) GCUGACGAUGGGGCA  1 
+YMR179W                  ( 2121) GAGGACAUAGUUGAA  1 
+YLR200W                  (  105) AAUGAAGAGUUUGAC  1 
+YHL039W                  ( 1554) GAAGAUGUUAUGGAG  1 
+YEL051W                  (  705) GCUGCUGAUGAGGAA  1 
+YDR358W                  (  858) GAAGAACGCGAUGAC  1 
+YDR096W                  ( 1059) GAUAAUGAUAACGAU  1 
+YBL005W                  ( 1326) AAUGAAAUUGAUGAG  1 
+YPR072W                  (   72) GAUGACAUAUACGAA  1 
+YPR034W                  (  117) GAUGAGGGGGGGGAA  1 
+YBR136W                  ( 1988) AAUGAUGACUUUGCA  1 
+YBL037W                  ( 1793) GGCGAUGAUAUUGAC  1 
+YPR008W                  (  933) GAUGAAAGUAUUGAG  1 
+YMR134W                  (  555) AAUGAGGGCGGUGAA  1 
+YML017W                  ( 2016) GAAGAGGAUUUGGCA  1 
+YGR218W                  (  489) GAAGAAGUCUUCGAU  1 
+YGR217W                  ( 6078) GAUAAUAAUGACGAU  1 
+YFL036W                  ( 2871) GGUGGUGACGUUGAA  1 
+YDR014W                  (  489) AAUGACAUCAAUGAA  1 
+YBR163W                  (  609) GAUAAUGAUAUGGAU  1 
+YPR030W                  ( 3276) AAUGAUAAUAAUGAU  1 
+YPL228W                  (  270) GAUACGGAUGACGAA  1 
+YLR148W                  ( 2067) GAGGAUGCCAUUGAC  1 
+YGR275W                  (  275) GAAAAAGUCGUUGAU  1 
+YDL240W                  ( 1917) GAAACCGAUGACGAA  1 
+YPR125W                  ( 1146) AAGGAAGAUGAGGCA  1 
+YOR257W                  (  429) GAUGGUGAUGGCGAG  1 
+YOR147W                  (  657) GAUGAGAUUUUGGAC  1 
+YMR119W                  ( 1086) GAUAAUGUUAAUGAG  1 
+YGR222W                  (  395) GGUGAAAAUGACGCC  1 
+YCR093W                  ( 1779) AAUAAUGAUAUUGAA  1 
+YPL204W                  ( 1158) GAUAAAGGUAUGGAA  1 
+YOR252W                  (  498) AAUGAUAAAGGUGAA  1 
+YOL137W                  (  828) GAAGAAGCGGGUGAU  1 
+YJL092W                  (  396) GAUGAUAUGAUCGAA  1 
+YIL130W                  ( 2751) GAAGAUAAAGAGGAG  1 
+YER068W                  (   81) GAUGAAGAAGAUUAU  1 
+YER063W                  (  264) GAGGAAAAUAAGGAC  1 
+YDR412W                  (  375) GACGGCGAUAACGAC  1 
+YOR066W                  (  134) GAUGAAAGUGGGGCA  1 
+YML030W                  (  408) GAGAACGAAGAGGAA  1 
+YKR027W                  ( 1059) AAUAACGACUAUGAA  1 
+YGR092W                  (   15) GAAAAAAAUGUCGAC  1 
+YGL145W                  (  345) GAUGACGUAAAGGCG  1 
+YPR070W                  ( 1392) GAUGGUGCCAAUGAC  1 
+YOR181W                  ( 1881) GACAAUGGUGAUGAU  1 
+YLR219W                  (  950) GACGACAAGAAGGAA  1 
+YKL204W                  (  701) GAAGGCAAAGAUGAA  1 
+YDR118W                  ( 1389) GAAAAAGAUAUUGCA  1 
+YNL155W                  (  798) AAUAACGCCGACGAA  1 
+YMR136W                  (  570) GACAAUAUUGAUGAA  1 
+YGR212W                  ( 1077) GAUAAAGUAAACGAA  1 
+YDR463W                  (  933) GAUGCCGUAGAGGCU  1 
+YDR189W                  ( 1434) GAAAACGAUUACGAU  1 
+YDR076W                  (  795) AAUGAACAAGUGGAC  1 
+YBR155W                  (  183) GGUGAAAACGUGGAG  1 
+YML111W                  (  633) GAUGAUCUAAACGAC  1 
+YGR227W                  (   33) AAUGAUGUAUUGGAA  1 
+YDR466W                  ( 2262) AAUAACGCUGGUGAA  1 
+YDR288W                  (  741) GAUACCGACGGGGAA  1 
+YBR257W                  (  711) GAUGACGACGAUUCG  1 
+YPR168W                  (  408) AAAGAACCUGUUGAA  1 
+YHR155W                  (  675) AAGGACGUUAUCGAC  1 
+YGR198W                  (  960) GAUAACAGUAAUGAC  1 
+YER128W                  (  180) AAUGAAGCCGUGGCU  1 
+YER013W                  ( 1059) GACGAGACGGAUGAA  1 
+YDR063W                  (  150) GAAGAGCUAGACGAA  1 
+YCL039W                  (   36) AAUGACACGGAGGAA  1 
+YBR135W                  (  105) GACGAUAACUAUGAG  1 
+YOR109W                  ( 2456) GACGCCGUCAUGGAC  1 
+YBR041W                  ( 1977) GAAGCCAUCGAUGCA  1 
+YBL019W                  ( 1092) GACGACAGAAUUGAA  1 
+YOR030W                  (  854) AAUGAAAAAGGGGAC  1 
+YNL218W                  ( 1182) GAUAACCAUUAUGAU  1 
+YKL189W                  (  225) GAAGCCAUUGACGAG  1 
+YBR168W                  ( 1071) GAUGGACUUGGUGAA  1 
+YOR359W                  ( 1496) GAGAAAAUUGUUGAA  1 
+YGR072W                  (  321) GAUAAUAAUAACGAU  1 
+YPL168W                  (  555) GAUGAGGAGGUUUAU  1 
+YPL018W                  (  875) GACGAUAAAAUUGCA  1 
+YHR011W                  (  195) GAUAAAGUUAUUGCG  1 
+YGL113W                  ( 1728) AAAGAUAUCAAUGAA  1 
+YDL116W                  (  570) GGUGCGAUUGAUGAA  1 
+YPL207W                  ( 1941) GGUGAUGUCAGUGCA  1 
+YDR371W                  ( 1053) GAUAACAAAUUCGAA  1 
+YDR168W                  ( 1281) AAUAAAGUCUUUGAA  1 
+YJR112W                  (  345) AAAGAGCUUGUGGAA  1 
+YPL166W                  (  510) AAUGACAAAUUGGAU  1 
+YMR234W                  (  504) AAAGAAAGUUUUGAA  1 
+YMR052W                  (  348) GACGAACAGAAUGCA  1 
+YOR295W                  (   96) AAAGAAGUAUAUGCA  1 
+YNL009W                  (  483) AAAGAAAACAUCGAU  1 
+YDL117W                  (   96) GGAGAUAUUAUGGAA  1 
+YOR386W                  (  825) AACGAAACUUUUGAA  1 
+YPR122W                  ( 3000) AAUGAGAUAGUGGCA  1 
+YKL185W                  ( 1649) AAUAAACAUUAUGAA  1 
+YJL061W                  (  606) GGUGAUAUCUUUGCA  1 
+YPR046W                  (  354) GCAGAACGCGACGAA  1 
+YGR003W                  ( 1806) GAUGACGUUAAGUCU  1 
+YNR023W                  (  435) GCUGACCUUAUGGCA  1 
+YGR156W                  ( 1107) AAUAAAGCGAAUGAC  1 
+YML116W                  ( 1599) GCUGCAGAAUACGAU  1 
+YML094W                  (  377) GAAGCAGCAAUCGCA  1 
+YFL049W                  (  756) AAUGAAAUUAGUGCG  1 
+YOR349W                  (  501) ACAGAUGCCUUUGAC  1 
+YGL178W                  ( 2968) GACAAAAUUAAUGCU  1 
+YMR194W                  (  712) AAGGCUAAGGUCGAA  1 
+YJR050W                  (  225) GCGGAACUUAACGAC  1 
+YMR263W                  (   57) GGUGGUGGUUACGCA  1 
+YGR046W                  (   89) AAUAAAGGAGGGGAG  1 
+YBL098W                  (  837) GACGAUGCUGUCAAA  1 
+YDR337W                  (  441) GAGAAUAAAAAUGCC  1 
+YLR455W                  (  276) GCAAAAAAUUUUGAU  1 
+YPR106W                  (  860) AAUAACAGAAAUGCA  1 
+YOR278W                  (  594) GAUGAAGUAUUCUCG  1 
+YJR147W                  (  735) GCCGGCGUGUUCGAA  1 
+YDR073W                  (  389) AGUGCCCUCAGCGAA  1 
+YPR065W                  (  257) GGUAAGAAAGUCUAA  1 
+YIL049W                  (  292) GACACUCAUUGCGCC  1 
+YOR367W                  (  588) AGAGAUAUAGUUUAG  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GAUGAHGAUGWUGAA MEME-1 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 15 n= 599607 bayes= 12.5846 E= 2.0e-012 
+   -62  -1485    198  -1485 
+   138   -209   -170  -1485 
+   -48    -89   -178    113 
+  -124  -1485    212  -1485 
+   136   -127   -228  -1485 
+    12     58   -101    -12 
+   -50   -127    178  -1485 
+    79   -115   -106    -25 
+   -78     27   -122     85 
+   -33  -1485    152    -75 
+    63  -1485   -111     47 
+ -1485     16     11    108 
+  -666  -1485    229   -316 
+   132    -40  -1485  -1485 
+    56     21   -111    -55 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GAUGAHGAUGWUGAA MEME-1 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 15 nsites= 296 E= 2.0e-012 
+ 0.222973  0.000000  0.777027  0.000000 
+ 0.895270  0.043919  0.060811  0.000000 
+ 0.246622  0.101351  0.057432  0.594595 
+ 0.145270  0.000000  0.854730  0.000000 
+ 0.881757  0.077703  0.040541  0.000000 
+ 0.371622  0.280405  0.097973  0.250000 
+ 0.243243  0.077703  0.679054  0.000000 
+ 0.591216  0.084459  0.094595  0.229730 
+ 0.199324  0.226351  0.084459  0.489865 
+ 0.273649  0.000000  0.564189  0.162162 
+ 0.530405  0.000000  0.091216  0.378378 
+ 0.000000  0.209459  0.212838  0.577703 
+ 0.003378  0.000000  0.966216  0.030405 
+ 0.858108  0.141892  0.000000  0.000000 
+ 0.506757  0.216216  0.091216  0.185811 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GAUGAHGAUGWUGAA MEME-1 regular expression
+--------------------------------------------------------------------------------
+[GA]A[UA]GA[ACU][GA][AU][UC][GA][AU][UGC]GA[AC]
+--------------------------------------------------------------------------------
+
+
+
+
+Time 70.76 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+MOTIF DGAARHHRADGAAGA MEME-2	width =  15  sites = 280  llr = 2245  E-value = 8.6e-003
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif DGAARHHRADGAAGA MEME-2 Description
+--------------------------------------------------------------------------------
+Simplified        A  32a5343362:88:a
+pos.-specific     C  :1:3133:111::::
+probability       G  36::5:17128:2a:
+matrix            U  4::2224:34:2:::
+
+         bits    2.4                
+                 2.2              * 
+                 1.9              * 
+                 1.7           *  * 
+Relative         1.4   *       *  * 
+Entropy          1.2   *       *  **
+(11.6 bits)      1.0  **    *  ** **
+                 0.7  **    *  *****
+                 0.5  **    *  *****
+                 0.2 ****** ** *****
+                 0.0 ---------------
+
+Multilevel           UGAAGAUGAUGAAGA
+consensus            AA CACAAUA  G  
+sequence             G  U UC  G     
+                                    
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif DGAARHHRADGAAGA MEME-2 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value                 Site    
+-------------             ----- ---------            ---------------
+YMR017W                     968  2.17e-09 AGTATCAGTT TGAAGCCGATGAAGA AGATAACCAA
+YNL103W                    1769  2.49e-08 AAGAGTTAGG GGACGACGATGAAGA TTTATTGATA
+YMR277W                    1937  2.49e-08 GGTTAAACAA TGACGACGATGAAGA TATTCCGGAC
+YMR044W                     890  2.49e-08 AATATCATTT TGAAGATGATGAAGA TTGGAGCATT
+YOR027W                     752  6.33e-08 CCGAGCCAAT GGAAGTTGATGAAGA TGACTCTAAA
+YLR449W                     737  8.09e-08 GGAAACATGA GGAAGATGAGGAAGA AAGTGCTAAA
+YPL181W                     191  1.18e-07 GTGGAGAGGG GGAAGTCGAGGAAGA GGAAGGCGAA
+YML010W                     446  2.23e-07 ACAAAGATGA AGACGATGATGAAGA CGACGATGAC
+YGR142W                     362  2.23e-07 ATGTTGAAGA TGAAGCGGATGAAGA TGCTCTATTG
+YER164W                     167  2.23e-07 TGACCACGAT TGAAGACGACGAAGA CGAATTTGAA
+YDR138W                     242  2.23e-07 CAAATGCTAT TGAAGACGAAGAAGA AAATAATCTT
+YDL060W                     497  2.23e-07 GTGGTGTCCA AGAAGTCGATGAAGA ATTTGGTGAG
+YNL186W                     911  3.04e-07 GAGAGGAGGA GGAAGAAGAGGAAGA AGAGCTGAAA
+YML117W                    3089  3.04e-07 CAGTAAAGAT AGAAGACGAGGAAGA AGCCGTAGGA
+YLR196W                    1679  3.04e-07 ATGATCAAGG TGAAGATGAAGAAGA AAGAGAAGGT
+YJR050W                     587  3.04e-07 TGCCTGTGAA TGAAGATGAAGAAGA AATGTCAAGG
+YJR035W                     629  3.04e-07 GTAAAGAGAG TGAAGATGACGAAGA AGAAGAAAAT
+YJL033W                    1877  3.04e-07 TTTATGAACT TGAAGATGAAGAAGA ATTTCATAAG
+YKL160W                     221  5.33e-07 GTGATTGGTT TGACGCCGTCGAAGA AGTCAATTCT
+YBL046W                     593  6.75e-07 TAGGCTACGA TGACGAGGATGAAGA GGAAGGATTT
+YJR042W                     650  8.90e-07 GATCAGACGG TGAACCAGATGAAGA ATATATTGAA
+YGL244W                     152  8.90e-07 GCAGTGTAGA GGATGATGATGAGGA GGACGATTAT
+YDR118W                    1808  8.90e-07 GAGAAAACTA TGAAAACGAGGAAGA TGATGGCACA
+YOR014W                    1100  1.15e-06 GTGACATTTA TGACCCAGATGAAGA TGAACCTGTT
+YMR179W                    2024  1.15e-06 AAGAAGTTTT GGATGAAGAGGAAGA GGAGGAAGCC
+YDR528W                    1043  1.15e-06 AGAAACAAAC AGACGACGAAGAAGA AGAGAGTATT
+YBL011W                    2234  1.15e-06 AAGAGGAAGA AGAAGAAGAGGAAGA AGAAGAAGAA
+YPR129W                     903  1.47e-06 GGGAAACAGA GGAAACAGAGGAAGA GGCGGCCAAC
+YPR072W                     289  1.47e-06 AAGTCCGTGG AGAAGCTAATGAAGA CAAAACAGTT
+YMR119W                    1454  1.47e-06 AGTCACTGGG GGATTCTGATGAAGA AAACTTGGAA
+YGR145W                    1472  1.47e-06 ATGAAGAATT TCAAGTCGATGAAGA TGACTATGAT
+YGL133W                    1061  1.47e-06 AAAGGAAAAA GGAAGCCAATGAGGA ACCGAACACG
+YEL012W                     650  1.47e-06 AAGAGGACAG TGATTCTGATGAAGA TATGGATGGC
+YML034W                     437  1.84e-06 CCGATGAAGT GGACGATGAAGAGGA TGATGTGATA
+YLR260W                    1535  1.84e-06 CCGAAAACGA AGATGAAGATGAAGA TGCGGATGCG
+YDR334W                    1997  1.84e-06 ACGATATAAA AGATGTCGAGGAAGA TGCTGAAACA
+YBR279W                    1217  1.84e-06 AAAAAGAGAA TGAACAAGATGAAGA AAATAAACAA
+YPL268W                     725  2.84e-06 TTACTGTTTC TGAAAAAGAGGAAGA TGAGAAAAAG
+YNR006W                     893  2.84e-06 GACAAGAAAT AGAAGAAGAAGAAGA TCCTGATTTA
+YKL108W                    1341  2.84e-06 ATTCTCTAAT GGACGATGGGGAAGA AGGTGA    
+YJL083W                    1055  2.84e-06 CATCAGACTC AGACACAGATGAAGA TTCTAATGTG
+YHR036W                     578  2.84e-06 TAATCAGAAA TGAAGAAGTCGAAGA TGAGATCAAA
+YER030W                      93  2.84e-06 TAAGCCAAAG AGAAGAAGAAGAAGA AACTATGACG
+YDR416W                     503  2.84e-06 TGGATTCAAC TCAAGAAGATGAAGA AGAAAGTACT
+YPL207W                    1130  3.48e-06 ATGAAAACGC AGACTCTGAGGAAGA TGAAGAAGAA
+YMR109W                    3635  3.48e-06 AGGCTAACGA AGATGAAGAGGAAGA TGATTGGTAA
+YKL204W                     596  3.48e-06 GAAGATCTCA ACAAGATGATGAAGA AAAAAAGATT
+YJL102W                     776  3.48e-06 AGACTTTGAC TGAATACGACGAAGA TTTAGTCCAG
+YGL006W                    3458  3.48e-06 ATACTGGAAA ACACGACGATGAAGA AGCGCTGTTG
+YDL225W                     587  3.48e-06 ACGGTCTGAG AGAAGTCGATGTAGA GCTCATGAAA
+YOR069W                     608  4.32e-06 AAAAAGAGAA TGAATTTGTTGAAGA GCCATTGGAC
+YMR125W                     345  4.32e-06 TTTTACCGTT AGACTTCGATGAAGA TGAAAATTAC
+YER013W                     595  4.32e-06 CAAATTTTTG GGACGCGAATGAAGA ATTGTGATGG
+YPL228W                     251  5.21e-06 GCAAGTCATC TAATGATGATGAAGA AACCGATACG
+YNL102W                    1022  5.21e-06 ATGTCAAAAA GGAAGATGTGGTAGA TCCGGAAACT
+YER068W                     758  5.21e-06 TGTTTTTGCA TGAACCTGGTGAAGA AGCTGATTCT
+YDR161W                    1136  5.21e-06 TGGAAGAGTT GGACATAGAGGAAGA ATATTCTGAC
+YDL073W                    2069  5.21e-06 AGGAAAACGA AGATAATGATGAAGA CTCAGAAGAT
+YLR135W                    1694  6.29e-06 TTGAGGCAAA TGATTCTGAAGAAGA GGAGACAGAA
+YGR217W                      80  6.29e-06 CAGTAATGAC GGAAAATGTTGAGGA TAACAGCGAA
+YDL116W                    1718  6.29e-06 ACATATCAAA GGATGAAAATGAAGA TCAGTTTTTG
+YGR198W                    1934  7.48e-06 TGAGAACAAA AGACAATGATGAGGA TGCCAAGGCC
+YDR466W                    1672  7.48e-06 TTACAGGTAT TGACTTTGAAGAAGA GCGGAATGTT
+YDR152W                     263  7.48e-06 ACAACGAAGA AGATAACGAGGAAGA TGAAGACGAG
+YDL195W                    1451  7.48e-06 ATGAGAAAGA AGACGATGGGGAAGA ATTCTTTCAA
+YKL124W                     230  8.92e-06 ATGATGAATC AGAATACGACGAAGA GAACGCCTTA
+YKL117W                     377  8.92e-06 AATGGGTTGA TGAAGATGAACAAGA CGAAGTTGAA
+YKR025W                     176  1.07e-05 AAGCTGAAGA TGATACTGGTGAAGA AGAAGAGGAT
+YJL092W                    1859  1.07e-05 CCCTTCATTC TGATGCAGCTGAGGA GGAAGAGTCG
+YDR211W                    2102  1.07e-05 AGTGGTTACA GAATGCTGACGAAGA ATCTTCCTCA
+YOR066W                     625  1.26e-05 CTTTCTCTCT TAAAACAGATGAAGA ATGAGAAATA
+YHR155W                    2141  1.26e-05 AAATTTTCCA GGAATTAGACGAAGA GATTGAGAAC
+YHR102W                     179  1.26e-05 ATTCTGATTC TGACGAGGTGGAGGA TGTGCAGCGA
+YHR073W                      82  1.26e-05 AATTATCAGA TCAAGCCATTGAAGA AATCTATTGA
+YGR072W                    1000  1.26e-05 AAAGAGGTTT TGAAACAAAGGAAGA AGAAAATGCT
+YDR463W                    1255  1.26e-05 ATGTTCCATG GCAAGCAAATGAAGA ATTTTTTGAT
+YDR189W                    1259  1.26e-05 ATACTTTCTT TGAAGTTGAACAAGA CCCTGGAAGC
+YDR358W                     380  1.48e-05 AAATGATTCT TGAAGCCATCGAGGA ATGGTACCAA
+YDR168W                     332  1.48e-05 CAACATACAA TGAAATGGTTGAAGA TCTTTTTGAA
+YDR049W                     122  1.48e-05 CCACACTGCG AGAAGTTGAAGTAGA GAAGACATCT
+YDR014W                     366  1.48e-05 GGCATCTAAG AGAAAAAGAAGAAGA ACTTACCAAA
+YPL267W                     194  1.71e-05 TGCTGTATGA GGAAACGGCTGAAGA AAGAAACATA
+YJL042W                    1616  1.71e-05 AAGTGGAGGC ACACGACGAGGAGGA TAACAATTCT
+YLL001W                     872  2.00e-05 AAGAATCATT GGACAAAGAAGAGGA CTATTTCAGG
+YKR058W                     830  2.00e-05 AGGTATACGA GGAATTTAAGGAAGA ACATCAATTA
+YHR066W                     458  2.00e-05 AAAGATCTGG TGAAGACGACCAGGA TGTAAACGTG
+YER129W                    3389  2.00e-05 TAACAGTCGC TGAACTAAATGAAGA GAAGAGAAGG
+YER127W                     725  2.00e-05 AATCGCGTAT GCAAGCCATGGAAGA ATATATTAGA
+YDR089W                    1922  2.00e-05 ATGAATTTGA TGAACAAGAAGAGGA TAATTTAGAC
+YDL150W                     965  2.00e-05 CCGCTGTGAA AGAAGAAAAAGAAGA CATGGAAACC
+YPR008W                     218  2.32e-05 AACTGGCACA GAAAGCCAAAGAAGA AGCAAGAGCT
+YPL260W                     548  2.32e-05 GGAAAAAGAA TAAAATTGAGGAAGA CCTATTACTA
+YNL207W                    1079  2.32e-05 ATATGTCTAA TGACGAGGCCGAAGA AGAAAATGGG
+YKL125W                     782  2.32e-05 ATGATCTAGA GGAAGTTGATCTAGA GGATGACGAC
+YOR252W                     304  2.69e-05 TTAGACGAAC TCAAGAAGAAGAGGA GGTCAAACAG
+YOR018W                    1298  2.69e-05 AAAACTTTGT AGACGATAGTGAAGA AGATGTGATT
+YLR182W                     332  2.69e-05 AGCCTGAAAC AGATCAGGATGAAGA AGATCCCAGC
+YLR090W                     499  2.69e-05 GGTTCTGGCT GGAAACCAAAGAGGA AAATTCACGT
+YHR099W                    3818  2.69e-05 TTACGTTCGC GGATGTAAAAGAAGA GGATTTGGGT
+YGL066W                     464  2.69e-05 AAGATGATGA TGACGCTGATGATGA CGACGATAAT
+YBR041W                     596  2.69e-05 ATCCGATCAG AGAATCGGAAGAAGA AATCAAAAAC
+YOR274W                    1081  3.08e-05 TCTAAAGGCG AAACTACGATGAAGA AATTGGACGA
+YOR160W                    1190  3.08e-05 AGTTTTCATC TAAAGAGGAAGAAGA TAAATTTAAA
+YKL195W                     503  3.08e-05 AAGATGATGA GCAATCCAATGAAGA CAATGCCACC
+YGR222W                     566  3.08e-05 GGAGTATCCT TGATTCGGTGGAAGA AATAGAAAAT
+YGR046W                    1135  3.08e-05 GCCAAAAAAC TAAAATCGATGAGGA GAAGCTAG  
+YGL021W                      98  3.08e-05 CGTCGTTCGA AGAATTTGTCGAAGA TAAACGATTC
+YER014W                    1571  3.08e-05 CCGGTGTCCC TGACGTTATTGTAGA CGGCTTTAAC
+YEL051W                     658  3.08e-05 TTGGATGCTG AGATGAAATTGAAGA GAGATAGAGC
+YDR160W                     746  3.08e-05 CATCAGGTAG TGAATCTGTTGTGGA AGGTGGATCG
+YBR237W                     271  3.08e-05 AAGCCTTCGA AGAAAAAGTCGAAGA GAAGTAAGGT
+YOL115W                      64  3.51e-05 AATGGGAAAG TGAAAAAGAGCAAGA AAATCAAGAA
+YLR206W                     653  3.51e-05 TACAACTAAG TAAAGAAGAAGAGGA GTTGAAGCAA
+YHR114W                    1046  3.51e-05 AGCACGAAAT GAAAACTAATGAAGA TAATATCAAT
+YOL123W                     503  4.01e-05 GTCTGAATTG GGACACTACGGAAGA TAATCTTCGC
+YJR112W                     470  4.01e-05 ACTTAGAGAC GCAAGTAGAGGTAGA GAAAAACGAA
+YJL082W                    1844  4.01e-05 TTGATTCGGA AGACCCAGATCAAGA GCTGATCAGA
+YGR097W                    1115  4.01e-05 AACTCAAACG TCAAGTTGCCGAAGA AACTTACTTG
+YGR003W                     797  4.01e-05 GAAAGTTGAG TGATATTATTGAAGA TCTAACGCAC
+YGL207W                    2885  4.01e-05 ATGAAGCATC TGATGAAAGTGAAGA AGAAGTTAGT
+YDR244W                     797  4.01e-05 GCATACACAA GGACGCTGAAGAAGT CTTGCCATCC
+YDR076W                     284  4.01e-05 TTCAAAAATT TAAAATCGTGGAAGA AAATGTGAAG
+YOR293W                     734  4.54e-05 CCCAACTCAA AGACCACAAAGAAGA TATTAA    
+YML111W                    2414  4.54e-05 ATACTTTTGA AGAAGAAAACGAGGA TATTATTTCG
+YLR439W                     812  4.54e-05 ACTTCGAACC TCATGCCGTTCAAGA GGCTTGTGTC
+YIL036W                     413  4.54e-05 CACCCTCTAT GAAAACTGAAGAGGA ATCCCAACTC
+YDR096W                     298  4.54e-05 TCGTACAATT TAACACAGTGGAAGA ACTTGGCCGA
+YBR155W                     617  4.54e-05 AACAAGAATT GAAAGCAAAAGAAGA AAAACAGCAA
+YNL075W                     131  5.16e-05 CATTGCCAAA GGAACTAGCAGAAGA TGAGAGTTTA
+YGL178W                    1722  5.16e-05 GTTTCATCAT AGATGCTATTGTAGA ACAAAATAAT
+YGL090W                     233  5.16e-05 TTACGGGAGA AAATATCGATGAAGA GTCTAAGAAA
+YOL049W                     818  5.81e-05 TTTTCATTAG GGACACAGAGCAGGA AATAGCGGTG
+YNL027W                     164  5.81e-05 TATCGGACTT GGACTTAGATGTGGA TATGAGGATG
+YMR230W                     707  5.81e-05 CCCATCCCAA AGACCTCAAAGAAGA TACTAA    
+YMR100W                     713  5.81e-05 CTAGCAATTT TGAACCTGACCAGGA AAGACACGAC
+YDR515W                     493  5.81e-05 ACTGCCAATG GGAATATAAAGAGGA TAACAAACAA
+YDL070W                    1310  5.81e-05 AAACGGATTC AGATCTTGAAGAGGA TAACTATTCT
+YBR114W                     299  5.81e-05 ACGAGATAAT AGAAATCAAGGAGGA ACGTGATGTT
+YPL168W                     870  6.51e-05 ATTTTTAGGT TCAAACGGAGGAGGA AAAAAGAGTA
+YML069W                    1553  6.51e-05 GCTCTGATAA TGACGCAGACGAAGT TGCAGAAGAG
+YML017W                    1807  6.51e-05 ATCATGATCG ACAAAACAATGAAGA AGGGTTAACC
+YKL109W                     887  6.51e-05 TGCAAGTTAA GGACAAAATTGAGGA TTTGAACGAG
+YDR392W                     391  6.51e-05 GGTGGAAACA TGATGAAGGTCAAGA AATCCCAAAT
+YDR221W                    1532  6.51e-05 AGAAATTATT AGATGAAACTGAAGA TGAAGGAACT
+YOR264W                     890  7.27e-05 CTGACCAATC GAATTCAGATGAGGA ATTGTCCGAA
+YOL081W                     404  7.27e-05 CGACTCACGT AGAACATGACCAAGA ACAGAAGTAC
+YMR263W                     565  7.27e-05 TACAAGGTAA AAAACCAGAAGAAGA AATTCAAGAT
+YMR176W                     485  7.27e-05 TTACTCAACT AAATGTTGATGTAGA TCGCCTCTGG
+YLR455W                     476  7.27e-05 AAGATAACCA GAAATCAAATGAAGA AGAAAGCAAA
+YGR092W                     112  7.27e-05 AACCAAAATA TAACAAAGAGGAGGA CAAGGCCTGC
+YCR093W                    2345  7.27e-05 AAGGTGCTCC TAAAGATGTCGTAGA AAAAGTTCTT
+YCL039W                    1598  7.27e-05 ATGGTAACTG GCAATATGTGGAGGA CGACGAAACC
+YBR094W                    1889  7.27e-05 TTTTGGAGTT TGACTCCATAGAGGA AATTCCAAAT
+YNL042W                    1110  8.12e-05 AACATGCAGT GAAAGCAGTAGTAGA AACGAAAGCC
+YLR403W                    1634  8.12e-05 ATGATGTTGA TGATGACGATGACGA TGACGATGAC
+YGR093W                     431  8.12e-05 TGTCTGGAAG TGAAGTTGTTGATGA ATTGGCGAAA
+YER133W                     547  8.12e-05 GAGAAAGGTC GGACGAAAACCAAGA AATGTGGATT
+YOR336W                    2846  9.05e-05 ATAGCAGATC AGATCCAGAAGTAGA TATTGAAATG
+YNL212W                    1217  9.05e-05 TCATTTCATC TGAAGCCTTTGAAGA ACCTAGGCGT
+YLR115W                    1766  9.05e-05 ACGAAGAAGA TAACAAAAATGAAGA AGAAGATGGT
+YGL151W                    2930  9.05e-05 TATATGATGT GAAAACCGCGGAGGA AGCCAGTCAA
+YGL145W                     263  9.05e-05 AAACACAAAT GCAAGCTGGCGTAGA CAAACTAGAT
+YGL060W                    1892  9.05e-05 ATACTCTGGG AGAATATATAGAAGA GATGAACATA
+YMR136W                    1237  1.00e-04 TCTAACCTCA ACACGAAAAAGAAGA ATAACAGAGG
+YML070W                    1607  1.00e-04 ATAAGGCGGT AAAAGCTGCAGAGGA AGGTGCTAAA
+YLR427W                    1524  1.00e-04 TCATGAGCTA AAACAACGTCGAAGA AAATTCACAA
+YGL016W                     590  1.00e-04 TGACGTTTAC AGAAGTTATTGTGGA AGATTTGACG
+YAR042W                    2015  1.00e-04 AGGTTGAAAC TGAGGCTAATGAAGA ATCCGATGAT
+YPR030W                     153  1.11e-04 AAAATCGTCA GGATTTAGTGGTAGA AGGAGGTCAT
+YPL232W                     713  1.11e-04 TTGAAGACGC TCAACTCGACGTAGA ACAGGGTGTC
+YOR349W                     719  1.11e-04 ATGATATCCT AGATGCTATAGTAGA ATTCTTCCAT
+YOR147W                    1121  1.11e-04 TTGATTTCAC GGACAACAATCAGGA AAATTACCGC
+YLR033W                     998  1.11e-04 AAGAATTACT GAACACGAATGAAGA AGGCATAAAC
+YER173W                     254  1.11e-04 AAAGAAAACT TAAAGATGTACAAGA AGCTTTAGAT
+YBL037W                    1816  1.11e-04 ACTACGATGA TCAAGTTGTACAAGA CCTCACCTGA
+YLR057W                    1934  1.22e-04 ATGAAACTTT TGAAAATGACCTAGA TGTCGGGATC
+YAL041W                    1356  1.22e-04 AAGTATCAAC GAAAATCAAAGAAGA ACAGAAAATC
+YMR129W                     260  1.35e-04 ACATTAATGG TGATAAAAAGGTAGA CATTTATTCA
+YLR256W                    3233  1.35e-04 TTAATAGTTC GGTAGAAGATGAGGA CGTCAAAGTT
+YJL061W                     347  1.35e-04 ACTATTCAAT TGATGAAGAAGAAGT TGGTCCGAAA
+YHR084W                      89  1.35e-04 AAGCTACTCC GGGCGAAGTTGAAGA ATCGCTAAGG
+YDR409W                      71  1.35e-04 ATGAACTAAG AAACGAGGTGGAGGA AACCATCACT
+YCR033W                     326  1.35e-04 GAAGCCGTTA TAACCCAGATGTGGA AAGATCCTCT
+YPR168W                     251  1.48e-04 TGGAAGTTGT TCAATACATTGAGGA CGGTAGAAAT
+YPL204W                     414  1.48e-04 AATGGGGGTA GGACGCCGTGGTAGC ACCGTTCATG
+YOR257W                     259  1.48e-04 GTAATGGGGG AAAAAATATTGAAGA GAGATCCGTT
+YOL113W                    1024  1.48e-04 GATTCGAATG AAATAATAATGAAGA TGAAAACTGT
+YNL278W                     838  1.48e-04 TATGAAAATG ACAAGAAAGTGAAGA AAAACCATGC
+YML116W                     137  1.48e-04 CGCAGTCTGA AGATGAAATGGTAGA TAGCAATCAG
+YLR143W                    1751  1.48e-04 ATTCCGACAA GAAAGAAAGGGAAGA GAATGATGAT
+YJR052W                     314  1.48e-04 TAGTCCCTGC TGATAGTGATGAAGA AGAATATGAA
+YHR206W                     844  1.48e-04 ATCGAAAGTT TGATAACATTCAAGA CCATAAATGA
+YOR165W                      92  1.62e-04 TTGGAAATCG TGATGTTGGTCTAGA TTACCATGTC
+YNL218W                    1088  1.62e-04 GAGAGCGCAA GGCCGACGAGGAAGA ATTATCTATC
+YKL068W                    2022  1.62e-04 GACACTGGAA AGAAGTGATAGAGGA AGCAGTACCA
+YDL132W                    1934  1.62e-04 TATTAACCTT AGAAAATATTCAAGA GGGCACGAGC
+YML094W                     145  1.77e-04 CTGTAAAACA GCAATTCGACCAAGA ATTGCAGCAT
+YML081W                    3427  1.77e-04 AAAGCATTCA AAACTTTGAAGAGGA TCGAATCACA
+YFL021W                     847  1.77e-04 AAACCTGCTT TGAAGAAGATCAAGT CTTCCACTTC
+YDL112W                    4022  1.77e-04 TGCCCATGGA GGAAGTTGCCCTAGA TGAGATTGCA
+YPL166W                     401  1.94e-04 CGGAAAGACA GGATTCTGAAGAAGT TGAGACAGAA
+YHL036W                     122  1.94e-04 TCAGTTCGAT GGATACTGTGGAAGC GCAGGCGATA
+YGR218W                    2027  1.94e-04 ATATGGCTTG GGACACTATAGTGGA ACAATCCACT
+YER098W                    1901  1.94e-04 TTTTGTATGA TGACGAAACGGTGGA ATCCATAAAA
+YBR136W                    6488  1.94e-04 ATAGGTGGCA GCACACCGCAGTAGA TGGAAAACTC
+YMR134W                     377  2.11e-04 ATGTCGAATG TAATGTTATTGTAGA TGGGAAAGAA
+YJL019W                     290  2.11e-04 CGTACATTGA GGATAATGGACAAGA GACCGACGGA
+YGL171W                    1088  2.11e-04 TTGCTATTAG ACAACTCGTTCAAGA GGGTGAGTTC
+YBL005W                    2693  2.11e-04 CGTCTTTGTT GAACTCTGGAGAGGA ATCGTACACT
+YOR346W                    1802  2.29e-04 CGTTACAAGG CCAAGATGATGAAGA AAGCTTGAAA
+YNR023W                      27  2.29e-04 ACCCAGCAAC GGAAAAGGTTCTAGA AAGAGTTCAA
+YFL036W                    3277  2.29e-04 GATGTTGATG AAAAATCGTTCAAGA ACGGTAATAA
+YDL117W                    2063  2.29e-04 TTATTCCAAC GGATAATGAAGAAGC TTCATCTGCG
+YOR181W                     425  2.49e-04 CATTAACCAA GAAAGTAAGAGAAGA ACAAAAATCT
+YIL130W                     659  2.49e-04 GCAACAGGGA ACAAGACAGTGTAGA TACCTACTCC
+YGR212W                    1121  2.49e-04 TTTCTTCTCA ACAATACATAGAAGA TAAAATTAGC
+YPR154W                     167  2.70e-04 CAGCTTCCTT GGAATATGTCGAAGC TCTTTATCAA
+YPL018W                      89  2.70e-04 ATCATGCTGG TGAAGCAGATGTAAA CATTGATGGG
+YML027W                     296  2.70e-04 ATAGTTCTCA AGAAACAGTTGATGA ATCACACGAA
+YKR027W                     905  2.70e-04 AGCGAAGTAA TGACCGCGATGTAGA AATGATCAAA
+YGR275W                     181  2.70e-04 TTCAGGTATA AAACATGGTTGAGGA ACCAGGAAGA
+YGR108W                     548  2.70e-04 TGACTACAGA AGAAGAGGTTCTGGA GGAGTACGAA
+YDR288W                      29  2.70e-04 ACAGCGATGT GGATTTAACAGAAGA TTTAGCCGTG
+YOR227W                    2619  2.93e-04 AGTACCAGAC GAAATTCAATCAAGA ATTGCGTTAT
+YKL061W                     176  2.93e-04 ATGTTGAACT TGATGATGTGGAAAA TTTAAGAGCC
+YPR046W                     473  3.16e-04 AAAAGGAAAA TGAAACGATACAAGA ATTGATGATT
+YKL062W                     659  3.16e-04 TGAACGACAA TGATTATAATCTAGA CGATACCAAT
+YFL049W                     428  3.16e-04 GCAACGCAAC GCATGACGAGGACGA GTTTATTGTC
+YER063W                     149  3.16e-04 TTTCTCCACA GGAACAAAACCAGGA ACAAGGGTCA
+YBR163W                    1325  3.16e-04 ACGTTCCGAT TGAGCAAGACGAAGA TAGTTCGGAG
+YNL192W                    2945  3.42e-04 TGGGTAAGAT TAATACTACAGAAGA TGGTACGTTC
+YLR174W                      20  3.42e-04 TTAAGGTAGC TAACCCCATTGTGGA AATGGACGGC
+YKL027W                     539  3.42e-04 ATGGAACTCC TGACTTTATCGTGGA CTGCATTGAT
+YDR412W                     308  3.42e-04 ATGCGAAAAA TGATAAGACGGAGGA TTTGCAGGTA
+YCR081W                    2086  3.42e-04 ACAGTGTTGC TAAAAATATTCAAGA TTTTTTGTAT
+YPR070W                     992  3.69e-04 TTGACATAAG TAATGACAATCTAGA TCTAATCTCT
+YOR386W                     347  3.69e-04 ATGCTGTTTA TGTCATCAATGAAGA TGATTGGAGA
+YOR158W                     407  3.69e-04 AAAAAGCAAA AGAACTGGAGCTAGA AAAACTAAAT
+YDR063W                      34  3.69e-04 ACTGAAACTA GAAATAAAATCAAGA AGTTTCGTAC
+YOR368W                     218  3.99e-04 ATTCGTATAG AAATGAAACTGAGGA TCACATGAAA
+YNL126W                     533  3.99e-04 ATGTGAACAC TATACCCGAGGAAGA TATCCTAAAA
+YIL045W                     338  3.99e-04 AAGACGTCAG TAAATTAGGCGAGGA GGAAGACGAA
+YGL113W                    1766  3.99e-04 ATGAACGTGT AGACTCTGAGGAAAA CGTACAAGTT
+YDR337W                     458  3.99e-04 AAAATGCCAT TAAAATGGCTGTAGA ACTCGCACGT
+YDR195W                    1288  3.99e-04 CCTCTTGATT TGATGTTTCTGAAGA ACACAAACAG
+YPR101W                     472  4.30e-04 GAAGAAATGA ACATCCAGCAGAGGA AACAAATTAA
+YBR257W                     356  4.30e-04 AAGACCTTTT ACACTACATAGAGGA GAAGCATCCA
+YPR034W                     164  4.64e-04 ACAATATGAT AGACGCTGCGGCAGA AAAACGCAAT
+YPL233W                     527  4.64e-04 TCAACTGGGA GCACATCAAGCAGGA TTACGTTGCC
+YDL010W                     491  4.64e-04 TTGACAAACA TGGACATGGGGAAGA GCTGCAAGAA
+YOR278W                     125  5.00e-04 TTAAACATAC ACATGTAATTCAAGA TTTTAGAAAT
+YOL051W                    3083  5.00e-04 GTGATTCTAA AAAAATTAAAGTAGA TTCTCCTGAT
+YPR106W                     965  5.38e-04 CAACAGATCT GAATACCACGGTAGA ATACTGTGCA
+YOR109W                     524  5.38e-04 CTTTGAGTAC AGATACCTACGAAGA AGAATATATG
+YIL049W                       2  5.38e-04          T GTACTTTGATGAAGA ACAATTGCTA
+YGR156W                    1235  5.38e-04 CAAGTGACCA GCAACTTATGGTGGA AAACTTTAGA
+YBR097W                    1001  5.38e-04 ATAGTACCTT GGAAGACAATGTAAA ACTTTTAGAT
+YLR148W                    2651  5.80e-04 ATGATTTAGA AAATATCATTGTAGA GAAATGTGGA
+YDR073W                      62  5.80e-04 ACCGCAATAC TGGCGCTGGCGTAGA TGTAAATACA
+YCR036W                     634  5.80e-04 CTTGTTGAAG AAATAAGGGAGAAGA TAAAGGACGA
+YBR168W                     597  5.80e-04 CATATCACCG GGAACTTATACTAGA TTTTTTATTA
+YKL208W                      12  6.24e-04 GGTGAGCTAT GGAAGTCATAGTAGT GAGGTTTCGA
+YGR167W                     329  6.24e-04 ATCAGAGTAC AGAATCCGTTAAAGA GGATCGTTCT
+YDR279W                     419  6.24e-04 CCAATTCAAG TGATACTGGTGAAAA CCAAAAAAGC
+YNL155W                     554  6.72e-04 ATGAGACGGA TATAGCCAAGGAGGA TACAAGAATG
+YNL009W                      20  6.72e-04 TTAAAGTTGT TCATCCCATCGTGGA AATGGACGGT
+YML030W                     353  6.72e-04 AGAGAAGGGA GGAAGAAACGGAGGC AAGGAGAAAA
+YPR125W                     544  7.22e-04 GAAAATTTAA GAAACACAAGGAAGT TAATGTCTGA
+YMR234W                     168  7.22e-04 AAATACTACA TCAAACTATGGAAGT TCAACGCATG
+YHR011W                     782  7.22e-04 GTCTAGGGGC AAACAAAGTTCTAGA GTTAAACTCG
+YPL075W                    2886  7.76e-04 CTAATCCTCA ACAACCGAGGGAGGA TATACGGAAG
+YKL189W                    1182  7.76e-04 ACATTCAACT TCACCTGATTCAAGA TAA       
+YKL142W                     263  7.76e-04 AGGGTGAGCT AAATTTCATCGAGGA AAGGTCTATC
+YGL181W                     440  7.76e-04 CCAGAATGGA TGATTTTGATGGGGA ATCGGACAGG
+YLR200W                     260  8.34e-04 AGAACATAAG GGACAAGCAGGAAGA ACTAGAAAAG
+YKL185W                     865  8.97e-04 ACTCCTCCCG TCACACCGCCGATGA GTCCACCAAC
+YPL125W                    2990  1.03e-03 ATCTAGAATC ACATTTAGGAGTAGA AAGGTACCAA
+YHL039W                     521  1.11e-03 AGGAGAATAA AGACTCTGCCGTAGT GCCGTTGGAA
+YER001W                    1895  1.28e-03 GTAAACACGA TAATGCTGCTAAAGA TGATTGGAAA
+YBL019W                     443  1.68e-03 ACGATTCTTT AGATCCCGATTTAGA TGAGAAAAGT
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif DGAARHHRADGAAGA MEME-2 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+YMR017W                           2.2e-09  967_[2]_211
+YNL103W                           2.5e-08  1768_[2]_235
+YMR277W                           2.5e-08  1936_[2]_247
+YMR044W                           2.5e-08  889_[2]_523
+YOR027W                           6.3e-08  751_[2]_1003
+YLR449W                           8.1e-08  736_[2]_427
+YPL181W                           1.2e-07  190_[2]_1315
+YML010W                           2.2e-07  445_[2]_2731
+YGR142W                           2.2e-07  361_[2]_856
+YER164W                           2.2e-07  166_[2]_4225
+YDR138W                           2.2e-07  241_[2]_2002
+YDL060W                           2.2e-07  496_[2]_1855
+YNL186W                             3e-07  910_[2]_1453
+YML117W                             3e-07  3088_[2]_301
+YLR196W                             3e-07  1678_[2]_37
+YJR050W                             3e-07  586_[2]_106
+YJR035W                             3e-07  628_[2]_2614
+YJL033W                             3e-07  1876_[2]_421
+YKL160W                           5.3e-07  220_[2]_202
+YBL046W                           6.7e-07  592_[2]_718
+YJR042W                           8.9e-07  649_[2]_1570
+YGL244W                           8.9e-07  151_[2]_1510
+YDR118W                           8.9e-07  1807_[2]_136
+YOR014W                           1.1e-06  1099_[2]_1159
+YMR179W                           1.1e-06  2023_[2]_238
+YDR528W                           1.1e-06  1042_[2]_214
+YBL011W                           1.1e-06  2233_[2]_31
+YPR129W                           1.5e-06  902_[2]_132
+YPR072W                           1.5e-06  288_[2]_1379
+YMR119W                           1.5e-06  1453_[2]_406
+YGR145W                           1.5e-06  1471_[2]_637
+YGL133W                           1.5e-06  1060_[2]_2719
+YEL012W                           1.5e-06  649_[2]_115
+YML034W                           1.8e-06  436_[2]_2179
+YLR260W                           1.8e-06  1534_[2]_514
+YDR334W                           1.8e-06  1996_[2]_2533
+YBR279W                           1.8e-06  1216_[2]_106
+YPL268W                           2.8e-06  724_[2]_1870
+YNR006W                           2.8e-06  892_[2]_961
+YKL108W                           2.8e-06  1340_[2]_6
+YJL083W                           2.8e-06  1054_[2]_745
+YHR036W                           2.8e-06  577_[2]_823
+YER030W                           2.8e-06  92_[2]_354
+YDR416W                           2.8e-06  502_[2]_2062
+YPL207W                           3.5e-06  1129_[2]_1288
+YMR109W                           3.5e-06  3634_[2]_10
+YKL204W                           3.5e-06  595_[2]_1288
+YJL102W                           3.5e-06  775_[2]_1669
+YGL006W                           3.5e-06  3457_[2]_49
+YDL225W                           3.5e-06  586_[2]_1054
+YOR069W                           4.3e-06  607_[2]_1405
+YMR125W                           4.3e-06  344_[2]_2548
+YER013W                           4.3e-06  594_[2]_2828
+YPL228W                           5.2e-06  250_[2]_1384
+YNL102W                           5.2e-06  1021_[2]_3370
+YER068W                           5.2e-06  757_[2]_991
+YDR161W                           5.2e-06  1135_[2]_13
+YDL073W                           5.2e-06  2068_[2]_871
+YLR135W                           6.3e-06  1693_[2]_538
+YGR217W                           6.3e-06  79_[2]_6025
+YDL116W                           6.3e-06  1717_[2]_448
+YGR198W                           7.5e-06  1933_[2]_505
+YDR466W                           7.5e-06  1671_[2]_1010
+YDR152W                           7.5e-06  262_[2]_520
+YDL195W                           7.5e-06  1450_[2]_2356
+YKL124W                           8.9e-06  229_[2]_1495
+YKL117W                           8.9e-06  376_[2]_259
+YKR025W                           1.1e-05  175_[2]_658
+YJL092W                           1.1e-05  1858_[2]_1651
+YDR211W                           1.1e-05  2101_[2]_22
+YOR066W                           1.3e-05  624_[2]_1250
+YHR155W                           1.3e-05  2140_[2]_1531
+YHR102W                           1.3e-05  178_[2]_3049
+YHR073W                           1.3e-05  81_[2]_2894
+YGR072W                           1.3e-05  999_[2]_149
+YDR463W                           1.3e-05  1254_[2]_290
+YDR189W                           1.3e-05  1258_[2]_727
+YDR358W                           1.5e-05  379_[2]_1279
+YDR168W                           1.5e-05  331_[2]_1174
+YDR049W                           1.5e-05  121_[2]_1762
+YDR014W                           1.5e-05  365_[2]_1563
+YPL267W                           1.7e-05  193_[2]_421
+YJL042W                           1.7e-05  1615_[2]_2566
+YLL001W                             2e-05  871_[2]_1387
+YKR058W                             2e-05  829_[2]_1006
+YHR066W                             2e-05  457_[2]_889
+YER129W                             2e-05  3388_[2]_25
+YER127W                             2e-05  724_[2]_334
+YDR089W                             2e-05  1921_[2]_673
+YDL150W                             2e-05  964_[2]_289
+YPR008W                           2.3e-05  217_[2]_1852
+YPL260W                           2.3e-05  547_[2]_1093
+YNL207W                           2.3e-05  1078_[2]_184
+YKL125W                           2.3e-05  781_[2]_1087
+YOR252W                           2.7e-05  303_[2]_218
+YOR018W                           2.7e-05  1297_[2]_1201
+YLR182W                           2.7e-05  331_[2]_2065
+YLR090W                           2.7e-05  498_[2]_866
+YHR099W                           2.7e-05  3817_[2]_7402
+YGL066W                           2.7e-05  463_[2]_1495
+YBR041W                           2.7e-05  595_[2]_1399
+YOR274W                           3.1e-05  1080_[2]_191
+YOR160W                           3.1e-05  1189_[2]_1714
+YKL195W                           3.1e-05  502_[2]_694
+YGR222W                           3.1e-05  565_[2]_301
+YGR046W                           3.1e-05  1134_[2]_8
+YGL021W                           3.1e-05  97_[2]_2170
+YER014W                           3.1e-05  1570_[2]_34
+YEL051W                           3.1e-05  657_[2]_98
+YDR160W                           3.1e-05  745_[2]_1798
+YBR237W                           3.1e-05  270_[2]_2264
+YOL115W                           3.5e-05  63_[2]_1676
+YLR206W                           3.5e-05  652_[2]_1174
+YHR114W                           3.5e-05  1045_[2]_841
+YOL123W                             4e-05  502_[2]_1087
+YJR112W                             4e-05  469_[2]_121
+YJL082W                             4e-05  1843_[2]_337
+YGR097W                             4e-05  1114_[2]_2311
+YGR003W                             4e-05  796_[2]_1423
+YGL207W                             4e-05  2884_[2]_208
+YDR244W                             4e-05  796_[2]_1027
+YDR076W                             4e-05  283_[2]_922
+YOR293W                           4.5e-05  733_[2]_6
+YML111W                           4.5e-05  2413_[2]_334
+YLR439W                           4.5e-05  811_[2]_133
+YIL036W                           4.5e-05  412_[2]_1336
+YDR096W                           4.5e-05  297_[2]_2372
+YBR155W                           4.5e-05  616_[2]_526
+YNL075W                           5.2e-05  130_[2]_727
+YGL178W                           5.2e-05  1721_[2]_1483
+YGL090W                           5.2e-05  232_[2]_1018
+YOL049W                           5.8e-05  817_[2]_643
+YNL027W                           5.8e-05  163_[2]_1858
+YMR230W                           5.8e-05  706_[2]_6
+YMR100W                           5.8e-05  712_[2]_1135
+YDR515W                           5.8e-05  492_[2]_836
+YDL070W                           5.8e-05  1309_[2]_592
+YBR114W                           5.8e-05  298_[2]_2059
+YPL168W                           6.5e-05  869_[2]_408
+YML069W                           6.5e-05  1552_[2]_91
+YML017W                           6.5e-05  1806_[2]_322
+YKL109W                           6.5e-05  886_[2]_763
+YDR392W                           6.5e-05  390_[2]_608
+YDR221W                           6.5e-05  1531_[2]_562
+YOR264W                           7.3e-05  889_[2]_388
+YOL081W                           7.3e-05  403_[2]_8821
+YMR263W                           7.3e-05  564_[2]_26
+YMR176W                           7.3e-05  484_[2]_3736
+YLR455W                           7.3e-05  475_[2]_424
+YGR092W                           7.3e-05  111_[2]_1592
+YCR093W                           7.3e-05  2344_[2]_3967
+YCL039W                           7.3e-05  1597_[2]_625
+YBR094W                           7.3e-05  1888_[2]_358
+YNL042W                           8.1e-05  1109_[2]_66
+YLR403W                           8.1e-05  1633_[2]_403
+YGR093W                           8.1e-05  430_[2]_1078
+YER133W                           8.1e-05  546_[2]_902
+YOR336W                             9e-05  2845_[2]_1237
+YNL212W                             9e-05  1216_[2]_1117
+YLR115W                             9e-05  1765_[2]_799
+YGL151W                             9e-05  2929_[2]_454
+YGL145W                             9e-05  262_[2]_1828
+YGL060W                             9e-05  1891_[2]_19
+YMR136W                            0.0001  1236_[2]_431
+YML070W                            0.0001  1606_[2]_133
+YLR427W                            0.0001  1523_[2]_474
+YGL016W                            0.0001  589_[2]_2641
+YAR042W                            0.0001  2014_[2]_1537
+YPR030W                           0.00011  152_[2]_3198
+YPL232W                           0.00011  712_[2]_145
+YOR349W                           0.00011  718_[2]_2311
+YOR147W                           0.00011  1120_[2]_733
+YLR033W                           0.00011  997_[2]_496
+YER173W                           0.00011  253_[2]_1711
+YBL037W                           0.00011  1815_[2]_1247
+YLR057W                           0.00012  1933_[2]_601
+YAL041W                           0.00012  1355_[2]_1194
+YMR129W                           0.00013  259_[2]_3739
+YLR256W                           0.00013  3232_[2]_1261
+YJL061W                           0.00013  346_[2]_1780
+YHR084W                           0.00013  88_[2]_1963
+YDR409W                           0.00013  70_[2]_2629
+YCR033W                           0.00013  325_[2]_3340
+YPR168W                           0.00015  250_[2]_208
+YPL204W                           0.00015  413_[2]_1056
+YOR257W                           0.00015  258_[2]_212
+YOL113W                           0.00015  1023_[2]_929
+YNL278W                           0.00015  837_[2]_2330
+YML116W                           0.00015  136_[2]_1477
+YLR143W                           0.00015  1750_[2]_292
+YJR052W                           0.00015  313_[2]_1369
+YHR206W                           0.00015  843_[2]_1010
+YOR165W                           0.00016  91_[2]_2224
+YNL218W                           0.00016  1087_[2]_661
+YKL068W                           0.00016  2021_[2]_843
+YDL132W                           0.00016  1933_[2]_499
+YML094W                           0.00018  144_[2]_415
+YML081W                           0.00018  3426_[2]_314
+YFL021W                           0.00018  846_[2]_671
+YDL112W                           0.00018  4021_[2]_274
+YPL166W                           0.00019  400_[2]_226
+YHL036W                           0.00019  121_[2]_1504
+YGR218W                           0.00019  2026_[2]_1213
+YER098W                           0.00019  1900_[2]_349
+YBR136W                           0.00019  6487_[2]_604
+YMR134W                           0.00021  376_[2]_322
+YJL019W                           0.00021  289_[2]_1744
+YGL171W                           0.00021  1087_[2]_592
+YBL005W                           0.00021  2692_[2]_223
+YOR346W                           0.00023  1801_[2]_1141
+YNR023W                           0.00023  26_[2]_1659
+YFL036W                           0.00023  3276_[2]_764
+YDL117W                           0.00023  2062_[2]_580
+YOR181W                           0.00025  424_[2]_1462
+YIL130W                           0.00025  658_[2]_2221
+YGR212W                           0.00025  1120_[2]_271
+YPR154W                           0.00027  166_[2]_466
+YPL018W                           0.00027  88_[2]_1006
+YML027W                           0.00027  295_[2]_847
+YKR027W                           0.00027  904_[2]_1378
+YGR275W                           0.00027  180_[2]_278
+YGR108W                           0.00027  547_[2]_853
+YDR288W                           0.00027  28_[2]_868
+YOR227W                           0.00029  2618_[2]_1107
+YKL061W                           0.00029  175_[2]_151
+YPR046W                           0.00032  472_[2]_58
+YKL062W                           0.00032  658_[2]_1219
+YFL049W                           0.00032  427_[2]_1429
+YER063W                           0.00032  148_[2]_493
+YBR163W                           0.00032  1324_[2]_418
+YNL192W                           0.00034  2944_[2]_436
+YLR174W                           0.00034  19_[2]_1204
+YKL027W                           0.00034  538_[2]_790
+YDR412W                           0.00034  307_[2]_385
+YCR081W                           0.00034  2085_[2]_2183
+YPR070W                           0.00037  991_[2]_694
+YOR386W                           0.00037  346_[2]_1336
+YOR158W                           0.00037  406_[2]_535
+YDR063W                           0.00037  33_[2]_401
+YOR368W                            0.0004  217_[2]_973
+YNL126W                            0.0004  532_[2]_1993
+YIL045W                            0.0004  337_[2]_1264
+YGL113W                            0.0004  1765_[2]_226
+YDR337W                            0.0004  457_[2]_388
+YDR195W                            0.0004  1287_[2]_299
+YPR101W                           0.00043  471_[2]_41
+YBR257W                           0.00043  355_[2]_469
+YPR034W                           0.00046  163_[2]_1255
+YPL233W                           0.00046  526_[2]_109
+YDL010W                           0.00046  490_[2]_190
+YOR278W                            0.0005  124_[2]_688
+YOL051W                            0.0005  3082_[2]_148
+YPR106W                           0.00054  964_[2]_352
+YOR109W                           0.00054  523_[2]_2785
+YIL049W                           0.00054  1_[2]_745
+YGR156W                           0.00054  1234_[2]_28
+YBR097W                           0.00054  1000_[2]_3349
+YLR148W                           0.00058  2650_[2]_91
+YDR073W                           0.00058  61_[2]_433
+YCR036W                           0.00058  633_[2]_353
+YBR168W                           0.00058  596_[2]_630
+YKL208W                           0.00062  11_[2]_789
+YGR167W                           0.00062  328_[2]_358
+YDR279W                           0.00062  418_[2]_619
+YNL155W                           0.00067  553_[2]_256
+YNL009W                           0.00067  19_[2]_1228
+YML030W                           0.00067  352_[2]_112
+YPR125W                           0.00072  543_[2]_806
+YMR234W                           0.00072  167_[2]_864
+YHR011W                           0.00072  781_[2]_544
+YPL075W                           0.00078  2885_[2]_208
+YKL189W                           0.00078  1181_[2]_3
+YKL142W                           0.00078  262_[2]_382
+YGL181W                           0.00078  439_[2]_736
+YLR200W                           0.00083  259_[2]_70
+YKL185W                            0.0009  864_[2]_887
+YPL125W                             0.001  2989_[2]_94
+YHL039W                            0.0011  520_[2]_1222
+YER001W                            0.0013  1894_[2]_379
+YBL019W                            0.0017  442_[2]_1105
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif DGAARHHRADGAAGA MEME-2 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF DGAARHHRADGAAGA width=15 seqs=280
+YMR017W                  (  968) UGAAGCCGAUGAAGA  1 
+YNL103W                  ( 1769) GGACGACGAUGAAGA  1 
+YMR277W                  ( 1937) UGACGACGAUGAAGA  1 
+YMR044W                  (  890) UGAAGAUGAUGAAGA  1 
+YOR027W                  (  752) GGAAGUUGAUGAAGA  1 
+YLR449W                  (  737) GGAAGAUGAGGAAGA  1 
+YPL181W                  (  191) GGAAGUCGAGGAAGA  1 
+YML010W                  (  446) AGACGAUGAUGAAGA  1 
+YGR142W                  (  362) UGAAGCGGAUGAAGA  1 
+YER164W                  (  167) UGAAGACGACGAAGA  1 
+YDR138W                  (  242) UGAAGACGAAGAAGA  1 
+YDL060W                  (  497) AGAAGUCGAUGAAGA  1 
+YNL186W                  (  911) GGAAGAAGAGGAAGA  1 
+YML117W                  ( 3089) AGAAGACGAGGAAGA  1 
+YLR196W                  ( 1679) UGAAGAUGAAGAAGA  1 
+YJR050W                  (  587) UGAAGAUGAAGAAGA  1 
+YJR035W                  (  629) UGAAGAUGACGAAGA  1 
+YJL033W                  ( 1877) UGAAGAUGAAGAAGA  1 
+YKL160W                  (  221) UGACGCCGUCGAAGA  1 
+YBL046W                  (  593) UGACGAGGAUGAAGA  1 
+YJR042W                  (  650) UGAACCAGAUGAAGA  1 
+YGL244W                  (  152) GGAUGAUGAUGAGGA  1 
+YDR118W                  ( 1808) UGAAAACGAGGAAGA  1 
+YOR014W                  ( 1100) UGACCCAGAUGAAGA  1 
+YMR179W                  ( 2024) GGAUGAAGAGGAAGA  1 
+YDR528W                  ( 1043) AGACGACGAAGAAGA  1 
+YBL011W                  ( 2234) AGAAGAAGAGGAAGA  1 
+YPR129W                  (  903) GGAAACAGAGGAAGA  1 
+YPR072W                  (  289) AGAAGCUAAUGAAGA  1 
+YMR119W                  ( 1454) GGAUUCUGAUGAAGA  1 
+YGR145W                  ( 1472) UCAAGUCGAUGAAGA  1 
+YGL133W                  ( 1061) GGAAGCCAAUGAGGA  1 
+YEL012W                  (  650) UGAUUCUGAUGAAGA  1 
+YML034W                  (  437) GGACGAUGAAGAGGA  1 
+YLR260W                  ( 1535) AGAUGAAGAUGAAGA  1 
+YDR334W                  ( 1997) AGAUGUCGAGGAAGA  1 
+YBR279W                  ( 1217) UGAACAAGAUGAAGA  1 
+YPL268W                  (  725) UGAAAAAGAGGAAGA  1 
+YNR006W                  (  893) AGAAGAAGAAGAAGA  1 
+YKL108W                  ( 1341) GGACGAUGGGGAAGA  1 
+YJL083W                  ( 1055) AGACACAGAUGAAGA  1 
+YHR036W                  (  578) UGAAGAAGUCGAAGA  1 
+YER030W                  (   93) AGAAGAAGAAGAAGA  1 
+YDR416W                  (  503) UCAAGAAGAUGAAGA  1 
+YPL207W                  ( 1130) AGACUCUGAGGAAGA  1 
+YMR109W                  ( 3635) AGAUGAAGAGGAAGA  1 
+YKL204W                  (  596) ACAAGAUGAUGAAGA  1 
+YJL102W                  (  776) UGAAUACGACGAAGA  1 
+YGL006W                  ( 3458) ACACGACGAUGAAGA  1 
+YDL225W                  (  587) AGAAGUCGAUGUAGA  1 
+YOR069W                  (  608) UGAAUUUGUUGAAGA  1 
+YMR125W                  (  345) AGACUUCGAUGAAGA  1 
+YER013W                  (  595) GGACGCGAAUGAAGA  1 
+YPL228W                  (  251) UAAUGAUGAUGAAGA  1 
+YNL102W                  ( 1022) GGAAGAUGUGGUAGA  1 
+YER068W                  (  758) UGAACCUGGUGAAGA  1 
+YDR161W                  ( 1136) GGACAUAGAGGAAGA  1 
+YDL073W                  ( 2069) AGAUAAUGAUGAAGA  1 
+YLR135W                  ( 1694) UGAUUCUGAAGAAGA  1 
+YGR217W                  (   80) GGAAAAUGUUGAGGA  1 
+YDL116W                  ( 1718) GGAUGAAAAUGAAGA  1 
+YGR198W                  ( 1934) AGACAAUGAUGAGGA  1 
+YDR466W                  ( 1672) UGACUUUGAAGAAGA  1 
+YDR152W                  (  263) AGAUAACGAGGAAGA  1 
+YDL195W                  ( 1451) AGACGAUGGGGAAGA  1 
+YKL124W                  (  230) AGAAUACGACGAAGA  1 
+YKL117W                  (  377) UGAAGAUGAACAAGA  1 
+YKR025W                  (  176) UGAUACUGGUGAAGA  1 
+YJL092W                  ( 1859) UGAUGCAGCUGAGGA  1 
+YDR211W                  ( 2102) GAAUGCUGACGAAGA  1 
+YOR066W                  (  625) UAAAACAGAUGAAGA  1 
+YHR155W                  ( 2141) GGAAUUAGACGAAGA  1 
+YHR102W                  (  179) UGACGAGGUGGAGGA  1 
+YHR073W                  (   82) UCAAGCCAUUGAAGA  1 
+YGR072W                  ( 1000) UGAAACAAAGGAAGA  1 
+YDR463W                  ( 1255) GCAAGCAAAUGAAGA  1 
+YDR189W                  ( 1259) UGAAGUUGAACAAGA  1 
+YDR358W                  (  380) UGAAGCCAUCGAGGA  1 
+YDR168W                  (  332) UGAAAUGGUUGAAGA  1 
+YDR049W                  (  122) AGAAGUUGAAGUAGA  1 
+YDR014W                  (  366) AGAAAAAGAAGAAGA  1 
+YPL267W                  (  194) GGAAACGGCUGAAGA  1 
+YJL042W                  ( 1616) ACACGACGAGGAGGA  1 
+YLL001W                  (  872) GGACAAAGAAGAGGA  1 
+YKR058W                  (  830) GGAAUUUAAGGAAGA  1 
+YHR066W                  (  458) UGAAGACGACCAGGA  1 
+YER129W                  ( 3389) UGAACUAAAUGAAGA  1 
+YER127W                  (  725) GCAAGCCAUGGAAGA  1 
+YDR089W                  ( 1922) UGAACAAGAAGAGGA  1 
+YDL150W                  (  965) AGAAGAAAAAGAAGA  1 
+YPR008W                  (  218) GAAAGCCAAAGAAGA  1 
+YPL260W                  (  548) UAAAAUUGAGGAAGA  1 
+YNL207W                  ( 1079) UGACGAGGCCGAAGA  1 
+YKL125W                  (  782) GGAAGUUGAUCUAGA  1 
+YOR252W                  (  304) UCAAGAAGAAGAGGA  1 
+YOR018W                  ( 1298) AGACGAUAGUGAAGA  1 
+YLR182W                  (  332) AGAUCAGGAUGAAGA  1 
+YLR090W                  (  499) GGAAACCAAAGAGGA  1 
+YHR099W                  ( 3818) GGAUGUAAAAGAAGA  1 
+YGL066W                  (  464) UGACGCUGAUGAUGA  1 
+YBR041W                  (  596) AGAAUCGGAAGAAGA  1 
+YOR274W                  ( 1081) AAACUACGAUGAAGA  1 
+YOR160W                  ( 1190) UAAAGAGGAAGAAGA  1 
+YKL195W                  (  503) GCAAUCCAAUGAAGA  1 
+YGR222W                  (  566) UGAUUCGGUGGAAGA  1 
+YGR046W                  ( 1135) UAAAAUCGAUGAGGA  1 
+YGL021W                  (   98) AGAAUUUGUCGAAGA  1 
+YER014W                  ( 1571) UGACGUUAUUGUAGA  1 
+YEL051W                  (  658) AGAUGAAAUUGAAGA  1 
+YDR160W                  (  746) UGAAUCUGUUGUGGA  1 
+YBR237W                  (  271) AGAAAAAGUCGAAGA  1 
+YOL115W                  (   64) UGAAAAAGAGCAAGA  1 
+YLR206W                  (  653) UAAAGAAGAAGAGGA  1 
+YHR114W                  ( 1046) GAAAACUAAUGAAGA  1 
+YOL123W                  (  503) GGACACUACGGAAGA  1 
+YJR112W                  (  470) GCAAGUAGAGGUAGA  1 
+YJL082W                  ( 1844) AGACCCAGAUCAAGA  1 
+YGR097W                  ( 1115) UCAAGUUGCCGAAGA  1 
+YGR003W                  (  797) UGAUAUUAUUGAAGA  1 
+YGL207W                  ( 2885) UGAUGAAAGUGAAGA  1 
+YDR244W                  (  797) GGACGCUGAAGAAGU  1 
+YDR076W                  (  284) UAAAAUCGUGGAAGA  1 
+YOR293W                  (  734) AGACCACAAAGAAGA  1 
+YML111W                  ( 2414) AGAAGAAAACGAGGA  1 
+YLR439W                  (  812) UCAUGCCGUUCAAGA  1 
+YIL036W                  (  413) GAAAACUGAAGAGGA  1 
+YDR096W                  (  298) UAACACAGUGGAAGA  1 
+YBR155W                  (  617) GAAAGCAAAAGAAGA  1 
+YNL075W                  (  131) GGAACUAGCAGAAGA  1 
+YGL178W                  ( 1722) AGAUGCUAUUGUAGA  1 
+YGL090W                  (  233) AAAUAUCGAUGAAGA  1 
+YOL049W                  (  818) GGACACAGAGCAGGA  1 
+YNL027W                  (  164) GGACUUAGAUGUGGA  1 
+YMR230W                  (  707) AGACCUCAAAGAAGA  1 
+YMR100W                  (  713) UGAACCUGACCAGGA  1 
+YDR515W                  (  493) GGAAUAUAAAGAGGA  1 
+YDL070W                  ( 1310) AGAUCUUGAAGAGGA  1 
+YBR114W                  (  299) AGAAAUCAAGGAGGA  1 
+YPL168W                  (  870) UCAAACGGAGGAGGA  1 
+YML069W                  ( 1553) UGACGCAGACGAAGU  1 
+YML017W                  ( 1807) ACAAAACAAUGAAGA  1 
+YKL109W                  (  887) GGACAAAAUUGAGGA  1 
+YDR392W                  (  391) UGAUGAAGGUCAAGA  1 
+YDR221W                  ( 1532) AGAUGAAACUGAAGA  1 
+YOR264W                  (  890) GAAUUCAGAUGAGGA  1 
+YOL081W                  (  404) AGAACAUGACCAAGA  1 
+YMR263W                  (  565) AAAACCAGAAGAAGA  1 
+YMR176W                  (  485) AAAUGUUGAUGUAGA  1 
+YLR455W                  (  476) GAAAUCAAAUGAAGA  1 
+YGR092W                  (  112) UAACAAAGAGGAGGA  1 
+YCR093W                  ( 2345) UAAAGAUGUCGUAGA  1 
+YCL039W                  ( 1598) GCAAUAUGUGGAGGA  1 
+YBR094W                  ( 1889) UGACUCCAUAGAGGA  1 
+YNL042W                  ( 1110) GAAAGCAGUAGUAGA  1 
+YLR403W                  ( 1634) UGAUGACGAUGACGA  1 
+YGR093W                  (  431) UGAAGUUGUUGAUGA  1 
+YER133W                  (  547) GGACGAAAACCAAGA  1 
+YOR336W                  ( 2846) AGAUCCAGAAGUAGA  1 
+YNL212W                  ( 1217) UGAAGCCUUUGAAGA  1 
+YLR115W                  ( 1766) UAACAAAAAUGAAGA  1 
+YGL151W                  ( 2930) GAAAACCGCGGAGGA  1 
+YGL145W                  (  263) GCAAGCUGGCGUAGA  1 
+YGL060W                  ( 1892) AGAAUAUAUAGAAGA  1 
+YMR136W                  ( 1237) ACACGAAAAAGAAGA  1 
+YML070W                  ( 1607) AAAAGCUGCAGAGGA  1 
+YLR427W                  ( 1524) AAACAACGUCGAAGA  1 
+YGL016W                  (  590) AGAAGUUAUUGUGGA  1 
+YAR042W                  ( 2015) UGAGGCUAAUGAAGA  1 
+YPR030W                  (  153) GGAUUUAGUGGUAGA  1 
+YPL232W                  (  713) UCAACUCGACGUAGA  1 
+YOR349W                  (  719) AGAUGCUAUAGUAGA  1 
+YOR147W                  ( 1121) GGACAACAAUCAGGA  1 
+YLR033W                  (  998) GAACACGAAUGAAGA  1 
+YER173W                  (  254) UAAAGAUGUACAAGA  1 
+YBL037W                  ( 1816) UCAAGUUGUACAAGA  1 
+YLR057W                  ( 1934) UGAAAAUGACCUAGA  1 
+YAL041W                  ( 1356) GAAAAUCAAAGAAGA  1 
+YMR129W                  (  260) UGAUAAAAAGGUAGA  1 
+YLR256W                  ( 3233) GGUAGAAGAUGAGGA  1 
+YJL061W                  (  347) UGAUGAAGAAGAAGU  1 
+YHR084W                  (   89) GGGCGAAGUUGAAGA  1 
+YDR409W                  (   71) AAACGAGGUGGAGGA  1 
+YCR033W                  (  326) UAACCCAGAUGUGGA  1 
+YPR168W                  (  251) UCAAUACAUUGAGGA  1 
+YPL204W                  (  414) GGACGCCGUGGUAGC  1 
+YOR257W                  (  259) AAAAAAUAUUGAAGA  1 
+YOL113W                  ( 1024) AAAUAAUAAUGAAGA  1 
+YNL278W                  (  838) ACAAGAAAGUGAAGA  1 
+YML116W                  (  137) AGAUGAAAUGGUAGA  1 
+YLR143W                  ( 1751) GAAAGAAAGGGAAGA  1 
+YJR052W                  (  314) UGAUAGUGAUGAAGA  1 
+YHR206W                  (  844) UGAUAACAUUCAAGA  1 
+YOR165W                  (   92) UGAUGUUGGUCUAGA  1 
+YNL218W                  ( 1088) GGCCGACGAGGAAGA  1 
+YKL068W                  ( 2022) AGAAGUGAUAGAGGA  1 
+YDL132W                  ( 1934) AGAAAAUAUUCAAGA  1 
+YML094W                  (  145) GCAAUUCGACCAAGA  1 
+YML081W                  ( 3427) AAACUUUGAAGAGGA  1 
+YFL021W                  (  847) UGAAGAAGAUCAAGU  1 
+YDL112W                  ( 4022) GGAAGUUGCCCUAGA  1 
+YPL166W                  (  401) GGAUUCUGAAGAAGU  1 
+YHL036W                  (  122) GGAUACUGUGGAAGC  1 
+YGR218W                  ( 2027) GGACACUAUAGUGGA  1 
+YER098W                  ( 1901) UGACGAAACGGUGGA  1 
+YBR136W                  ( 6488) GCACACCGCAGUAGA  1 
+YMR134W                  (  377) UAAUGUUAUUGUAGA  1 
+YJL019W                  (  290) GGAUAAUGGACAAGA  1 
+YGL171W                  ( 1088) ACAACUCGUUCAAGA  1 
+YBL005W                  ( 2693) GAACUCUGGAGAGGA  1 
+YOR346W                  ( 1802) CCAAGAUGAUGAAGA  1 
+YNR023W                  (   27) GGAAAAGGUUCUAGA  1 
+YFL036W                  ( 3277) AAAAAUCGUUCAAGA  1 
+YDL117W                  ( 2063) GGAUAAUGAAGAAGC  1 
+YOR181W                  (  425) GAAAGUAAGAGAAGA  1 
+YIL130W                  (  659) ACAAGACAGUGUAGA  1 
+YGR212W                  ( 1121) ACAAUACAUAGAAGA  1 
+YPR154W                  (  167) GGAAUAUGUCGAAGC  1 
+YPL018W                  (   89) UGAAGCAGAUGUAAA  1 
+YML027W                  (  296) AGAAACAGUUGAUGA  1 
+YKR027W                  (  905) UGACCGCGAUGUAGA  1 
+YGR275W                  (  181) AAACAUGGUUGAGGA  1 
+YGR108W                  (  548) AGAAGAGGUUCUGGA  1 
+YDR288W                  (   29) GGAUUUAACAGAAGA  1 
+YOR227W                  ( 2619) GAAAUUCAAUCAAGA  1 
+YKL061W                  (  176) UGAUGAUGUGGAAAA  1 
+YPR046W                  (  473) UGAAACGAUACAAGA  1 
+YKL062W                  (  659) UGAUUAUAAUCUAGA  1 
+YFL049W                  (  428) GCAUGACGAGGACGA  1 
+YER063W                  (  149) GGAACAAAACCAGGA  1 
+YBR163W                  ( 1325) UGAGCAAGACGAAGA  1 
+YNL192W                  ( 2945) UAAUACUACAGAAGA  1 
+YLR174W                  (   20) UAACCCCAUUGUGGA  1 
+YKL027W                  (  539) UGACUUUAUCGUGGA  1 
+YDR412W                  (  308) UGAUAAGACGGAGGA  1 
+YCR081W                  ( 2086) UAAAAAUAUUCAAGA  1 
+YPR070W                  (  992) UAAUGACAAUCUAGA  1 
+YOR386W                  (  347) UGUCAUCAAUGAAGA  1 
+YOR158W                  (  407) AGAACUGGAGCUAGA  1 
+YDR063W                  (   34) GAAAUAAAAUCAAGA  1 
+YOR368W                  (  218) AAAUGAAACUGAGGA  1 
+YNL126W                  (  533) UAUACCCGAGGAAGA  1 
+YIL045W                  (  338) UAAAUUAGGCGAGGA  1 
+YGL113W                  ( 1766) AGACUCUGAGGAAAA  1 
+YDR337W                  (  458) UAAAAUGGCUGUAGA  1 
+YDR195W                  ( 1288) UGAUGUUUCUGAAGA  1 
+YPR101W                  (  472) ACAUCCAGCAGAGGA  1 
+YBR257W                  (  356) ACACUACAUAGAGGA  1 
+YPR034W                  (  164) AGACGCUGCGGCAGA  1 
+YPL233W                  (  527) GCACAUCAAGCAGGA  1 
+YDL010W                  (  491) UGGACAUGGGGAAGA  1 
+YOR278W                  (  125) ACAUGUAAUUCAAGA  1 
+YOL051W                  ( 3083) AAAAAUUAAAGUAGA  1 
+YPR106W                  (  965) GAAUACCACGGUAGA  1 
+YOR109W                  (  524) AGAUACCUACGAAGA  1 
+YIL049W                  (    2) GUACUUUGAUGAAGA  1 
+YGR156W                  ( 1235) GCAACUUAUGGUGGA  1 
+YBR097W                  ( 1001) GGAAGACAAUGUAAA  1 
+YLR148W                  ( 2651) AAAUAUCAUUGUAGA  1 
+YDR073W                  (   62) UGGCGCUGGCGUAGA  1 
+YCR036W                  (  634) AAAUAAGGGAGAAGA  1 
+YBR168W                  (  597) GGAACUUAUACUAGA  1 
+YKL208W                  (   12) GGAAGUCAUAGUAGU  1 
+YGR167W                  (  329) AGAAUCCGUUAAAGA  1 
+YDR279W                  (  419) UGAUACUGGUGAAAA  1 
+YNL155W                  (  554) UAUAGCCAAGGAGGA  1 
+YNL009W                  (   20) UCAUCCCAUCGUGGA  1 
+YML030W                  (  353) GGAAGAAACGGAGGC  1 
+YPR125W                  (  544) GAAACACAAGGAAGU  1 
+YMR234W                  (  168) UCAAACUAUGGAAGU  1 
+YHR011W                  (  782) AAACAAAGUUCUAGA  1 
+YPL075W                  ( 2886) ACAACCGAGGGAGGA  1 
+YKL189W                  ( 1182) UCACCUGAUUCAAGA  1 
+YKL142W                  (  263) AAAUUUCAUCGAGGA  1 
+YGL181W                  (  440) UGAUUUUGAUGGGGA  1 
+YLR200W                  (  260) GGACAAGCAGGAAGA  1 
+YKL185W                  (  865) UCACACCGCCGAUGA  1 
+YPL125W                  ( 2990) ACAUUUAGGAGUAGA  1 
+YHL039W                  (  521) AGACUCUGCCGUAGU  1 
+YER001W                  ( 1895) UAAUGCUGCUAAAGA  1 
+YBL019W                  (  443) AGAUCCCGAUUUAGA  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif DGAARHHRADGAAGA MEME-2 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 15 n= 599607 bayes= 13.0892 E= 8.6e-003 
+   -16   -571     59     53 
+   -70    -39    170   -625 
+   150   -571   -420   -425 
+    55     42   -479    -19 
+   -40    -63    120    -73 
+    35     73   -479    -15 
+   -26     54   -109     36 
+    -5   -571    173   -467 
+    75   -107   -133     -8 
+   -59    -50     14     63 
+  -558    -39    210   -625 
+   123   -571   -578    -53 
+   114   -471     17   -425 
+  -426  -1477    232  -1477 
+   147   -339  -1477   -308 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif DGAARHHRADGAAGA MEME-2 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 15 nsites= 280 E= 8.6e-003 
+ 0.307143  0.003571  0.296429  0.392857 
+ 0.210714  0.142857  0.642857  0.003571 
+ 0.971429  0.003571  0.010714  0.014286 
+ 0.503571  0.250000  0.007143  0.239286 
+ 0.260714  0.121429  0.453571  0.164286 
+ 0.435714  0.310714  0.007143  0.246429 
+ 0.285714  0.271429  0.092857  0.350000 
+ 0.332143  0.003571  0.653571  0.010714 
+ 0.575000  0.089286  0.078571  0.257143 
+ 0.228571  0.132143  0.217857  0.421429 
+ 0.007143  0.142857  0.846429  0.003571 
+ 0.803571  0.003571  0.003571  0.189286 
+ 0.757143  0.007143  0.221429  0.014286 
+ 0.017857  0.000000  0.982143  0.000000 
+ 0.950000  0.017857  0.000000  0.032143 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif DGAARHHRADGAAGA MEME-2 regular expression
+--------------------------------------------------------------------------------
+[UAG][GA]A[ACU][GA][ACU][UAC][GA][AU][UAG]GA[AG]GA
+--------------------------------------------------------------------------------
+
+
+
+
+Time 143.78 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+SUMMARY OF MOTIFS
+********************************************************************************
+
+--------------------------------------------------------------------------------
+	Combined block diagrams: non-overlapping sites with p-value < 0.0001
+--------------------------------------------------------------------------------
+SEQUENCE NAME            COMBINED P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+YAL041W                          7.05e-02  2456_[1(1.99e-05)]_93
+YAR042W                          1.38e-04  433_[1(1.30e-05)]_859_[1(6.02e-06)]_\
+    63_[1(1.45e-06)]_3_[1(1.51e-08)]_198_[1(5.51e-05)]_1935
+YBL005W                          2.71e-01  1325_[1(6.19e-05)]_1590
+YBL011W                          2.31e-04  1255_[2(9.05e-05)]_558_\
+    [2(2.84e-06)]_366_[2(2.84e-06)]_3_[2(8.90e-07)]_[2(8.90e-07)]_22
+YBL019W                          4.12e-01  1562
+YBL037W                          2.15e-01  1792_[1(6.94e-05)]_1270
+YBL046W                          1.60e-07  440_[1(4.34e-05)]_135_[1(1.48e-07)]_\
+    21_[1(2.61e-05)]_87_[1(8.68e-05)]_48_[1(3.26e-07)]_[1(6.94e-05)]_18_\
+    [1(1.90e-07)]_30_[1(2.13e-08)]_426
+YBL098W                          8.31e-01  1382
+YBR041W                          8.57e-02  595_[2(2.69e-05)]_1399
+YBR094W                          1.67e-02  761_[1(7.08e-06)]_99_[1(3.38e-05)]_\
+    480_[1(5.51e-05)]_132_[1(9.64e-06)]_21_[1(1.12e-05)]_320_[2(7.27e-05)]_358
+YBR097W                          2.21e-01  3077_[1(1.50e-05)]_1272
+YBR114W                          1.32e-02  278_[1(6.19e-05)]_5_[2(5.81e-05)]_\
+    1309_[1(6.02e-06)]_735
+YBR135W                          1.66e-01  452
+YBR136W                          6.49e-01  1987_[1(6.94e-05)]_5104
+YBR155W                          4.56e-02  616_[2(4.54e-05)]_526
+YBR163W                          2.11e-01  608_[1(7.78e-05)]_1134
+YBR168W                          3.19e-01  1241
+YBR171W                          8.96e-02  197_[1(4.34e-05)]_408
+YBR237W                          2.08e-04  268_[1(2.97e-05)]_37_[1(6.94e-05)]_\
+    192_[1(9.11e-08)]_924_[1(3.83e-05)]_81_[1(1.30e-05)]_825_[1(4.89e-05)]_132
+YBR257W                          1.60e-01  839
+YBR279W                          1.48e-06  166_[2(3.51e-05)]_492_[2(2.32e-05)]_\
+    73_[1(2.97e-05)]_311_[2(1.18e-07)]_76_[1(7.78e-05)]_23_[2(1.84e-06)]_66_\
+    [2(4.54e-05)]_25
+YCL039W                          1.96e-01  1063_[2(8.12e-05)]_519_\
+    [2(7.27e-05)]_625
+YCR033W                          1.23e-02  1082_[1(9.66e-05)]_636_\
+    [1(2.61e-05)]_495_[1(1.73e-05)]_227_[2(7.48e-06)]_1180
+YCR036W                          1.27e-03  619_[2(3.48e-06)]_367
+YCR081W                          3.73e-02  3182_[1(2.61e-05)]_804_\
+    [1(8.26e-06)]_267
+YCR093W                          4.44e-01  1778_[1(9.66e-05)]_551_\
+    [2(7.27e-05)]_46_[1(8.68e-05)]_3906
+YDL010W                          2.66e-04  214_[2(1.47e-06)]_466
+YDL060W                          3.60e-05  496_[2(2.23e-07)]_561_[2(5.16e-05)]_\
+    127_[1(2.11e-06)]_6_[1(5.51e-05)]_59_[2(8.92e-06)]_10_[1(2.97e-05)]_1017
+YDL070W                          1.78e-02  773_[1(7.78e-05)]_521_[2(5.81e-05)]_\
+    25_[1(1.30e-05)]_3_[1(7.78e-05)]_285_[1(1.30e-05)]_234
+YDL073W                          2.73e-04  1505_[1(8.68e-05)]_546_\
+    [1(3.06e-06)]_152_[2(8.90e-07)]_438_[2(4.32e-06)]_253
+YDL112W                          1.97e-01  2843_[1(2.97e-05)]_1452
+YDL116W                          2.78e-02  514_[2(3.08e-05)]_924_[2(2.00e-05)]_\
+    249_[2(6.29e-06)]_448
+YDL117W                          6.86e-01  2657
+YDL132W                          7.14e-02  1595_[1(2.97e-05)]_801_\
+    [1(1.73e-05)]_21
+YDL150W                          1.14e-03  428_[1(3.64e-06)]_66_[1(5.09e-06)]_\
+    440_[2(2.00e-05)]_289
+YDL195W                          1.66e-04  1316_[1(5.12e-07)]_117_\
+    [1(2.55e-06)]_2358
+YDL225W                          2.77e-04  586_[2(3.48e-06)]_157_[1(2.55e-06)]_\
+    426_[1(1.73e-05)]_441
+YDL240W                          2.92e-01  1916_[1(8.68e-05)]_1122
+YDR014W                          2.56e-02  365_[2(1.48e-05)]_108_[1(7.78e-05)]_\
+    1440
+YDR049W                          7.08e-03  121_[2(1.48e-05)]_286_[1(3.38e-05)]_\
+    1209_[1(1.73e-05)]_237
+YDR063W                          2.25e-03  136_[2(7.48e-06)]_6_[2(1.71e-05)]_\
+    277
+YDR073W                          4.92e-01  509
+YDR076W                          4.48e-02  283_[2(4.01e-05)]_922
+YDR089W                          1.58e-02  133_[1(1.73e-05)]_1630_\
+    [1(7.78e-05)]_128_[2(2.00e-05)]_673
+YDR096W                          8.79e-02  297_[2(4.54e-05)]_746_[1(6.19e-05)]_\
+    1611
+YDR118W                          3.20e-03  1807_[2(8.90e-07)]_136
+YDR138W                          5.64e-04  241_[2(2.23e-07)]_907_[1(9.66e-05)]_\
+    603_[1(4.89e-05)]_399_[1(9.66e-05)]_48
+YDR152W                          3.50e-05  1_[2(3.08e-05)]_234_[2(2.84e-06)]_\
+    13_[1(1.45e-06)]_435_[1(3.83e-05)]_54
+YDR160W                          1.46e-03  310_[2(8.12e-05)]_349_[1(7.78e-07)]_\
+    56_[2(3.08e-05)]_685_[1(9.66e-05)]_1098
+YDR161W                          2.38e-03  611_[1(3.83e-05)]_125_[2(3.51e-05)]_\
+    237_[2(5.16e-05)]_97_[1(3.83e-05)]_5_[2(5.21e-06)]_13
+YDR168W                          1.87e-02  331_[2(1.48e-05)]_736_[1(9.66e-05)]_\
+    423
+YDR189W                          3.78e-02  1258_[2(1.26e-05)]_727
+YDR195W                          5.93e-02  754_[1(2.61e-05)]_832
+YDR211W                          4.51e-03  653_[1(1.12e-05)]_591_[1(3.38e-05)]_\
+    348_[1(2.61e-05)]_356_[2(8.12e-05)]_93_[2(1.07e-05)]_22
+YDR221W                          1.03e-02  572_[1(5.09e-06)]_944_[2(6.51e-05)]_\
+    148_[1(7.78e-05)]_399
+YDR244W                          3.68e-02  796_[2(4.01e-05)]_595_[1(4.89e-05)]_\
+    417
+YDR279W                          6.51e-03  203_[1(9.66e-05)]_350_[2(2.00e-05)]_\
+    469
+YDR288W                          1.32e-01  911
+YDR334W                          2.78e-03  1294_[2(1.71e-05)]_151_\
+    [1(1.73e-05)]_24_[1(2.61e-05)]_338_[2(1.26e-05)]_129_[2(1.84e-06)]_1194_\
+    [2(7.27e-05)]_736_[2(9.05e-05)]_318_[1(1.50e-05)]_42_[1(8.26e-06)]_42_\
+    [1(1.73e-05)]_23_[2(1.71e-05)]_88
+YDR337W                          5.28e-01  860
+YDR358W                          1.67e-02  379_[2(1.48e-05)]_396_[2(2.32e-05)]_\
+    52_[1(6.19e-05)]_755_[2(6.51e-05)]_31
+YDR371W                          4.92e-01  1535
+YDR387C                          1.61e-01  711_[1(4.89e-05)]_941
+YDR392W                          2.60e-03  390_[2(6.51e-05)]_65_[1(8.26e-06)]_\
+    195_[1(2.97e-05)]_318
+YDR409W                          1.02e-04  1331_[1(1.19e-07)]_111_\
+    [1(3.38e-05)]_258_[1(3.71e-08)]_969
+YDR412W                          1.45e-02  383_[1(9.66e-05)]_87_[1(9.66e-05)]_\
+    103_[2(4.54e-05)]_89
+YDR416W                          3.14e-04  59_[1(3.64e-06)]_431_[2(1.15e-06)]_\
+    2059
+YDR463W                          6.22e-03  158_[1(2.61e-05)]_667_[2(9.05e-05)]_\
+    399_[2(1.26e-05)]_290
+YDR466W                          4.16e-02  1671_[2(7.48e-06)]_37_[2(9.05e-05)]_\
+    958
+YDR515W                          6.61e-04  492_[2(5.81e-05)]_647_[1(6.26e-07)]_\
+    174
+YDR528W                          5.72e-04  457_[2(6.29e-06)]_60_[2(6.51e-05)]_\
+    495_[2(1.15e-06)]_214
+YEL012W                          4.99e-05  599_[1(7.78e-05)]_24_[1(8.68e-05)]_\
+    3_[1(4.30e-06)]_72_[1(2.28e-05)]_21
+YEL051W                          8.28e-03  657_[2(3.08e-05)]_32_[1(6.19e-05)]_\
+    51
+YER001W                          2.17e-01  449_[1(3.38e-05)]_1824
+YER013W                          4.02e-02  594_[2(4.32e-06)]_2828
+YER014W                          2.41e-02  473_[1(4.89e-05)]_1082_\
+    [2(3.08e-05)]_34
+YER030W                          1.91e-07  92_[2(2.84e-06)]_147_[1(6.02e-06)]_\
+    149_[2(1.18e-07)]_1_[1(1.75e-06)]_12
+YER059W                          1.44e-01  917_[1(3.83e-05)]_330
+YER063W                          5.54e-02  656
+YER068W                          1.16e-02  76_[2(9.05e-05)]_666_[2(5.21e-06)]_\
+    991
+YER098W                          1.20e-01  626_[1(4.34e-05)]_144_[1(3.38e-05)]_\
+    1464
+YER127W                          1.53e-03  590_[1(7.08e-06)]_119_[2(2.00e-05)]_\
+    334
+YER128W                          2.91e-01  611
+YER129W                          2.79e-02  1727_[1(4.89e-05)]_741_\
+    [1(1.99e-05)]_455_[1(2.61e-05)]_420_[2(2.00e-05)]_25
+YER133W                          3.25e-03  546_[2(8.12e-05)]_703_[2(8.92e-06)]_\
+    70_[1(9.66e-05)]_99
+YER164W                          1.23e-05  110_[1(1.90e-07)]_20_[1(4.89e-05)]_\
+    6_[2(2.23e-07)]_10_[1(4.30e-06)]_14_[2(8.90e-07)]_7_[1(7.78e-07)]_1466_\
+    [2(4.01e-05)]_371_[2(6.51e-05)]_340_[2(5.16e-05)]_514_[2(2.00e-05)]_1398
+YER173W                          3.95e-02  176_[1(1.73e-05)]_867_[1(9.66e-05)]_\
+    906
+YFL021W                          3.16e-05  455_[1(3.71e-08)]_1062
+YFL036W                          4.11e-01  2870_[1(7.78e-05)]_1170
+YFL049W                          7.17e-01  1871
+YGL006W                          1.09e-03  835_[2(7.48e-06)]_798_[2(1.47e-06)]_\
+    327_[2(4.01e-05)]_10_[1(7.78e-05)]_1427_[2(3.48e-06)]_49
+YGL016W                          1.43e-01  215_[1(3.83e-05)]_1206_\
+    [1(4.34e-05)]_1794
+YGL021W                          4.05e-03  97_[2(3.08e-05)]_34_[1(3.06e-06)]_\
+    1200_[1(6.19e-05)]_906
+YGL060W                          7.35e-04  314_[1(3.06e-06)]_1562_\
+    [2(9.05e-05)]_19
+YGL066W                          3.97e-05  383_[1(2.97e-05)]_24_[1(2.87e-08)]_\
+    15_[1(3.26e-07)]_3_[1(9.73e-07)]_1488
+YGL090W                          4.51e-03  53_[1(1.99e-05)]_164_[2(5.16e-05)]_\
+    661_[1(1.12e-05)]_342
+YGL113W                          5.75e-01  2006
+YGL133W                          4.96e-03  437_[1(2.97e-05)]_608_[2(1.47e-06)]_\
+    2541_[2(3.08e-05)]_163
+YGL145W                          1.62e-01  262_[2(9.05e-05)]_1828
+YGL151W                          4.73e-02  115_[2(2.32e-05)]_1069_\
+    [1(6.94e-05)]_1715_[2(9.05e-05)]_142_[1(3.83e-05)]_54_[1(3.38e-05)]_228
+YGL171W                          3.57e-02  110_[1(1.73e-05)]_1569
+YGL178W                          4.34e-01  1721_[2(5.16e-05)]_1483
+YGL181W                          1.78e-02  245_[1(4.34e-05)]_69_[1(3.64e-06)]_\
+    846
+YGL207W                          1.24e-02  350_[1(6.02e-06)]_648_[1(6.19e-05)]_\
+    314_[2(3.08e-05)]_997_[1(4.34e-05)]_2_[2(6.51e-05)]_511_[1(2.28e-05)]_87_\
+    [1(1.30e-05)]_9_[1(9.66e-05)]_69
+YGL244W                          7.46e-06  4_[2(2.32e-05)]_24_[2(1.84e-06)]_93_\
+    [2(8.90e-07)]_388_[1(3.26e-07)]_27_[1(6.19e-05)]_72_[1(4.34e-05)]_978
+YGR003W                          1.91e-01  796_[2(4.01e-05)]_936_[2(8.12e-05)]_\
+    472
+YGR046W                          1.29e-01  708_[2(9.05e-05)]_411_[2(3.08e-05)]_\
+    8
+YGR072W                          7.07e-03  329_[1(6.94e-05)]_318_[1(5.51e-05)]_\
+    139_[2(7.27e-05)]_168_[2(1.26e-05)]_149
+YGR092W                          1.04e-01  111_[2(7.27e-05)]_1592
+YGR093W                          2.55e-02  41_[1(2.28e-05)]_72_[1(2.97e-05)]_\
+    287_[2(8.12e-05)]_1078
+YGR097W                          1.82e-02  299_[1(1.99e-05)]_800_[2(4.01e-05)]_\
+    2248_[1(6.02e-06)]_48
+YGR108W                          7.96e-04  577_[2(3.48e-06)]_28_[1(3.38e-05)]_\
+    780
+YGR142W                          7.43e-06  361_[2(2.23e-07)]_781_[1(1.45e-06)]_\
+    60
+YGR145W                          1.12e-03  1471_[2(1.47e-06)]_532_\
+    [1(1.73e-05)]_45_[2(6.51e-05)]_30
+YGR156W                          6.56e-01  1277
+YGR167W                          1.63e-02  128_[1(8.68e-05)]_18_[1(9.64e-06)]_\
+    105_[1(3.83e-05)]_213_[1(6.94e-05)]_177
+YGR198W                          1.20e-02  244_[1(6.19e-05)]_526_[1(4.89e-05)]_\
+    641_[2(2.69e-05)]_477_[2(7.48e-06)]_505
+YGR212W                          2.12e-01  1406
+YGR217W                          4.18e-02  79_[2(6.29e-06)]_445_[1(3.38e-05)]_\
+    95_[2(2.00e-05)]_2340_[2(2.69e-05)]_3058_[1(7.78e-05)]_27
+YGR218W                          3.39e-01  488_[1(7.78e-05)]_2751
+YGR222W                          1.52e-02  394_[1(9.66e-05)]_156_[2(3.08e-05)]_\
+    301
+YGR227W                          3.51e-01  1577
+YGR251W                          1.02e-06  494_[1(3.26e-07)]_81
+YGR275W                          2.91e-02  274_[1(8.68e-05)]_184
+YHL036W                          6.23e-01  1640
+YHL039W                          2.50e-01  1553_[1(6.19e-05)]_189
+YHR002W                          5.82e-02  740_[1(1.30e-05)]_318
+YHR011W                          4.30e-01  1340
+YHR036W                          1.03e-04  52_[2(4.54e-05)]_132_[2(3.48e-06)]_\
+    22_[1(1.45e-06)]_326_[2(2.84e-06)]_823
+YHR066W                          1.54e-04  457_[2(2.00e-05)]_433_[1(7.78e-07)]_\
+    441
+YHR073W                          4.93e-03  81_[2(1.26e-05)]_902_[1(1.73e-05)]_\
+    533_[2(5.21e-06)]_1103_[2(1.71e-05)]_121_[2(7.27e-05)]_175
+YHR084W                          2.02e-02  56_[1(1.30e-05)]_957_[1(7.78e-05)]_\
+    1023
+YHR099W                          7.57e-02  563_[1(8.26e-06)]_2709_\
+    [1(2.97e-05)]_515_[2(2.69e-05)]_322_[1(5.09e-06)]_7065
+YHR102W                          1.73e-02  178_[2(1.26e-05)]_853_[1(1.99e-05)]_\
+    2181
+YHR114W                          2.33e-02  378_[2(4.01e-05)]_652_[2(3.51e-05)]_\
+    457_[1(2.97e-05)]_369
+YHR155W                          6.16e-02  2140_[2(1.26e-05)]_1531
+YHR167W                          9.23e-02  755_[1(4.89e-05)]_15
+YHR206W                          3.52e-02  124_[1(1.30e-05)]_1729
+YIL036W                          3.81e-02  412_[2(4.54e-05)]_397_[1(4.89e-05)]_\
+    831_[1(5.51e-05)]_78
+YIL045W                          7.50e-02  347_[1(2.97e-05)]_513_[1(6.94e-05)]_\
+    12_[1(8.68e-05)]_78_[1(3.83e-05)]_606
+YIL049W                          6.88e-01  761
+YIL130W                          9.76e-02  2749_[2(2.69e-05)]_130
+YJL019W                          2.01e-04  260_[1(1.19e-07)]_1773
+YJL033W                          3.85e-05  1547_[1(4.30e-06)]_114_\
+    [1(1.75e-06)]_150_[1(5.09e-06)]_20_[2(3.04e-07)]_343_[1(7.08e-06)]_63
+YJL042W                          2.14e-02  1547_[1(2.28e-05)]_53_[2(1.71e-05)]_\
+    229_[1(5.51e-05)]_1737_[1(1.12e-05)]_518_[2(9.05e-05)]_37
+YJL061W                          3.58e-01  2141
+YJL082W                          5.36e-02  1076_[1(5.51e-05)]_752_\
+    [2(4.01e-05)]_337
+YJL083W                          1.53e-03  495_[2(6.51e-05)]_544_[2(2.84e-06)]_\
+    54_[1(9.66e-05)]_268_[1(1.73e-05)]_393
+YJL092W                          5.83e-03  1858_[2(1.07e-05)]_177_\
+    [2(1.15e-06)]_1203_[2(2.84e-06)]_241
+YJL102W                          6.88e-03  775_[2(3.48e-06)]_814_[1(4.34e-05)]_\
+    840
+YJR035W                          8.68e-05  527_[1(2.11e-06)]_84_[1(2.97e-05)]_\
+    [1(1.30e-05)]_60_[1(3.38e-05)]_446_[2(5.16e-05)]_1363_[1(6.94e-05)]_687
+YJR042W                          8.09e-06  649_[2(8.90e-07)]_321_[2(3.51e-05)]_\
+    331_[1(1.99e-05)]_198_[1(1.30e-05)]_537_[1(1.19e-07)]_123
+YJR050W                          4.80e-04  586_[2(3.04e-07)]_106
+YJR052W                          1.81e-02  224_[1(7.08e-06)]_84_[1(1.50e-05)]_\
+    213_[1(4.34e-05)]_570_[1(8.68e-05)]_546
+YJR112W                          2.71e-02  208_[2(5.81e-05)]_246_[2(4.01e-05)]_\
+    121
+YJR147W                          9.61e-01  1076
+YKL027W                          2.96e-02  815_[1(9.64e-06)]_513
+YKL061W                          1.49e-03  158_[1(5.09e-06)]_168
+YKL062W                          4.24e-03  1225_[2(6.29e-06)]_652
+YKL068W                          1.15e-02  2306_[1(1.45e-06)]_558
+YKL108W                          9.55e-05  215_[1(9.66e-05)]_624_[1(2.11e-06)]_\
+    117_[1(1.45e-06)]_36_[2(5.81e-05)]_288_[2(2.84e-06)]_6
+YKL109W                          5.94e-03  224_[2(9.05e-05)]_647_[2(6.51e-05)]_\
+    76_[1(7.78e-05)]_144_[1(2.61e-05)]_474_[1(4.30e-06)]_24
+YKL117W                          1.77e-07  376_[2(8.92e-06)]_213_[2(1.18e-07)]_\
+    31
+YKL124W                          9.80e-04  229_[2(8.92e-06)]_901_[1(3.64e-06)]_\
+    579
+YKL125W                          1.34e-04  755_[1(1.45e-06)]_[1(4.34e-05)]_9_\
+    [1(1.73e-05)]_18_[1(4.16e-07)]_528_[1(6.02e-06)]_498
+YKL142W                          4.87e-03  311_[1(6.02e-06)]_18_[1(9.66e-05)]_\
+    222_[1(8.68e-05)]_63
+YKL160W                          1.60e-06  220_[2(5.33e-07)]_28_[1(9.73e-07)]_\
+    23_[2(5.81e-05)]_27_[2(4.32e-06)]_6_[2(6.51e-05)]_40_[1(8.68e-05)]_3
+YKL185W                          7.58e-01  1766
+YKL189W                          1.77e-01  1199
+YKL195W                          2.86e-03  284_[1(4.89e-05)]_105_[1(1.12e-05)]_\
+    83_[2(3.08e-05)]_255_[2(2.00e-05)]_424
+YKL204W                          1.09e-02  595_[2(3.48e-06)]_1288
+YKL208W                          1.29e-02  310_[1(7.08e-06)]_490
+YKR025W                          4.55e-05  29_[1(2.11e-06)]_18_[1(4.34e-05)]_\
+    111_[1(3.06e-06)]_500_[2(5.81e-05)]_60_[2(2.69e-05)]_55
+YKR027W                          3.09e-01  2297
+YKR058W                          9.89e-03  829_[2(2.00e-05)]_142_[1(1.99e-05)]_\
+    272_[2(8.12e-05)]_532_[1(6.94e-05)]_15
+YLL001W                          8.63e-03  871_[2(2.00e-05)]_144_[2(9.05e-05)]_\
+    727_[1(1.12e-05)]_108_[1(8.68e-05)]_363
+YLR033W                          1.04e-02  491_[1(6.02e-06)]_585_[1(3.38e-05)]_\
+    102_[1(8.26e-06)]_285
+YLR057W                          1.16e-01  1385_[1(3.83e-05)]_1149
+YLR090W                          8.62e-03  230_[1(2.28e-05)]_253_[2(2.69e-05)]_\
+    866
+YLR115W                          1.26e-05  1466_[1(1.90e-07)]_[1(6.94e-05)]_\
+    275_[2(5.81e-05)]_793
+YLR135W                          4.01e-05  245_[1(5.51e-05)]_98_[2(1.62e-07)]_\
+    622_[1(4.34e-05)]_105_[1(9.64e-06)]_99_[1(2.61e-05)]_329_[2(4.01e-05)]_105_\
+    [2(6.29e-06)]_538
+YLR143W                          1.78e-03  263_[1(3.06e-06)]_1482_\
+    [1(1.99e-05)]_282
+YLR148W                          4.05e-01  2066_[1(8.68e-05)]_675
+YLR174W                          8.04e-03  262_[1(2.28e-05)]_961
+YLR182W                          8.85e-04  331_[2(2.69e-05)]_1542_\
+    [2(3.48e-06)]_468_[2(9.05e-05)]_25
+YLR196W                          2.24e-05  68_[1(3.06e-06)]_171_[1(2.97e-05)]_\
+    74_[2(1.48e-05)]_172_[1(1.75e-06)]_262_[2(3.08e-05)]_779_[2(4.54e-05)]_62_\
+    [2(3.04e-07)]_13_[1(5.09e-06)]_9
+YLR200W                          2.92e-02  104_[1(6.19e-05)]_225
+YLR206W                          3.32e-02  25_[1(4.89e-05)]_541_[2(5.81e-05)]_\
+    56_[2(3.51e-05)]_1174
+YLR219W                          5.52e-01  2186
+YLR256W                          1.82e-01  4028_[1(2.97e-05)]_14_[1(5.51e-05)]_\
+    289_[1(5.51e-05)]_108_[1(2.28e-05)]_9
+YLR260W                          1.64e-04  740_[1(2.28e-05)]_777_[1(1.75e-06)]_\
+    6_[1(6.02e-06)]_495
+YLR403W                          3.25e-04  1613_[1(3.26e-07)]_3_[1(9.11e-08)]_\
+    [1(1.48e-07)]_390
+YLR427W                          7.12e-02  485_[1(8.68e-05)]_288_[1(3.83e-05)]_\
+    1209
+YLR439W                          1.65e-03  581_[1(4.30e-06)]_215_[2(4.54e-05)]_\
+    133
+YLR449W                          3.15e-06  326_[1(2.28e-05)]_3_[1(5.51e-05)]_\
+    161_[2(6.75e-07)]_33_[2(2.84e-06)]_10_[1(1.75e-06)]_15_[1(6.19e-05)]_98_\
+    [2(8.09e-08)]_427
+YLR455W                          2.00e-01  475_[2(7.27e-05)]_424
+YML010W                          1.44e-06  443_[1(6.42e-08)]_6_[1(3.71e-08)]_\
+    [1(3.26e-07)]_69_[1(2.49e-07)]_2_[2(1.47e-06)]_40_[1(4.63e-08)]_2541
+YML017W                          9.73e-02  1806_[2(6.51e-05)]_194_\
+    [1(7.78e-05)]_113
+YML027W                          2.26e-02  955_[1(1.12e-05)]_187
+YML030W                          4.36e-02  479
+YML034W                          5.72e-06  23_[1(8.68e-05)]_309_[1(1.19e-07)]_\
+    3_[1(2.87e-08)]_41_[2(7.27e-05)]_4_[1(1.45e-06)]_686_[2(6.51e-05)]_40_\
+    [1(8.68e-05)]_633_[1(9.66e-05)]_430_[2(5.81e-05)]_326
+YML069W                          1.90e-03  998_[1(3.64e-06)]_489_[1(1.20e-06)]_\
+    33_[1(2.97e-05)]_93
+YML070W                          7.82e-06  392_[1(9.64e-06)]_369_[1(8.47e-09)]_\
+    963
+YML081W                          1.85e-01  1346_[1(2.61e-05)]_2394
+YML094W                          1.53e-01  574
+YML111W                          5.79e-02  1580_[1(5.51e-05)]_819_\
+    [1(3.38e-05)]_333
+YML116W                          4.48e-01  1628
+YML117W                          1.01e-03  961_[2(1.26e-05)]_583_[1(7.78e-05)]_\
+    1110_[1(2.97e-05)]_389_[2(3.04e-07)]_301
+YMR017W                          1.34e-06  500_[1(2.61e-05)]_452_[2(2.17e-09)]_\
+    211
+YMR044W                          1.45e-05  157_[2(3.51e-05)]_4_[1(2.97e-05)]_\
+    35_[2(5.16e-05)]_185_[2(6.51e-05)]_103_[2(2.69e-05)]_4_[1(2.61e-05)]_152_\
+    [2(1.15e-06)]_144_[2(2.49e-08)]_486_[2(1.71e-05)]_22
+YMR052W                          3.01e-01  614
+YMR100W                          1.70e-02  539_[1(9.66e-05)]_158_[2(5.81e-05)]_\
+    7_[1(1.30e-05)]_435_[1(9.66e-05)]_663
+YMR109W                          2.17e-03  159_[2(8.12e-05)]_682_[2(8.12e-05)]_\
+    2743_[1(1.30e-05)]_5_[2(3.48e-06)]_10
+YMR119W                          1.14e-03  1085_[1(9.66e-05)]_267_\
+    [1(2.28e-05)]_71_[2(1.47e-06)]_406
+YMR125W                          9.40e-04  8_[2(3.51e-05)]_321_[2(4.32e-06)]_\
+    2302_[1(2.55e-06)]_231
+YMR129W                          2.27e-01  1690_[1(3.83e-05)]_2308
+YMR134W                          4.30e-02  554_[1(7.78e-05)]_144
+YMR136W                          1.47e-01  1682
+YMR176W                          4.98e-02  484_[2(7.27e-05)]_369_[2(5.81e-05)]_\
+    1654_[1(9.64e-06)]_1683
+YMR179W                          1.15e-03  15_[2(9.05e-05)]_347_[1(3.83e-05)]_\
+    18_[1(1.99e-05)]_840_[1(7.78e-05)]_357_[1(4.34e-05)]_360_[1(5.51e-05)]_3_\
+    [1(1.99e-05)]_77_[2(7.48e-06)]_19_[1(4.89e-05)]_105
+YMR194W                          5.54e-01  765
+YMR230W                          6.53e-04  616_[1(2.11e-06)]_75_[2(5.81e-05)]_\
+    6
+YMR234W                          4.81e-01  1046
+YMR263W                          1.12e-01  564_[2(7.27e-05)]_26
+YMR277W                          5.07e-09  149_[1(3.38e-05)]_1209_\
+    [1(1.84e-09)]_548_[2(2.49e-08)]_25_[1(1.45e-06)]_6_[1(2.97e-05)]_122_\
+    [2(8.92e-06)]_49
+YNL009W                          5.10e-01  1262
+YNL027W                          7.59e-02  163_[2(5.81e-05)]_487_[1(6.94e-05)]_\
+    242_[1(6.94e-05)]_184_[1(9.66e-05)]_828_[2(7.27e-05)]_57
+YNL042W                          2.90e-02  596_[1(4.34e-05)]_498_[2(8.12e-05)]_\
+    66
+YNL075W                          7.62e-03  130_[2(5.16e-05)]_49_[1(2.61e-05)]_\
+    9_[1(4.89e-05)]_573_[1(3.83e-05)]_51
+YNL102W                          7.20e-06  110_[1(3.83e-05)]_675_[1(1.48e-07)]_\
+    206_[2(5.21e-06)]_612_[2(8.12e-05)]_997_[1(5.51e-05)]_1731
+YNL103W                          2.42e-06  1694_[1(1.45e-06)]_59_[2(2.49e-08)]_\
+    235
+YNL126W                          2.50e-01  2492_[1(5.51e-05)]_33
+YNL155W                          1.45e-01  824
+YNL186W                          6.81e-05  416_[1(3.38e-05)]_95_[2(2.32e-05)]_\
+    19_[1(1.99e-05)]_114_[1(3.06e-06)]_[1(8.68e-05)]_191_[2(3.04e-07)]_1453
+YNL192W                          1.06e-01  956_[1(1.99e-05)]_329_[1(7.78e-05)]_\
+    259_[1(9.64e-06)]_1806
+YNL207W                          5.90e-03  1078_[2(2.32e-05)]_70_[1(1.99e-05)]_\
+    9_[1(5.51e-05)]_75
+YNL212W                          1.12e-03  188_[1(1.99e-05)]_174_[1(7.08e-06)]_\
+    168_[1(7.78e-07)]_597_[1(2.49e-07)]_29_[2(9.05e-05)]_103_[1(3.06e-06)]_843_\
+    [1(7.78e-05)]_141
+YNL218W                          2.60e-01  1763
+YNL278W                          2.77e-02  2216_[1(6.19e-05)]_138_\
+    [1(3.64e-06)]_798
+YNR006W                          3.22e-03  766_[2(9.05e-05)]_111_[2(2.84e-06)]_\
+    36_[2(7.27e-05)]_637_[1(3.83e-05)]_258
+YNR023W                          5.50e-01  1700
+YOL049W                          8.85e-03  761_[1(9.64e-06)]_41_[2(5.81e-05)]_\
+    643
+YOL051W                          3.52e-01  1607_[1(4.89e-05)]_1623
+YOL081W                          3.68e-01  293_[1(9.66e-05)]_95_[2(7.27e-05)]_\
+    537_[1(2.97e-05)]_4936_[1(7.78e-05)]_777_[1(6.94e-05)]_2082_[1(9.66e-05)]_\
+    363_[1(8.68e-05)]_51
+YOL113W                          3.38e-02  1027_[1(7.78e-05)]_634_\
+    [1(1.12e-05)]_276
+YOL115W                          6.12e-06  63_[2(3.51e-05)]_158_[1(9.66e-05)]_\
+    146_[2(6.51e-05)]_1132_[1(6.02e-06)]_39_[1(6.26e-07)]_99_[1(1.90e-07)]_27
+YOL123W                          9.86e-03  502_[2(4.01e-05)]_361_[1(2.28e-05)]_\
+    630_[2(2.32e-05)]_66
+YOL137W                          1.95e-01  1493
+YOR014W                          2.75e-03  1099_[2(1.15e-06)]_372_\
+    [1(5.51e-05)]_730_[1(5.51e-05)]_27
+YOR018W                          4.83e-02  927_[2(3.51e-05)]_17_[1(5.51e-05)]_\
+    323_[2(2.69e-05)]_1201
+YOR027W                          7.38e-05  179_[1(2.97e-05)]_557_[2(6.33e-08)]_\
+    187_[1(2.97e-05)]_209_[2(8.12e-05)]_577
+YOR030W                          6.16e-01  1859
+YOR066W                          2.97e-02  624_[2(1.26e-05)]_1250
+YOR069W                          7.27e-03  607_[2(4.32e-06)]_136_[1(5.51e-05)]_\
+    1254
+YOR109W                          5.81e-01  3323
+YOR147W                          1.37e-01  656_[1(9.66e-05)]_1197
+YOR158W                          7.05e-02  674_[1(4.89e-05)]_267
+YOR160W                          1.93e-01  1189_[2(3.08e-05)]_1714
+YOR165W                          1.11e-02  29_[1(8.26e-06)]_1691_[2(3.51e-05)]_\
+    580
+YOR181W                          2.89e-01  1901
+YOR227W                          1.92e-01  3275_[1(1.99e-05)]_450
+YOR252W                          6.22e-03  303_[2(2.69e-05)]_218
+YOR257W                          2.04e-02  428_[1(9.66e-05)]_42
+YOR264W                          9.12e-04  116_[1(6.02e-06)]_758_[2(7.27e-05)]_\
+    289_[1(7.78e-07)]_84
+YOR274W                          8.21e-02  277_[2(2.32e-05)]_788_[2(3.08e-05)]_\
+    191
+YOR278W                          3.12e-01  827
+YOR293W                          5.61e-04  220_[2(8.12e-05)]_18_[1(9.66e-05)]_\
+    375_[1(2.11e-06)]_75_[2(4.54e-05)]_6
+YOR295W                          4.35e-01  686
+YOR336W                          5.04e-02  173_[1(7.08e-06)]_2657_\
+    [2(9.05e-05)]_1237
+YOR346W                          7.78e-01  2957
+YOR349W                          6.33e-01  3044
+YOR359W                          6.42e-01  1571
+YOR367W                          6.81e-01  602
+YOR368W                          1.87e-02  299_[1(6.02e-06)]_735_[1(7.78e-05)]_\
+    141
+YOR386W                          6.15e-01  1697
+YPL018W                          2.37e-01  1109
+YPL075W                          7.96e-02  2379_[1(6.02e-06)]_714
+YPL125W                          3.13e-01  2057_[1(5.51e-05)]_723_\
+    [1(3.38e-05)]_288
+YPL166W                          1.17e-01  641
+YPL168W                          8.89e-02  869_[2(6.51e-05)]_408
+YPL181W                          1.03e-05  190_[2(1.18e-07)]_325_[1(5.09e-06)]_\
+    9_[1(2.55e-06)]_951
+YPL204W                          1.30e-01  1484
+YPL207W                          3.41e-03  1138_[2(3.04e-07)]_1279
+YPL228W                          8.74e-03  250_[2(5.21e-06)]_4_[1(8.68e-05)]_\
+    1365
+YPL232W                          1.11e-03  467_[1(2.11e-06)]_158_[2(7.27e-05)]_\
+    217
+YPL233W                          1.62e-02  181_[1(9.66e-05)]_280_[1(5.51e-05)]_\
+    6_[1(1.99e-05)]_138
+YPL260W                          1.17e-02  497_[1(2.61e-05)]_35_[2(2.32e-05)]_\
+    966_[2(8.12e-05)]_112
+YPL267W                          5.01e-04  193_[2(1.71e-05)]_358_[1(7.08e-06)]_\
+    48
+YPL268W                          8.53e-03  487_[2(9.05e-05)]_222_[2(2.84e-06)]_\
+    327_[1(6.19e-05)]_1528
+YPR008W                          4.16e-02  217_[2(2.32e-05)]_700_[1(7.78e-05)]_\
+    1137
+YPR030W                          2.78e-01  3275_[1(8.68e-05)]_75
+YPR034W                          1.85e-01  116_[1(6.94e-05)]_1302
+YPR046W                          8.49e-02  545
+YPR065W                          7.98e-01  1106
+YPR070W                          3.13e-01  1700
+YPR072W                          3.79e-04  71_[1(6.94e-05)]_202_[2(1.47e-06)]_\
+    136_[2(2.00e-05)]_1204_[1(8.26e-06)]_9
+YPR101W                          2.65e-03  236_[1(3.06e-06)]_276
+YPR106W                          8.05e-01  1331
+YPR122W                          9.71e-01  3626
+YPR125W                          2.72e-01  1145_[1(9.66e-05)]_204
+YPR129W                          2.40e-04  602_[1(1.30e-05)]_285_[2(1.47e-06)]_\
+    132
+YPR154W                          3.69e-02  80_[1(6.19e-05)]_552
+YPR168W                          1.25e-03  409_[2(3.48e-06)]_49
+--------------------------------------------------------------------------------
+
+********************************************************************************
+
+
+********************************************************************************
+Stopped because the next motif E-value > 5.00e-02.
+********************************************************************************
+
+CPU: noble-meme.grid.gs.washington.edu
+
+********************************************************************************
