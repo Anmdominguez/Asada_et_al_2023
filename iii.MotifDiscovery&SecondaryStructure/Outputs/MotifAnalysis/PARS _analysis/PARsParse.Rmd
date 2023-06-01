@@ -1,0 +1,123 @@
+---
+title: "Untitled"
+author: "AndrewDominguez"
+date: "2023-02-28"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r cars}
+library(tidyverse)
+library(splitstackshape)
+
+data <- read.table("sce_Score.tab", header = F, sep = "\t", fill = TRUE)
+colnames(data ) <- c("seq_name", "Length", "PARS_scores")
+data$means <- sapply(strsplit((data$PARS_scores), split=";"), function(x) mean(as.numeric(x)))
+data$Group <- "All"
+```
+
+```{r Load Fastas}
+library(Biostrings)
+
+#imports fasta reference file
+fastaImport <- function(fasta){
+  fastaFile <- readDNAStringSet(fasta)
+  seq_name = names(fastaFile)
+  sequence = paste(fastaFile)
+  Transcript.Dataframe <- data.frame(seq_name, sequence)
+  return(Transcript.Dataframe)
+}
+
+```
+
+```{r}
+Cbp80 <- fastaImport("Cbp80_cDNA.fa")
+Cbp80Hpr1 <- fastaImport("Cbp80Hpr1_cDNA.fa")
+
+new.colnames <- c("seq_name", "Group")
+
+Cbp80.Comms <- read.csv("Cbp80_comms.csv")
+Cbp80.Comms$X <- substring(Cbp80.Comms$X, 2)
+colnames(Cbp80.Comms) <- new.colnames
+Cbp80Hpr1.Comms <- read.csv("Cbp80Hpr1_comms.csv")
+Cbp80Hpr1.Comms$X <-substring(Cbp80Hpr1.Comms$X, 2)
+colnames(Cbp80Hpr1.Comms) <- new.colnames
+
+Cbp80 <- merge(Cbp80,Cbp80.Comms, by= "seq_name")
+Cbp80 <- merge(Cbp80,data, by= "seq_name")
+Cbp80$Condition <- "Cbp80"
+
+Cbp80Hpr1 <- merge(Cbp80Hpr1,Cbp80Hpr1.Comms, by= "seq_name")
+Cbp80Hpr1 <- merge(Cbp80Hpr1,data, by= "seq_name")
+Cbp80Hpr1$Condition <- "Cbp80Hpr1"
+
+data.means <-select(data, "Group", "means")
+PARS.mean <- mean(data.means$means)
+Cbp80.means <- select(Cbp80, "Group", "means")
+Cbp80Hpr1.means <- select(Cbp80Hpr1, "Group", "means")
+
+Cbp80.Merged <- rbind(Cbp80.means, data.means)
+Cbp80Hpr1.Merged <- rbind(Cbp80Hpr1.means, data.means)
+```
+
+
+```{r}
+library(ggpubr)
+Cbp80.compare <- compare_means(means ~ Group,  data = Cbp80.Merged, method = "anova")
+Cbp80Hpr1.compare <- compare_means(means ~ Group,  data = Cbp80Hpr1.Merged, method = "anova")
+```
+
+```{r}
+PARs.Cbp80 <- ggplot(Cbp80.Merged, aes(x=factor(Group), y=means, fill=factor(Group))) +
+  geom_violin(alpha=0.8) +
+  ggtitle("PARS scores per K-mer cluster for Cbp80 transcripts") +
+  xlab("Cluster") +
+  ylab("PARS score") +
+  theme_bw() +
+  geom_hline(yintercept=PARS.mean, linetype="dashed", color = "black", size=0.5) +
+  theme(legend.position = "none", plot.title = element_text(hjust = 0.5)) +
+  stat_compare_means(method = "anova", label.y = 3) + 
+  stat_compare_means(label = "p.signif", method = "t.test", ref.group = "All") +
+  scale_fill_manual(values = c("brown1",
+                                "chartreuse3",
+                                "plum4",
+                                "hotpink1",
+                                "darkorange2",
+                                "dodgerblue",
+                                "grey")) 
+                                  
+  
+
+
+PARs.Cbp80Hpr1 <- ggplot(Cbp80Hpr1.Merged, aes(x=factor(Group), y=means, fill=factor(Group))) +
+  geom_violin(alpha=0.8) +
+  ggtitle("PARS scores per K-mer cluster for Cbp80Hpr1 transcripts") +
+  xlab("Cluster") +
+  ylab("PARS score") +
+  theme_bw() +
+  geom_hline(yintercept=PARS.mean, linetype="dashed", color = "black", size=0.5) +
+  theme(legend.position = "none", plot.title = element_text(hjust = 0.5)) +
+  stat_compare_means(method = "anova", label.y = 3) + 
+  stat_compare_means(label = "p.signif", method = "t.test", ref.group = "All") +
+  scale_fill_manual(values = c("brown1",
+                                "chartreuse3",
+                                "plum4",
+                                "hotpink1",
+                                "darkorange2",
+                                "dodgerblue",
+                                "grey"))
+
+
+PARs.Cbp80 
+PARs.Cbp80Hpr1
+PARs.Cbp80 + PARs.Cbp80Hpr1
+ggsave("PARSscore_Vplot.png", plot = last_plot(), units = "in", height = 10, width = 18, dpi = 300)
+
+```
+
+
+
+
